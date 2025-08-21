@@ -1,0 +1,103 @@
+<svg width="600" height="200" viewBox="0 0 600 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="sketch" x="-50%" y="-50%" width="200%" height="200%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2"/>
+    </filter>
+  </defs>
+  
+  <!-- Unit 1: Tall narrow unit with gridded vent -->
+  <rect x="20" y="80" width="40" height="100" stroke="#2298D2" stroke-width="2" fill="none" rx="4"/>
+  <rect x="25" y="85" width="30" height="15" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <circle cx="30" cy="92" r="1" fill="#2298D2"/>
+  <circle cx="35" cy="92" r="1" fill="#2298D2"/>
+  <rect x="25" y="105" width="30" height="60" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <rect x="30" y="110" width="20" height="50" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <rect x="35" y="115" width="10" height="40" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <circle cx="25" cy="175" r="2" fill="#2298D2"/>
+  <circle cx="35" cy="175" r="2" fill="#2298D2"/>
+  <circle cx="45" cy="175" r="2" fill="#2298D2"/>
+  <circle cx="55" cy="175" r="2" fill="#2298D2"/>
+  
+  <!-- Unit 2: Large substantial cabinet -->
+  <rect x="80" y="70" width="60" height="110" stroke="#2298D2" stroke-width="2" fill="none" rx="4"/>
+  <rect x="85" y="75" width="50" height="20" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <circle cx="90" cy="82" r="1.5" fill="#2298D2"/>
+  <circle cx="95" cy="82" r="1.5" fill="#2298D2"/>
+  <circle cx="100" cy="82" r="1.5" fill="#2298D2"/>
+  <circle cx="105" cy="82" r="1.5" fill="#2298D2"/>
+  <rect x="110" y="80" width="15" height="4" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <rect x="85" y="100" width="50" height="75" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <circle cx="110" cy="130" r="2" fill="#2298D2"/>
+  <rect x="85" y="175" width="50" height="5" stroke="#2298D2" stroke-width="1" fill="none"/>
+  
+  <!-- Unit 3: Small compact box -->
+  <rect x="160" y="120" width="40" height="60" stroke="#2298D2" stroke-width="2" fill="none" rx="4"/>
+  <rect x="165" y="125" width="30" height="10" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <circle cx="170" cy="130" r="1" fill="#2298D2"/>
+  <circle cx="175" cy="130" r="1" fill="#2298D2"/>
+  <rect x="165" y="140" width="30" height="35" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <circle cx="180" cy="155" r="1.5" fill="#2298D2"/>
+  <rect x="165" y="175" width="30" height="5" stroke="#2298D2" stroke-width="1" fill="none"/>
+  
+  <!-- Unit 4: Wide shallow unit with arched opening -->
+  <rect x="220" y="110" width="70" height="70" stroke="#2298D2" stroke-width="2" fill="none" rx="4"/>
+  <rect x="225" y="115" width="60" height="10" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <circle cx="230" cy="120" r="1" fill="#2298D2"/>
+  <circle cx="235" cy="120" r="1" fill="#2298D2"/>
+  <rect x="225" y="130" width="60" height="45" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <path d="M 225 130 Q 255 110 285 130" stroke="#2298D2" stroke-width="2" fill="none"/>
+  <rect x="225" y="175" width="60" height="5" stroke="#2298D2" stroke-width="1" fill="none"/>
+  
+  <!-- Unit 5: Rectangular chest with flat lid -->
+  <rect x="310" y="110" width="50" height="70" stroke="#2298D2" stroke-width="2" fill="none" rx="4"/>
+  <rect x="315" y="115" width="40" height="8" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <rect x="315" y="128" width="40" height="47" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <circle cx="325" cy="135" r="1" fill="#2298D2"/>
+  <circle cx="335" cy="135" r="1" fill="#2298D2"/>
+  <rect x="315" y="175" width="40" height="5" stroke="#2298D2" stroke-width="1" fill="none"/>
+  
+  <!-- Unit 6: Small compact box (similar to Unit 3) -->
+  <rect x="380" y="120" width="40" height="60" stroke="#2298D2" stroke-width="2" fill="none" rx="4"/>
+  <rect x="385" y="125" width="30" height="10" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <circle cx="390" cy="130" r="1" fill="#2298D2"/>
+  <circle cx="395" cy="130" r="1" fill="#2298D2"/>
+  <rect x="385" y="140" width="30" height="35" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <circle cx="400" cy="155" r="1.5" fill="#2298D2"/>
+  <rect x="385" y="175" width="30" height="5" stroke="#2298D2" stroke-width="1" fill="none"/>
+  
+  <!-- Unit 7: Tall vertical unit with "0" shape -->
+  <rect x="440" y="90" width="35" height="90" stroke="#2298D2" stroke-width="2" fill="none" rx="4"/>
+  <rect x="445" y="95" width="25" height="8" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <circle cx="450" cy="99" r="1" fill="#2298D2"/>
+  <rect x="445" y="108" width="25" height="67" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <ellipse cx="457.5" cy="130" rx="8" ry="12" stroke="#2298D2" stroke-width="2" fill="none"/>
+  <rect x="445" y="175" width="25" height="5" stroke="#2298D2" stroke-width="1" fill="none"/>
+  
+  <!-- Unit 8: Wide rectangular with flat lid -->
+  <rect x="495" y="110" width="60" height="70" stroke="#2298D2" stroke-width="2" fill="none" rx="4"/>
+  <rect x="500" y="115" width="50" height="8" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <rect x="500" y="128" width="50" height="47" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <rect x="505" y="133" width="15" height="8" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <rect x="525" y="133" width="15" height="8" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <circle cx="510" cy="137" r="1" fill="#2298D2"/>
+  <circle cx="530" cy="137" r="1" fill="#2298D2"/>
+  <circle cx="515" cy="150" r="1" fill="#2298D2"/>
+  <circle cx="520" cy="150" r="1" fill="#2298D2"/>
+  <circle cx="525" cy="150" r="1" fill="#2298D2"/>
+  <rect x="500" y="175" width="50" height="5" stroke="#2298D2" stroke-width="1" fill="none"/>
+  
+  <!-- Unit 9: Long low rectangular with "Probe Sonicator" label -->
+  <rect x="575" y="130" width="80" height="50" stroke="#2298D2" stroke-width="2" fill="none" rx="4"/>
+  <rect x="580" y="135" width="70" height="8" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <circle cx="585" cy="139" r="1" fill="#2298D2"/>
+  <circle cx="590" cy="139" r="1" fill="#2298D2"/>
+  <circle cx="595" cy="139" r="1" fill="#2298D2"/>
+  <rect x="580" y="148" width="70" height="27" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <text x="615" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#2298D2">Probe</text>
+  <text x="615" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#2298D2">Sonicator</text>
+  
+  <!-- Labels -->
+  <text x="300" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2298D2">Table Top Instruments</text>
+</svg>
+

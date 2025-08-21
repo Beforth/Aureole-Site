@@ -1,0 +1,84 @@
+<svg width="600" height="200" viewBox="0 0 600 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="sketch" x="-50%" y="-50%" width="200%" height="200%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2"/>
+    </filter>
+  </defs>
+  
+  <!-- Equipment 1: Medium-sized upright cabinet -->
+  <rect x="20" y="80" width="60" height="100" stroke="#2298D2" stroke-width="2" fill="none" rx="4"/>
+  <rect x="25" y="85" width="50" height="15" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <circle cx="35" cy="92" r="2" fill="#2298D2"/>
+  <circle cx="45" cy="92" r="2" fill="#2298D2"/>
+  <polygon points="30,90 35,85 40,90" fill="#2298D2"/>
+  <rect x="25" y="105" width="50" height="70" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <rect x="30" y="110" width="40" height="60" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <circle cx="35" cy="140" r="3" fill="#2298D2"/>
+  <rect x="25" y="175" width="50" height="5" stroke="#2298D2" stroke-width="1" fill="none"/>
+  
+  <!-- Equipment 2: Smaller compact cabinet -->
+  <rect x="100" y="100" width="50" height="80" stroke="#2298D2" stroke-width="2" fill="none" rx="4"/>
+  <rect x="105" y="105" width="40" height="12" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <circle cx="115" cy="111" r="1.5" fill="#2298D2"/>
+  <circle cx="125" cy="111" r="1.5" fill="#2298D2"/>
+  <polygon points="110,109 114,105 118,109" fill="#2298D2"/>
+  <rect x="105" y="122" width="40" height="53" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <circle cx="115" cy="145" r="2" fill="#2298D2"/>
+  <rect x="105" y="175" width="40" height="5" stroke="#2298D2" stroke-width="1" fill="none"/>
+  
+  <!-- Equipment 3: Large upright cabinet -->
+  <rect x="170" y="60" width="80" height="120" stroke="#2298D2" stroke-width="2" fill="none" rx="4"/>
+  <rect x="175" y="65" width="70" height="18" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <circle cx="185" cy="74" r="2" fill="#2298D2"/>
+  <circle cx="195" cy="74" r="2" fill="#2298D2"/>
+  <circle cx="205" cy="74" r="2" fill="#2298D2"/>
+  <polygon points="180,72 185,67 190,72" fill="#2298D2"/>
+  <rect x="175" y="88" width="70" height="87" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <rect x="180" y="93" width="60" height="77" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <rect x="185" y="98" width="50" height="67" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <circle cx="200" cy="130" r="3" fill="#2298D2"/>
+  <rect x="175" y="175" width="70" height="5" stroke="#2298D2" stroke-width="1" fill="none"/>
+  
+  <!-- Equipment 4: Medium wider cabinet -->
+  <rect x="270" y="100" width="70" height="80" stroke="#2298D2" stroke-width="2" fill="none" rx="4"/>
+  <rect x="275" y="105" width="60" height="12" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <circle cx="285" cy="111" r="1.5" fill="#2298D2"/>
+  <circle cx="295" cy="111" r="1.5" fill="#2298D2"/>
+  <polygon points="280,109 284,105 288,109" fill="#2298D2"/>
+  <rect x="275" y="122" width="60" height="25" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <rect x="275" y="152" width="60" height="23" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <circle cx="290" cy="135" r="2" fill="#2298D2"/>
+  <circle cx="290" cy="163" r="2" fill="#2298D2"/>
+  <rect x="275" y="175" width="60" height="5" stroke="#2298D2" stroke-width="1" fill="none"/>
+  
+  <!-- Equipment 5: Medium upright cabinet -->
+  <rect x="360" y="100" width="50" height="80" stroke="#2298D2" stroke-width="2" fill="none" rx="4"/>
+  <rect x="365" y="105" width="40" height="12" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <circle cx="375" cy="111" r="1.5" fill="#2298D2"/>
+  <circle cx="385" cy="111" r="1.5" fill="#2298D2"/>
+  <polygon points="370,109 374,105 378,109" fill="#2298D2"/>
+  <rect x="365" y="122" width="40" height="53" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <rect x="370" y="127" width="30" height="43" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <circle cx="385" cy="145" r="2" fill="#2298D2"/>
+  <rect x="365" y="175" width="40" height="5" stroke="#2298D2" stroke-width="1" fill="none"/>
+  
+  <!-- Equipment 6: Large walk-in chamber -->
+  <rect x="430" y="40" width="120" height="140" stroke="#2298D2" stroke-width="2" fill="none" rx="4"/>
+  <rect x="435" y="45" width="110" height="15" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <rect x="440" y="50" width="20" height="5" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <circle cx="450" cy="52" r="1" fill="#2298D2"/>
+  <circle cx="455" cy="52" r="1" fill="#2298D2"/>
+  <circle cx="460" cy="52" r="1" fill="#2298D2"/>
+  <rect x="470" y="50" width="30" height="5" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <rect x="435" y="65" width="110" height="110" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <rect x="440" y="70" width="100" height="100" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <rect x="480" y="75" width="50" height="90" stroke="#2298D2" stroke-width="2" fill="none"/>
+  <circle cx="505" cy="85" r="2" fill="#2298D2"/>
+  <rect x="500" y="90" width="10" height="70" stroke="#2298D2" stroke-width="1" fill="none"/>
+  <rect x="435" y="175" width="110" height="5" stroke="#2298D2" stroke-width="1" fill="none"/>
+  
+  <!-- Labels -->
+  <text x="300" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2298D2">Stability Chambers</text>
+</svg>
+

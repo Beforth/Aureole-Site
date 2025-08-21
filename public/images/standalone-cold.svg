@@ -1,0 +1,47 @@
+<svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="sketch5" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect x="20" y="40" width="260" height="140" fill="none" stroke="#1b243f" stroke-width="2" stroke-dasharray="5,5" opacity="0.3"/>
+  
+  <!-- Main Cold Chamber -->
+  <rect x="80" y="60" width="140" height="100" fill="none" stroke="#1b243f" stroke-width="3" filter="url(#sketch5)"/>
+  
+  <!-- Door -->
+  <rect x="100" y="80" width="40" height="80" fill="none" stroke="#1b243f" stroke-width="2" stroke-dasharray="3,3"/>
+  <circle cx="130" cy="120" r="3" fill="#1b243f"/>
+  
+  <!-- Temperature Display -->
+  <rect x="90" y="70" width="50" height="20" fill="none" stroke="#1b243f" stroke-width="2"/>
+  <text x="115" y="83" text-anchor="middle" fill="#1b243f" font-family="monospace" font-size="12" font-weight="bold">-15°C</text>
+  
+  <!-- Frost Indicators -->
+  <path d="M 180 80 Q 190 75 200 80" fill="none" stroke="#1b243f" stroke-width="2"/>
+  <path d="M 180 90 Q 190 85 200 90" fill="none" stroke="#1b243f" stroke-width="2"/>
+  <path d="M 180 100 Q 190 95 200 100" fill="none" stroke="#1b243f" stroke-width="2"/>
+  
+  <!-- Control Panel -->
+  <rect x="90" y="110" width="30" height="30" fill="none" stroke="#1b243f" stroke-width="2"/>
+  <circle cx="100" cy="120" r="2" fill="#1b243f"/>
+  <circle cx="110" cy="120" r="2" fill="#1b243f"/>
+  <circle cx="100" cy="130" r="2" fill="#1b243f"/>
+  <circle cx="110" cy="130" r="2" fill="#1b243f"/>
+  
+  <!-- Cooling System -->
+  <rect x="180" y="110" width="30" height="30" fill="none" stroke="#1b243f" stroke-width="2"/>
+  <path d="M 190 115 L 200 115 M 190 120 L 200 120 M 190 125 L 200 125" stroke="#1b243f" stroke-width="1"/>
+  
+  <!-- Shelves -->
+  <line x1="90" y1="130" x2="210" y2="130" stroke="#1b243f" stroke-width="2"/>
+  <line x1="90" y1="145" x2="210" y2="145" stroke="#1b243f" stroke-width="2"/>
+  
+  <!-- Product Label -->
+  <text x="150" y="180" text-anchor="middle" fill="#1b243f" font-family="Arial" font-size="14" font-weight="bold">Cold Chamber</text>
+</svg>
+
+
