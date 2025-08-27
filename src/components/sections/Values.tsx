@@ -17,7 +17,7 @@ const aureoleLetters = [
 
 export default function Values() {
   const [currentLetterIndex, setCurrentLetterIndex] = useState(0)
-  const [animationPhase, setAnimationPhase] = useState('start') // 'start', 'colored', 'glow', 'final'
+  const [animationPhase, setAnimationPhase] = useState('start') // 'start', 'colored', 'glow', 'final', 'completed'
   const [showFinalMessage, setShowFinalMessage] = useState(false)
   const lettersRef = useRef<HTMLDivElement>(null)
 
@@ -42,6 +42,11 @@ export default function Values() {
             setTimeout(() => {
               setAnimationPhase('final')
               setShowFinalMessage(true)
+              
+              // After final message, add subtle completion animation
+              setTimeout(() => {
+                setAnimationPhase('completed')
+              }, 3000)
             }, 2000) // Reduced from 3s to 2s
             
             clearInterval(interval)
@@ -67,7 +72,6 @@ export default function Values() {
     <section className="values-section bg-white">
       {/* Background Elements */}
       <div className="values-background">
-        <div className="values-grid" />
         <div className="values-particles">
           <div className="particle" />
           <div className="particle" />
