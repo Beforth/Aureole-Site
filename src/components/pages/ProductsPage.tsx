@@ -1,13 +1,10 @@
 'use client'
 
-// ========================================
-// IMPORTS - External libraries and components
-// ========================================
-import React, { useState, useEffect, useRef } from 'react'  // React hooks for state management and DOM access
-import { motion, AnimatePresence } from 'framer-motion'    // Animation library for smooth transitions
-import { useRouter, useSearchParams } from 'next/navigation'  // Next.js routing and URL parameter handling
+import React, { useState, useEffect, useRef } from 'react'
+import { motion } from 'framer-motion'
+import { useRouter, useSearchParams } from 'next/navigation'
 
-import Footer from '@/components/Footer'  // Footer component for the page
+import Footer from '@/components/Footer'
 
 // ========================================
 // PRODUCT INFORMATION DATA - Static content for product categories
@@ -89,30 +86,37 @@ const productCategories = [
     description: "Advanced environmental chambers for pharmaceutical stability testing with precise temperature and humidity control.",
     subcategories: [
       {
-        name: "Walk in Chamber",
+        name: "Walk In Chambers",
         types: [
-          "Walk in Humidity Chamber",
-          "Walk in BOD Incubator",
+          "Walk In Humidity Chamber",
           "Walk In Cold Chamber",
-          "Walk in Deep Freezer"
+          "Walk In BOD Incubator",
+          "Walk In Deep Freezer"
         ]
       },
       {
-        name: "Stand Alone Chamber",
+        name: "Humidity & Stability",
         types: [
-          "Humidity Chamber",
+          "Humidity Chamber / Stability Chamber",
+          "Photostability Chamber"
+        ]
+      },
+      {
+        name: "Incubators & Ovens",
+        types: [
           "BOD Incubator",
-          "Cold Chamber",
-          "Deep Freezer (Upto -20°C)",
-          "Deep Freezer (Upto -40°C)",
-          "Ultra Low Deep Freezer (Upto -80°C)",
           "Hot Air Oven",
-          "Vaccum Oven",
-          "Photostability Chamber",
-          "Bacteriological Incubator",
-          "Dual Zone Chamber",
-          "Laboratory Oven",
-          "Pharma Refrigerator"
+          "Vacuum Oven",
+          "Muffle Furnace"
+        ]
+      },
+      {
+        name: "Temperature Control",
+        types: [
+          "Cold Chamber",
+          "Deep Freezer (upto -20°C / upto -40°C)",
+          "Ultra Low Deep Freezer (-80°C)",
+          "Pharma Refrigerator / Dual Zone Chamber"
         ]
       }
     ]
@@ -127,7 +131,7 @@ const productCategories = [
         types: [
           "Eco Series",
           "Prime Series",
-          "Prime Series with Chilling (Table Top & Floor Model)",
+          "Prime Series with Chilling",
           "Prime Series with Advance Controlling",
           "Prime Series with Heating & Shaking",
           "Industrial Series"
@@ -145,11 +149,8 @@ const productCategories = [
         ]
       },
       {
-        name: "Refrigerated Circulating Bath",
-        types: [
-          "Vertical Series",
-          "Horizontal Series"
-        ]
+        name: "Refrigerated Circular Bath",
+        types: []
       },
       {
         name: "Air Sampler",
@@ -160,9 +161,7 @@ const productCategories = [
       },
       {
         name: "Stainless Steel Items & Accessories",
-        types: [
-          "Stainless Steel Items & Accessories"
-        ]
+        types: []
       }
     ]
   }
@@ -1657,7 +1656,7 @@ export default function ProductsPage() {
               name: "Constant",
               description: "A water bath is a testing cabinet which used in many industries and laboratories. The container's main substance for testing the specimen is a heated water. The samples are kept inside them to test their behavior in rising temperature. This machine has very distinct applications. It is utilized in biological labs to incubate sensitive which are unable to be kept in direct dry heat. This water bath is successfully used in R&D laboratory, microbiology, quality control, blood bank, pathology, chemical, food processing industry area in Pharmaceutical, Healthcare, Institutions & Food Industry.",
               image: "/images/products/constant-water-bath.png",
-              features: [
+          features: [
                 "Constant temperature control",
                 "Digital display",
                 "Stainless steel construction",
@@ -1724,7 +1723,7 @@ export default function ProductsPage() {
               name: "Circulating",
               description: "A water bath is a testing cabinet which used in many industries and laboratories. The container's main substance for testing the specimen is a heated water. The samples are kept inside them to test their behavior in rising temperature. This machine has very distinct applications. It is utilized in biological labs to incubate sensitive which are unable to be kept in direct dry heat. This water bath is successfully used in R&D laboratory, microbiology, quality control, blood bank, pathology, chemical, food processing industry area in Pharmaceutical, Healthcare, Institutions & Food Industry.",
               image: "/images/products/circulating-water-bath.png",
-              features: [
+          features: [
                 "Circulation system for uniform temperature",
                 "Digital control with high accuracy",
                 "Stainless steel construction",
@@ -2143,14 +2142,14 @@ export default function ProductsPage() {
   return (
     <>
       
-        <div className="min-h-screen bg-gray-50" ref={detailViewRef}>
+        <section className="min-h-screen bg-background-off" ref={detailViewRef}>
           <div className="flex h-screen">
             {/* Left Section - Product List */}
-            <div className="w-80 border-r border-gray-200 flex-shrink-0 sticky top-0 h-screen overflow-y-auto">
-              <div className="p-6 border-b border-gray-200">
+            <div className="w-80 bg-white/80 backdrop-blur-sm border-r border-white/30 flex-shrink-0 sticky top-0 h-screen overflow-y-auto">
+              <div className="p-6 border-b border-gray-200/50">
                 <button 
                   onClick={handleBackToProducts}
-                  className="flex items-center text-primary-500 hover:text-primary-600 mb-4 text-sm font-medium transition-colors"
+                  className="flex items-center text-primary-500 hover:text-text-primary mb-4 text-sm font-medium transition-colors"
                 >
                   <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -2164,9 +2163,9 @@ export default function ProductsPage() {
                 </p>
               </div>
               
-                              <div className="p-4">
-                  <h3 className="text-sm font-semibold text-text-primary mb-3 uppercase tracking-wide">Products</h3>
-                  <div className="space-y-4">
+              <div className="p-4">
+                <h3 className="text-sm font-semibold mb-3 uppercase tracking-wide text-text-primary">Products</h3>
+                <div className="space-y-4">
                   {productDetails[selectedProduct as keyof typeof productDetails]?.products?.map((product, index) => (
                     <div key={index} className="relative">
                       {/* Main Product Category */}
@@ -2181,23 +2180,23 @@ export default function ProductsPage() {
                         }}
                       >
                         <div className="flex items-center">
-                                                 {/* Preloader Icon for Main Types */}
-                       <div className={`w-4 h-4 mr-3 transition-all duration-300 ${
-                         expandedSubtypes === product.name
-                           ? 'animate-dropdown-active'
-                           : selectedIndividualProduct?.name === product.name
-                           ? 'text-primary-500'
-                           : 'text-gray-400'
-                       }`}>
-                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                           <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
-                         </svg>
-                       </div>
+                          {/* Preloader Icon for Main Types */}
+                          <div className={`w-4 h-4 mr-3 transition-all duration-300 ${
+                            expandedSubtypes === product.name
+                              ? 'animate-dropdown-active'
+                              : selectedIndividualProduct?.name === product.name
+                              ? 'bg-gradient-to-r from-primary-400 via-blue-400 to-cyan-400'
+                              : 'text-text-secondary'
+                          }`}>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                              <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                            </svg>
+                          </div>
                           
                           {/* Product Name */}
                           <h4 className={`text-base transition-colors duration-200 ${
                             selectedIndividualProduct?.name === product.name 
-                              ? 'text-primary-500 font-semibold text-lg' 
+                              ? 'font-semibold text-lg bg-gradient-to-r from-primary-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent' 
                               : 'text-text-primary hover:text-primary-600'
                           }`}>
                             {product.name}
@@ -2208,7 +2207,7 @@ export default function ProductsPage() {
                         {(product as any).subtypes && (
                           <div className="ml-2">
                             <svg 
-                              className={`w-4 h-4 transition-transform duration-200 text-gray-400 ${
+                              className={`w-4 h-4 transition-transform duration-200 text-text-secondary ${
                                 expandedSubtypes === product.name ? 'rotate-180' : ''
                               }`} 
                               fill="none" 
@@ -2221,16 +2220,16 @@ export default function ProductsPage() {
                         )}
                       </div>
                       
-                                             {/* Simple Connecting Line and Subtypes */}
-                       {(product as any).subtypes && (
-                         <div className={`relative overflow-hidden transition-all duration-300 ease-out ${
-                           expandedSubtypes === product.name ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                         }`}>
-                                                  {/* Vertical Line */}
-                       <div className="absolute left-2 top-0 w-px h-full bg-gradient-to-b from-primary-300 to-transparent"></div>
+                      {/* Simple Connecting Line and Subtypes */}
+                      {(product as any).subtypes && (
+                        <div className={`relative overflow-hidden transition-all duration-300 ease-out ${
+                          expandedSubtypes === product.name ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                        }`}>
+                          {/* Vertical Line */}
+                          <div className="absolute left-2 top-0 w-px h-full bg-gradient-to-b from-primary-300 to-transparent"></div>
                            
-                           {/* Subtypes */}
-                           <div className="ml-4 mt-3 space-y-3">
+                          {/* Subtypes */}
+                          <div className="ml-4 mt-3 space-y-3">
                             {(product as any).subtypes.map((subtype: any, subtypeIndex: number) => (
                               <div 
                                 key={subtypeIndex}
@@ -2242,7 +2241,7 @@ export default function ProductsPage() {
                                   <svg className={`w-4 h-4 transition-colors duration-200 ${
                                     selectedIndividualProduct?.name === subtype.name
                                       ? 'text-primary-500'
-                                      : 'text-gray-400'
+                                      : 'text-text-secondary'
                                   }`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" />
                                   </svg>
@@ -2251,7 +2250,7 @@ export default function ProductsPage() {
                                 {/* Subtype Name */}
                                 <h5 className={`transition-all duration-300 ease-out ${
                                   selectedIndividualProduct?.name === subtype.name 
-                                    ? 'text-primary-500 font-semibold text-lg' 
+                                    ? 'font-semibold text-lg text-primary-500' 
                                     : 'text-text-secondary hover:text-primary-600 text-sm'
                                 }`}>
                                   {subtype.name}
@@ -2278,16 +2277,16 @@ export default function ProductsPage() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
                         </svg>
                       </div>
-                      <div>
-                        <h1 className="text-4xl font-bold text-text-primary mb-2">{selectedIndividualProduct.name}</h1>
-                        <p className="text-text-secondary text-lg">Product Details</p>
-                      </div>
+                                              <div>
+                          <h1 className="text-4xl font-bold text-text-primary mb-2">{selectedIndividualProduct.name}</h1>
+                          <p className="text-text-secondary text-lg">{selectedIndividualProduct.description}</p>
+                        </div>
                     </div>
                     
                                                                                                                                                                       {/* Product Images and Specifications in Separate Cards */}
                        {/* Product Images Card - Only for products with gallery images */}
                        {selectedIndividualProduct.images && selectedIndividualProduct.images.length > 0 && (
-                         <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 mb-8">
+                         <div className="bg-white/80 backdrop-blur-sm rounded-lg p-6 shadow-sm border border-white/30 mb-8">
                            <div className="max-w-7xl mx-auto">
                              {selectedIndividualProduct.name === "Stainless Steel Items & Accessories" ? (
                                // Special layout for Stainless Steel Items - 2 rows of 5 images each
@@ -2301,8 +2300,8 @@ export default function ProductsPage() {
                                          alt={`${selectedIndividualProduct.name} - Image ${index + 1}`}
                                          className="w-full h-48 object-contain rounded-lg"
                                        />
-                                       <div className="mt-2 p-2 bg-gray-50 rounded-lg">
-                                         <p className="text-sm font-medium text-text-primary text-center">
+                                       <div className="mt-2 p-2 glass rounded-lg">
+                                         <p className="text-sm font-medium text-center">
                                            {index === 0 && "Test Tube Racks - Sheet"}
                                            {index === 1 && "Test Tube Racks - Wire Mesh"}
                                            {index === 2 && "Weight Rings"}
@@ -2322,8 +2321,8 @@ export default function ProductsPage() {
                                          alt={`${selectedIndividualProduct.name} - Image ${index + 6}`}
                                          className="w-full h-48 object-contain rounded-lg"
                                        />
-                                       <div className="mt-2 p-2 bg-gray-50 rounded-lg">
-                                         <p className="text-sm font-medium text-text-primary text-center">
+                                       <div className="mt-2 p-2 glass rounded-lg">
+                                         <p className="text-sm font-medium text-center">
                                            {index === 0 && "Swab Plates - Plate"}
                                            {index === 1 && "Swab Plates - Perforated"}
                                            {index === 2 && "Lid & Stands - Tray"}
@@ -2353,7 +2352,7 @@ export default function ProductsPage() {
                                  
                                  {/* Specifications on the right */}
                                  <div className="flex-1">
-                                   <h3 className="text-xl font-semibold text-text-primary mb-4 flex items-center">
+                                   <h3 className="text-xl font-semibold mb-4 flex items-center">
                                      <div className="w-6 h-6 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
                                        <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
@@ -2364,8 +2363,8 @@ export default function ProductsPage() {
                                    </h3>
                                    <div className="space-y-3">
                                      {Object.entries(selectedIndividualProduct.specifications).map(([key, value], specIndex) => (
-                                       <div key={specIndex} className="flex justify-between items-center py-2 border-b border-gray-100 last:border-b-0">
-                                         <span className="font-medium text-text-primary text-base">{key}</span>
+                                       <div key={specIndex} className="flex justify-between items-center py-2 border-b border-white/20 last:border-b-0">
+                                         <span className="font-medium text-base">{key}</span>
                                          <span className="text-text-secondary text-base">{value as string}</span>
                                        </div>
                                      ))}
@@ -2383,7 +2382,7 @@ export default function ProductsPage() {
                                        className="w-full h-auto rounded-lg"
                                      />
                                      {selectedIndividualProduct.imageDescriptions && selectedIndividualProduct.imageDescriptions[index] && (
-                                       <div className="mt-2 p-3 bg-gray-50 rounded-lg">
+                                       <div className="mt-2 p-3 glass rounded-lg">
                                          <p className="text-sm text-text-secondary leading-relaxed">
                                            {selectedIndividualProduct.imageDescriptions[index]}
                                          </p>
@@ -2399,26 +2398,28 @@ export default function ProductsPage() {
 
 
 
+
+
                        {/* Main Product Card - Image, Features, and Specifications */}
                        {(!selectedIndividualProduct.images || selectedIndividualProduct.images.length === 0) && (
-                         <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 mb-8">
-                           <div className="flex items-start gap-6">
+                         <div className="bg-white/80 backdrop-blur-sm rounded-lg p-6 shadow-sm border border-white/30 mb-8">
+                           <div className="flex items-start gap-8">
                              {/* Product Image */}
-                             <div className="w-64">
+                             <div className="w-80 flex-shrink-0">
                                <img 
                                  src={selectedIndividualProduct.image} 
                                  alt={selectedIndividualProduct.name}
-                                 className="w-full h-auto rounded-lg shadow-md"
+                                 className="w-full h-80 object-contain rounded-lg shadow-md bg-white/10 p-4"
                                />
                              </div>
                              
                              {/* Features and Specifications */}
-                             <div className="flex-1">
-                               <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
+                             <div className="flex-1 min-w-0 pl-4">
+                               <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
                                  {/* Key Features */}
                                  {selectedIndividualProduct.features && selectedIndividualProduct.features.length > 0 && (
                                    <div>
-                                     <h3 className="text-xl font-semibold text-text-primary mb-4 flex items-center">
+                                     <h3 className="text-xl font-semibold mb-4 flex items-center">
                                        <div className="w-6 h-6 bg-green-100 rounded-lg flex items-center justify-center mr-3">
                                          <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -2426,11 +2427,11 @@ export default function ProductsPage() {
                                        </div>
                                        Key Features
                                      </h3>
-                                     <ul className="space-y-3">
+                                     <ul className="space-y-2">
                                        {selectedIndividualProduct.features.map((feature: string, index: number) => (
                                          <li key={index} className="flex items-start">
                                            <div className="w-2 h-2 bg-primary-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                           <span className="text-text-secondary text-base">{feature}</span>
+                                           <span className="text-text-secondary text-sm">{feature}</span>
                                          </li>
                                        ))}
                                      </ul>
@@ -2440,7 +2441,7 @@ export default function ProductsPage() {
                                  {/* Specifications */}
                                  {selectedIndividualProduct.specifications && Object.keys(selectedIndividualProduct.specifications).length > 0 && (
                                    <div>
-                                     <h3 className="text-xl font-semibold text-text-primary mb-4 flex items-center">
+                                     <h3 className="text-xl font-semibold mb-4 flex items-center">
                                        <div className="w-6 h-6 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
                                          <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
@@ -2449,11 +2450,11 @@ export default function ProductsPage() {
                                        </div>
                                        Specifications
                                      </h3>
-                                     <div className="space-y-3">
-                                       {Object.entries(selectedIndividualProduct.specifications).map(([key, value], specIndex) => (
-                                         <div key={specIndex} className="flex justify-between items-center py-2 border-b border-gray-100 last:border-b-0">
-                                           <span className="font-medium text-text-primary text-base">{key}</span>
-                                           <span className="text-text-secondary text-base">{value as string}</span>
+                                                                        <div className="space-y-2">
+                                     {Object.entries(selectedIndividualProduct.specifications).map(([key, value], specIndex) => (
+                                       <div key={specIndex} className="flex justify-between items-center py-1.5 border-b border-white/20 last:border-b-0">
+                                           <span className="font-medium text-sm">{key}</span>
+                                           <span className="text-text-secondary text-sm">{value as string}</span>
                                          </div>
                                        ))}
                                      </div>
@@ -2467,8 +2468,8 @@ export default function ProductsPage() {
 
                         {/* Key Features Card */}
                         {selectedIndividualProduct.name === "21 CFR Model" && (
-                          <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 mb-8">
-                            <h3 className="text-xl font-semibold text-text-primary mb-4 flex items-center">
+                          <div className="bg-white/80 backdrop-blur-sm rounded-lg p-6 shadow-sm border border-white/30 mb-8">
+                            <h3 className="text-xl font-semibold mb-4 flex items-center">
                         <div className="w-6 h-6 bg-green-100 rounded-lg flex items-center justify-center mr-3">
                           <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -2503,8 +2504,8 @@ export default function ProductsPage() {
 
                         {/* Key Features Text Block */}
                         {selectedIndividualProduct.name === "21 CFR Model" && (
-                          <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 mb-8">
-                            <h3 className="text-xl font-semibold text-text-primary mb-4">Key Features (Text Block)</h3>
+                          <div className="bg-white/80 backdrop-blur-sm rounded-lg p-6 shadow-sm border border-white/30 mb-8">
+                            <h3 className="text-xl font-semibold mb-4">Key Features (Text Block)</h3>
                             <div className="space-y-4 text-text-secondary text-base leading-relaxed">
                               <p><strong>Innovative key features for 21 CFR Air Sampler</strong></p>
                               <p>Web-based software for seamless data downloading</p>
@@ -2519,19 +2520,14 @@ export default function ProductsPage() {
 
                   </div>
  
-                   {/* Description below */}
-                   <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 mb-8">
-                     <p className="text-lg leading-relaxed text-text-secondary">
-                       {selectedIndividualProduct.description}
-                     </p>
-                   </div>
+
 
 
 
                   {/* Models Table */}
                   {selectedIndividualProduct.models && (
                     <div className="mb-8">
-                      <h3 className="text-2xl font-semibold text-text-primary mb-6 flex items-center">
+                      <h3 className="text-2xl font-semibold mb-1 flex items-center">
                         <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3">
                           <svg className="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
@@ -2543,65 +2539,65 @@ export default function ProductsPage() {
                       <div className="overflow-x-auto">
                         {selectedIndividualProduct.name === "Pharma Refrigerator / Dual Zone Chamber" ? (
                           // Dual Zone Chamber Models Table
-                          <table className="w-full border-collapse border border-gray-300">
+                          <table className="w-full border-collapse border border-white/20 glass">
                             <thead>
-                              <tr className="bg-gray-50">
-                                <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-text-primary">Model</th>
-                                <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-text-primary">Zone</th>
-                                <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-text-primary">Capacity (L)</th>
-                                <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-text-primary" colSpan={3}>Interior Dimension in MM</th>
-                                <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-text-primary">No Of Trays</th>
-                                <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-text-primary" colSpan={3}>Exterior Dimension in MM</th>
-                                <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-text-primary">Power Supply</th>
+                              <tr className="bg-white/10">
+                                <th className="border border-white/20 px-4 py-3 text-left font-semibold">Model</th>
+                                <th className="border border-white/20 px-4 py-3 text-left font-semibold">Zone</th>
+                                <th className="border border-white/20 px-4 py-3 text-left font-semibold">Capacity (L)</th>
+                                <th className="border border-white/20 px-4 py-3 text-left font-semibold" colSpan={3}>Interior Dimension in MM</th>
+                                <th className="border border-white/20 px-4 py-3 text-left font-semibold">No Of Trays</th>
+                                <th className="border border-white/20 px-4 py-3 text-left font-semibold" colSpan={3}>Exterior Dimension in MM</th>
+                                <th className="border border-white/20 px-4 py-3 text-left font-semibold">Power Supply</th>
                               </tr>
-                              <tr className="bg-gray-50">
-                                <th className="border border-gray-300 px-4 py-2 text-left font-semibold text-text-primary"></th>
-                                <th className="border border-gray-300 px-4 py-2 text-left font-semibold text-text-primary"></th>
-                                <th className="border border-gray-300 px-4 py-2 text-left font-semibold text-text-primary"></th>
-                                <th className="border border-gray-300 px-4 py-2 text-left font-semibold text-text-primary">Width</th>
-                                <th className="border border-gray-300 px-4 py-2 text-left font-semibold text-text-primary">Depth</th>
-                                <th className="border border-gray-300 px-4 py-2 text-left font-semibold text-text-primary">Height</th>
-                                <th className="border border-gray-300 px-4 py-2 text-left font-semibold text-text-primary"></th>
-                                <th className="border border-gray-300 px-4 py-2 text-left font-semibold text-text-primary">Width</th>
-                                <th className="border border-gray-300 px-4 py-2 text-left font-semibold text-text-primary">Depth</th>
-                                <th className="border border-gray-300 px-4 py-2 text-left font-semibold text-text-primary">Height</th>
-                                <th className="border border-gray-300 px-4 py-2 text-left font-semibold text-text-primary"></th>
-                              </tr>
+                                                              <tr className="bg-white/5">
+                                  <th className="border border-white/20 px-4 py-2 text-left font-semibold"></th>
+                                  <th className="border border-white/20 px-4 py-2 text-left font-semibold"></th>
+                                  <th className="border border-white/20 px-4 py-2 text-left font-semibold"></th>
+                                  <th className="border border-white/20 px-4 py-2 text-left font-semibold">Width</th>
+                                  <th className="border border-white/20 px-4 py-2 text-left font-semibold">Depth</th>
+                                  <th className="border border-white/20 px-4 py-2 text-left font-semibold">Height</th>
+                                  <th className="border border-white/20 px-4 py-2 text-left font-semibold"></th>
+                                  <th className="border border-white/20 px-4 py-2 text-left font-semibold">Width</th>
+                                  <th className="border border-white/20 px-4 py-2 text-left font-semibold">Depth</th>
+                                  <th className="border border-white/20 px-4 py-2 text-left font-semibold">Height</th>
+                                  <th className="border border-white/20 px-4 py-2 text-left font-semibold"></th>
+                                </tr>
                             </thead>
                             <tbody>
                               {selectedIndividualProduct.models.map((model: any, index: number) => (
                                 model.zones ? (
                                   // Dual zone model - create rows for each zone
                                   model.zones.map((zone: any, zoneIndex: number) => (
-                                    <tr key={`${index}-${zoneIndex}`} className={zoneIndex % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                                    <tr key={`${index}-${zoneIndex}`} className={zoneIndex % 2 === 0 ? 'bg-white/5' : 'bg-white/10'}>
                                       {zoneIndex === 0 ? (
-                                        <td className="border border-gray-300 px-4 py-3 text-sm font-medium text-text-primary" rowSpan={model.zones.length}>
+                                        <td className="border border-white/20 px-4 py-3 text-sm font-medium" rowSpan={model.zones.length}>
                                           {model.model}
                                         </td>
                                       ) : null}
-                                      <td className="border border-gray-300 px-4 py-3 text-sm text-text-secondary">{zone.name}</td>
-                                      <td className="border border-gray-300 px-4 py-3 text-sm text-text-secondary">{zone.capacity}</td>
-                                      <td className="border border-gray-300 px-4 py-3 text-sm text-text-secondary">{zone.interior.width}</td>
-                                      <td className="border border-gray-300 px-4 py-3 text-sm text-text-secondary">{zone.interior.depth}</td>
-                                      <td className="border border-gray-300 px-4 py-3 text-sm text-text-secondary">{zone.interior.height}</td>
-                                      <td className="border border-gray-300 px-4 py-3 text-sm text-text-secondary">{zone.trays}</td>
+                                      <td className="border border-gray-200 px-4 py-3 text-sm text-text-secondary">{zone.name}</td>
+                                      <td className="border border-gray-600/50 px-4 py-3 text-sm text-text-secondary">{zone.capacity}</td>
+                                      <td className="border border-white/20 px-4 py-3 text-sm text-text-secondary">{zone.interior.width}</td>
+                                      <td className="border border-white/20 px-4 py-3 text-sm text-text-secondary">{zone.interior.depth}</td>
+                                      <td className="border border-white/20 px-4 py-3 text-sm text-text-secondary">{zone.interior.height}</td>
+                                      <td className="border border-white/20 px-4 py-3 text-sm text-text-secondary">{zone.trays}</td>
                                       {zoneIndex === 0 ? (
-                                        <td className="border border-gray-300 px-4 py-3 text-sm text-text-secondary" rowSpan={model.zones.length}>
+                                        <td className="border border-white/20 px-4 py-3 text-sm text-text-secondary" rowSpan={model.zones.length}>
                                           {model.exterior.width}
                                         </td>
                                       ) : null}
                                       {zoneIndex === 0 ? (
-                                        <td className="border border-gray-300 px-4 py-3 text-sm text-text-secondary" rowSpan={model.zones.length}>
+                                        <td className="border border-white/20 px-4 py-3 text-sm text-text-secondary" rowSpan={model.zones.length}>
                                           {model.exterior.depth}
                                         </td>
                                       ) : null}
                                       {zoneIndex === 0 ? (
-                                        <td className="border border-gray-300 px-4 py-3 text-sm text-text-secondary" rowSpan={model.zones.length}>
+                                        <td className="border border-white/20 px-4 py-3 text-sm text-text-secondary" rowSpan={model.zones.length}>
                                           {model.exterior.height}
                                         </td>
                                       ) : null}
                                       {zoneIndex === 0 ? (
-                                        <td className="border border-gray-300 px-4 py-3 text-sm text-text-secondary" rowSpan={model.zones.length}>
+                                        <td className="border border-white/20 px-4 py-3 text-sm text-text-secondary" rowSpan={model.zones.length}>
                                           {model.powerSupply}
                                         </td>
                                       ) : null}
@@ -2609,18 +2605,18 @@ export default function ProductsPage() {
                                   ))
                                 ) : (
                                   // Single zone model
-                                  <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                                    <td className="border border-gray-300 px-4 py-3 text-sm font-medium text-text-primary">{model.model}</td>
-                                    <td className="border border-gray-300 px-4 py-3 text-sm text-text-secondary">-</td>
-                                    <td className="border border-gray-300 px-4 py-3 text-sm text-text-secondary">{model.capacity}</td>
-                                    <td className="border border-gray-300 px-4 py-3 text-sm text-text-secondary">{model.interior.width}</td>
-                                    <td className="border border-gray-300 px-4 py-3 text-sm text-text-secondary">{model.interior.depth}</td>
-                                    <td className="border border-gray-300 px-4 py-3 text-sm text-text-secondary">{model.interior.height}</td>
-                                    <td className="border border-gray-300 px-4 py-3 text-sm text-text-secondary">{model.trays}</td>
-                                    <td className="border border-gray-300 px-4 py-3 text-sm text-text-secondary">{model.exterior.width}</td>
-                                    <td className="border border-gray-300 px-4 py-3 text-sm text-text-secondary">{model.exterior.depth}</td>
-                                    <td className="border border-gray-300 px-4 py-3 text-sm text-text-secondary">{model.exterior.height}</td>
-                                    <td className="border border-gray-300 px-4 py-3 text-sm text-text-secondary">{model.powerSupply}</td>
+                                  <tr key={index} className={index % 2 === 0 ? 'bg-white/5' : 'bg-white/10'}>
+                                    <td className="border border-white/20 px-4 py-3 text-sm font-medium">{model.model}</td>
+                                    <td className="border border-white/20 px-4 py-3 text-sm text-text-secondary">-</td>
+                                    <td className="border border-white/20 px-4 py-3 text-sm text-text-secondary">{model.capacity}</td>
+                                    <td className="border border-white/20 px-4 py-3 text-sm text-text-secondary">{model.interior.width}</td>
+                                    <td className="border border-white/20 px-4 py-3 text-sm text-text-secondary">{model.interior.depth}</td>
+                                    <td className="border border-white/20 px-4 py-3 text-sm text-text-secondary">{model.interior.height}</td>
+                                    <td className="border border-white/20 px-4 py-3 text-sm text-text-secondary">{model.trays}</td>
+                                    <td className="border border-white/20 px-4 py-3 text-sm text-text-secondary">{model.exterior.width}</td>
+                                    <td className="border border-white/20 px-4 py-3 text-sm text-text-secondary">{model.exterior.depth}</td>
+                                    <td className="border border-white/20 px-4 py-3 text-sm text-text-secondary">{model.exterior.height}</td>
+                                    <td className="border border-white/20 px-4 py-3 text-sm text-text-secondary">{model.powerSupply}</td>
                                   </tr>
                                 )
                               ))}
@@ -2629,42 +2625,42 @@ export default function ProductsPage() {
                         ) : (
                           // Standard Models Table - Hide for Eco Series, Prime Series, Prime Series with Chilling, Prime Series with Advance Controlling, Prime Series with Heating & Shaking, Constant Water Bath, Circulating Water Bath, Steam Bath, Oil Bath, Dry Bath, Chilled Circulating Bath, Refrigerated Circular Bath, and Air Sampler Basic Model
                           selectedIndividualProduct.name !== "Eco Series" && selectedIndividualProduct.name !== "Prime Series" && selectedIndividualProduct.name !== "Prime Series with Chilling" && selectedIndividualProduct.name !== "Prime Series with Advance Controlling" && selectedIndividualProduct.name !== "Prime Series with Heating & Shaking" && selectedIndividualProduct.name !== "Constant" && selectedIndividualProduct.name !== "Circulating" && selectedIndividualProduct.name !== "Steam Bath" && selectedIndividualProduct.name !== "Oil Bath" && selectedIndividualProduct.name !== "Dry Bath" && selectedIndividualProduct.name !== "Chilled Circulating Bath" && selectedIndividualProduct.name !== "Refrigerated Circular Bath" && (
-                            <table className="w-full border-collapse border border-gray-300">
+                            <table className="w-full border-collapse border border-white/20 glass">
                               <thead>
-                                <tr className="bg-gray-50">
-                                  <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-text-primary">Model</th>
-                                  <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-text-primary">Capacity (L)</th>
-                                  <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-text-primary" colSpan={3}>Interior Dimension in MM</th>
-                                  <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-text-primary" colSpan={3}>Exterior Dimension in MM</th>
-                                  <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-text-primary">No Of Trays</th>
-                                  <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-text-primary">Power Supply</th>
+                                <tr className="bg-white/10">
+                                  <th className="border border-white/20 px-4 py-3 text-left font-semibold">Model</th>
+                                  <th className="border border-white/20 px-4 py-3 text-left font-semibold">Capacity (L)</th>
+                                  <th className="border border-white/20 px-4 py-3 text-left font-semibold" colSpan={3}>Interior Dimension in MM</th>
+                                  <th className="border border-white/20 px-4 py-3 text-left font-semibold" colSpan={3}>Exterior Dimension in MM</th>
+                                  <th className="border border-white/20 px-4 py-3 text-left font-semibold">No Of Trays</th>
+                                  <th className="border border-white/20 px-4 py-3 text-left font-semibold">Power Supply</th>
                                 </tr>
-                                <tr className="bg-gray-50">
-                                  <th className="border border-gray-300 px-4 py-2 text-left font-semibold text-text-primary"></th>
-                                  <th className="border border-gray-300 px-4 py-2 text-left font-semibold text-text-primary"></th>
-                                  <th className="border border-gray-300 px-4 py-2 text-left font-semibold text-text-primary">Width</th>
-                                  <th className="border border-gray-300 px-4 py-2 text-left font-semibold text-text-primary">Depth</th>
-                                  <th className="border border-gray-300 px-4 py-2 text-left font-semibold text-text-primary">Height</th>
-                                  <th className="border border-gray-300 px-4 py-2 text-left font-semibold text-text-primary">Width</th>
-                                  <th className="border border-gray-300 px-4 py-2 text-left font-semibold text-text-primary">Depth</th>
-                                  <th className="border border-gray-300 px-4 py-2 text-left font-semibold text-text-primary">Height</th>
-                                  <th className="border border-gray-300 px-4 py-2 text-left font-semibold text-text-primary"></th>
-                                  <th className="border border-gray-300 px-4 py-2 text-left font-semibold text-text-primary"></th>
+                                <tr className="bg-white/5">
+                                  <th className="border border-white/20 px-4 py-2 text-left font-semibold"></th>
+                                  <th className="border border-white/20 px-4 py-2 text-left font-semibold"></th>
+                                  <th className="border border-white/20 px-4 py-2 text-left font-semibold">Width</th>
+                                  <th className="border border-white/20 px-4 py-2 text-left font-semibold">Depth</th>
+                                  <th className="border border-white/20 px-4 py-2 text-left font-semibold">Height</th>
+                                  <th className="border border-white/20 px-4 py-2 text-left font-semibold">Width</th>
+                                  <th className="border border-white/20 px-4 py-2 text-left font-semibold">Depth</th>
+                                  <th className="border border-white/20 px-4 py-2 text-left font-semibold">Height</th>
+                                  <th className="border border-white/20 px-4 py-2 text-left font-semibold"></th>
+                                  <th className="border border-white/20 px-4 py-2 text-left font-semibold"></th>
                                 </tr>
                               </thead>
                               <tbody>
                                 {selectedIndividualProduct.models.map((model: any, index: number) => (
-                                  <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                                    <td className="border border-gray-300 px-4 py-3 text-sm font-medium text-text-primary">{model.model}</td>
-                                    <td className="border border-gray-300 px-4 py-3 text-sm text-text-secondary">{model.capacity}</td>
-                                    <td className="border border-gray-300 px-4 py-3 text-sm text-text-secondary">{model.interior.width}</td>
-                                    <td className="border border-gray-300 px-4 py-3 text-sm text-text-secondary">{model.interior.depth}</td>
-                                    <td className="border border-gray-300 px-4 py-3 text-sm text-text-secondary">{model.interior.height}</td>
-                                    <td className="border border-gray-300 px-4 py-3 text-sm text-text-secondary">{model.exterior.width}</td>
-                                    <td className="border border-gray-300 px-4 py-3 text-sm text-text-secondary">{model.exterior.depth}</td>
-                                    <td className="border border-gray-300 px-4 py-3 text-sm text-text-secondary">{model.exterior.height}</td>
-                                    <td className="border border-gray-300 px-4 py-3 text-sm text-text-secondary">{model.trays}</td>
-                                    <td className="border border-gray-300 px-4 py-3 text-sm text-text-secondary">{model.powerSupply}</td>
+                                  <tr key={index} className={index % 2 === 0 ? 'bg-white/5' : 'bg-white/10'}>
+                                    <td className="border border-white/20 px-4 py-3 text-sm font-medium">{model.model}</td>
+                                    <td className="border border-white/20 px-4 py-3 text-sm text-text-secondary">{model.capacity}</td>
+                                    <td className="border border-white/20 px-4 py-3 text-sm text-text-secondary">{model.interior.width}</td>
+                                    <td className="border border-white/20 px-4 py-3 text-sm text-text-secondary">{model.interior.depth}</td>
+                                    <td className="border border-white/20 px-4 py-3 text-sm text-text-secondary">{model.interior.height}</td>
+                                    <td className="border border-white/20 px-4 py-3 text-sm text-text-secondary">{model.exterior.width}</td>
+                                    <td className="border border-white/20 px-4 py-3 text-sm text-text-secondary">{model.exterior.depth}</td>
+                                    <td className="border border-white/20 px-4 py-3 text-sm text-text-secondary">{model.exterior.height}</td>
+                                    <td className="border border-white/20 px-4 py-3 text-sm text-text-secondary">{model.trays}</td>
+                                    <td className="border border-white/20 px-4 py-3 text-sm text-text-secondary">{model.powerSupply}</td>
                                   </tr>
                                 ))}
                               </tbody>
@@ -2683,119 +2679,119 @@ export default function ProductsPage() {
                       {selectedIndividualProduct.name === "Eco Series" && (
                         <div className="mt-8">
                           <div className="overflow-x-auto">
-                            <table className="w-full border-collapse border border-gray-300 text-sm">
+                            <table className="w-full border-collapse border border-white/20 text-sm glass">
                               <thead>
-                                <tr className="bg-gray-50">
-                                  <th className="border border-gray-300 px-3 py-2 text-left font-semibold text-text-primary">Specification</th>
-                                  <th className="border border-gray-300 px-3 py-2 text-left font-semibold text-text-primary">AP_TT_UB_ES_3</th>
-                                  <th className="border border-gray-300 px-3 py-2 text-left font-semibold text-text-primary">AP_TT_UB_ES_5</th>
-                                  <th className="border border-gray-300 px-3 py-2 text-left font-semibold text-text-primary">AP_TT_UB_ES_10</th>
-                                  <th className="border border-gray-300 px-3 py-2 text-left font-semibold text-text-primary">AP_TT_UB_ES_22</th>
+                                <tr className="bg-white/10">
+                                  <th className="border border-white/20 px-3 py-2 text-left font-semibold">Specification</th>
+                                  <th className="border border-white/20 px-3 py-2 text-left font-semibold">AP_TT_UB_ES_3</th>
+                                  <th className="border border-white/20 px-3 py-2 text-left font-semibold">AP_TT_UB_ES_5</th>
+                                  <th className="border border-white/20 px-3 py-2 text-left font-semibold">AP_TT_UB_ES_10</th>
+                                  <th className="border border-white/20 px-3 py-2 text-left font-semibold">AP_TT_UB_ES_22</th>
                                 </tr>
                               </thead>
                               <tbody>
-                                <tr className="bg-white">
-                                  <td className="border border-gray-300 px-3 py-2 font-medium text-text-primary">Tank Size (L*W*H)</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">240*140*100</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">235*235*100</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">300*240*150</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">500*300*150</td>
+                                <tr className="bg-white/5">
+                                  <td className="border border-white/20 px-3 py-2 font-medium">Tank Size (L*W*H)</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">240*140*100</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">235*235*100</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">300*240*150</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">500*300*150</td>
                                 </tr>
-                                <tr className="bg-gray-50">
-                                  <td className="border border-gray-300 px-3 py-2 font-medium text-text-primary">Outer Size (L*W*H) (mm)</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">265*162*240</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">265*265*250</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">325*276*260</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">530*320*400</td>
+                                <tr className="bg-white/10">
+                                  <td className="border border-white/20 px-3 py-2 font-medium">Outer Size (L*W*H) (mm)</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">265*162*240</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">265*265*250</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">325*276*260</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">530*320*400</td>
                                 </tr>
-                                <tr className="bg-white">
-                                  <td className="border border-gray-300 px-3 py-2 font-medium text-text-primary">Tank</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">SS 304</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">SS 304</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">SS 304</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">SS 304</td>
+                                <tr className="bg-white/5">
+                                  <td className="border border-white/20 px-3 py-2 font-medium">Tank</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">SS 304</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">SS 304</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">SS 304</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">SS 304</td>
                                 </tr>
-                                <tr className="bg-gray-50">
-                                  <td className="border border-gray-300 px-3 py-2 font-medium text-text-primary">Enclosure</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">SS 304</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">SS 304</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">SS 304</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">SS 304</td>
+                                <tr className="bg-white/10">
+                                  <td className="border border-white/20 px-3 py-2 font-medium">Enclosure</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">SS 304</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">SS 304</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">SS 304</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">SS 304</td>
                                 </tr>
-                                <tr className="bg-white">
-                                  <td className="border border-gray-300 px-3 py-2 font-medium text-text-primary">Tank Capacity</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">3 Liter</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">5 Liter</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">10 Liter</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">22 Liter</td>
+                                <tr className="bg-white/5">
+                                  <td className="border border-white/20 px-3 py-2 font-medium">Tank Capacity</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">3 Liter</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">5 Liter</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">10 Liter</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">22 Liter</td>
                                 </tr>
-                                <tr className="bg-gray-50">
-                                  <td className="border border-gray-300 px-3 py-2 font-medium text-text-primary">Ultrasonic Power</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">100 Watts</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">100 Watts</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">250 Watts</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">400 Watts</td>
+                                <tr className="bg-white/10">
+                                  <td className="border border-white/20 px-3 py-2 font-medium">Ultrasonic Power</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">100 Watts</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">100 Watts</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">250 Watts</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">400 Watts</td>
                                 </tr>
-                                <tr className="bg-white">
-                                  <td className="border border-gray-300 px-3 py-2 font-medium text-text-primary">Heater Power</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">100 Watts</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">200 Watts</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">200 Watts</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">500 Watts</td>
+                                <tr className="bg-white/5">
+                                  <td className="border border-white/20 px-3 py-2 font-medium">Heater Power</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">100 Watts</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">200 Watts</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">200 Watts</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">500 Watts</td>
                                 </tr>
-                                <tr className="bg-gray-50">
-                                  <td className="border border-gray-300 px-3 py-2 font-medium text-text-primary">PSP</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">NA</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">NA</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">NA</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">NA</td>
+                                <tr className="bg-white/10">
+                                  <td className="border border-white/20 px-3 py-2 font-medium">PSP</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">NA</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">NA</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">NA</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">NA</td>
                                 </tr>
-                                <tr className="bg-white">
-                                  <td className="border border-gray-300 px-3 py-2 font-medium text-text-primary">Ultrasonic Freq.</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">33±3</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">40/33±3</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">40/33±3</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">40/33±3</td>
+                                <tr className="bg-white/5">
+                                  <td className="border border-white/20 px-3 py-2 font-medium">Ultrasonic Freq.</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">33±3</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">40/33±3</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">40/33±3</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">40/33±3</td>
                                 </tr>
-                                <tr className="bg-gray-50">
-                                  <td className="border border-gray-300 px-3 py-2 font-medium text-text-primary">Timer Digital</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">0 to 15 min</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">0 to 99 min</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">0 to 99 min</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">0 to 99 min</td>
+                                <tr className="bg-white/10">
+                                  <td className="border border-white/20 px-3 py-2 font-medium">Timer Digital</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">0 to 15 min</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">0 to 99 min</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">0 to 99 min</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">0 to 99 min</td>
                                 </tr>
-                                <tr className="bg-white">
-                                  <td className="border border-gray-300 px-3 py-2 font-medium text-text-primary">Power Input</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">230 VAC</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">230 VAC</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">230 VAC</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">230 VAC</td>
+                                <tr className="bg-white/5">
+                                  <td className="border border-white/20 px-3 py-2 font-medium">Power Input</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">230 VAC</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">230 VAC</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">230 VAC</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">230 VAC</td>
                                 </tr>
-                                <tr className="bg-gray-50">
-                                  <td className="border border-gray-300 px-3 py-2 font-medium text-text-primary">Degas Mode</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">On / Off</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">On / Off</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">On / Off</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">On / Off</td>
+                                <tr className="bg-white/10">
+                                  <td className="border border-white/20 px-3 py-2 font-medium">Degas Mode</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">On / Off</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">On / Off</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">On / Off</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">On / Off</td>
                                 </tr>
-                                <tr className="bg-white">
-                                  <td className="border border-gray-300 px-3 py-2 font-medium text-text-primary">Temperature</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">45°C (Inbuilt)</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">Amb. - 60°C</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">Amb. - 60°C</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">Amb. - 60°C</td>
+                                <tr className="bg-white/5">
+                                  <td className="border border-white/20 px-3 py-2 font-medium">Temperature</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">45°C (Inbuilt)</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">Amb. - 60°C</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">Amb. - 60°C</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">Amb. - 60°C</td>
                                 </tr>
-                                <tr className="bg-gray-50">
-                                  <td className="border border-gray-300 px-3 py-2 font-medium text-text-primary">Transducer</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary" colSpan={4}>Imported make PZT type bonded at the bottom of the tank with weld bond technique</td>
+                                <tr className="bg-white/10">
+                                  <td className="border border-white/20 px-3 py-2 font-medium">Transducer</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary" colSpan={4}>Imported make PZT type bonded at the bottom of the tank with weld bond technique</td>
                                 </tr>
-                                <tr className="bg-white">
-                                  <td className="border border-gray-300 px-3 py-2 font-medium text-text-primary">Ultrasonic Gen.</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary" colSpan={4}>Advance latest MOSFET/IGBT based smps</td>
+                                <tr className="bg-white/5">
+                                  <td className="border border-white/20 px-3 py-2 font-medium">Ultrasonic Gen.</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary" colSpan={4}>Advance latest MOSFET/IGBT based smps</td>
                                 </tr>
-                                <tr className="bg-gray-50">
-                                  <td className="border border-gray-300 px-3 py-2 font-medium text-text-primary">Accessories</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary" colSpan={4}>Lid, Basket, Drain Valve, Powercard, User friendly operation manual</td>
+                                <tr className="bg-white/10">
+                                  <td className="border border-white/20 px-3 py-2 font-medium">Accessories</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary" colSpan={4}>Lid, Basket, Drain Valve, Powercard, User friendly operation manual</td>
                                 </tr>
                               </tbody>
                             </table>
@@ -2811,39 +2807,39 @@ export default function ProductsPage() {
                       {selectedIndividualProduct.name === "Prime Series" && (
                         <div className="mt-8">
                           <div className="overflow-x-auto">
-                            <table className="w-full border-collapse border border-gray-300 text-sm">
+                            <table className="w-full border-collapse border border-white/20 text-sm glass">
                               <thead>
-                                <tr className="bg-gray-50">
-                                  <th className="border border-gray-300 px-3 py-2 text-left font-semibold text-text-primary">Specification</th>
-                                  <th className="border border-gray-300 px-3 py-2 text-left font-semibold text-text-primary">AP_TT_UB_PS_6.5</th>
-                                  <th className="border border-gray-300 px-3 py-2 text-left font-semibold text-text-primary">AP_TT_UB_PS_20</th>
-                                  <th className="border border-gray-300 px-3 py-2 text-left font-semibold text-text-primary">AP_TT_UB_PS_30</th>
+                                <tr className="bg-white/10">
+                                  <th className="border border-white/20 px-3 py-2 text-left font-semibold">Specification</th>
+                                  <th className="border border-white/20 px-3 py-2 text-left font-semibold">AP_TT_UB_PS_6.5</th>
+                                  <th className="border border-white/20 px-3 py-2 text-left font-semibold">AP_TT_UB_PS_20</th>
+                                  <th className="border border-white/20 px-3 py-2 text-left font-semibold">AP_TT_UB_PS_30</th>
                                 </tr>
                               </thead>
                               <tbody>
-                                <tr className="bg-white">
-                                  <td className="border border-gray-300 px-3 py-2 font-medium text-text-primary">Tank Size (L*W*H) (inches)</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">12*6*6</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">14*12*8</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">15*15*8</td>
+                                <tr className="bg-white/5">
+                                  <td className="border border-white/20 px-3 py-2 font-medium">Tank Size (L*W*H) (inches)</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">12*6*6</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">14*12*8</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">15*15*8</td>
                                 </tr>
-                                <tr className="bg-gray-50">
-                                  <td className="border border-gray-300 px-3 py-2 font-medium text-text-primary">Outer Size (L*W*H) (inches)</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">15*9.8*15.4</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">17.4*16*16.8</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">19.2*19.8*19</td>
+                                <tr className="bg-white/10">
+                                  <td className="border border-white/20 px-3 py-2 font-medium">Outer Size (L*W*H) (inches)</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">15*9.8*15.4</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">17.4*16*16.8</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">19.2*19.8*19</td>
                                 </tr>
-                                <tr className="bg-white">
-                                  <td className="border border-gray-300 px-3 py-2 font-medium text-text-primary">Tank</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">SS 304</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">SS 304</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">SS 304</td>
+                                <tr className="bg-white/5">
+                                  <td className="border border-white/20 px-3 py-2 font-medium">Tank</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">SS 304</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">SS 304</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">SS 304</td>
                                 </tr>
-                                <tr className="bg-gray-50">
-                                  <td className="border border-gray-300 px-3 py-2 font-medium text-text-primary">Enclosure</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">SS 304</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">SS 304</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary">SS 304</td>
+                                <tr className="bg-white/10">
+                                  <td className="border border-white/20 px-3 py-2 font-medium">Enclosure</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">SS 304</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">SS 304</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary">SS 304</td>
                                 </tr>
                                 <tr className="bg-white">
                                   <td className="border border-gray-300 px-3 py-2 font-medium text-text-primary">Tank Capacity</td>
@@ -4535,13 +4531,13 @@ export default function ProductsPage() {
                    )}
 
                   {/* Call to Action */}
-                  <div className="pt-8 border-t border-gray-200">
+                  <div className="pt-8 border-t border-white/20">
                     <div className="flex items-center justify-between">
                       <div>
-                        <h3 className="text-2xl font-bold text-text-primary mb-2">Interested in this product?</h3>
+                        <h3 className="text-2xl font-bold mb-2">Interested in this product?</h3>
                         <p className="text-text-secondary text-lg">Get detailed specifications and pricing information</p>
                       </div>
-                      <button className="bg-primary-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-primary-600 transition-all duration-200 shadow-lg hover:shadow-xl">
+                      <button className="bg-transparent border-2 border-primary-500 text-primary-500 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-primary-500/10 hover:text-white transition-all duration-200">
                         Request Quote
                   </button>
                     </div>
@@ -4555,14 +4551,14 @@ export default function ProductsPage() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
                       </svg>
                     </div>
-                    <h2 className="text-3xl font-bold text-text-primary mb-3">Select a Product</h2>
+                    <h2 className="text-3xl font-bold mb-3">Select a Product</h2>
                     <p className="text-text-secondary text-lg">Choose a product from the left panel to view detailed information</p>
                   </div>
                 </div>
               )}
             </div>
           </div>
-                </div>
+        </section>
                 
         {showFooter && <Footer />}
       </>
@@ -4575,16 +4571,16 @@ export default function ProductsPage() {
     <>
       
       {/* Hero Section */}
-      <section className="hero-section bg-white py-20">
+      <section className="hero-section py-20 bg-background-off">
         <div className="max-w-8xl mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-6">
+                      <div className="text-center mb-16">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Our Products
             </h1>
-            <p className="text-xl text-text-secondary max-w-4xl mx-auto">
-              Comprehensive range of pharmaceutical equipment and laboratory instruments designed for precision and compliance
+              <p className="text-xl text-text-secondary max-w-4xl mx-auto">
+                Comprehensive range of pharmaceutical equipment and laboratory instruments designed for precision and compliance
             </p>
-                    </div>
+        </div>
 
           {/* Product Categories Hero */}
           <div className="space-y-16 w-full">
@@ -4597,14 +4593,14 @@ export default function ProductsPage() {
               className="w-full"
             >
               <div className="mb-8">
-                <h2 className="text-3xl font-bold text-text-primary mb-2">
+                <h2 className="text-3xl font-bold mb-2">
                   {productInfo.stabilityChambers.title}
                 </h2>
                 <p className="text-primary-500 font-medium text-lg">
                   {productInfo.stabilityChambers.subtitle}
                 </p>
-                  </div>
-              
+              </div>
+
               <div className="space-y-6 w-full">
                 <div>
                   <p className="text-text-secondary leading-relaxed text-lg">
@@ -4614,7 +4610,7 @@ export default function ProductsPage() {
                 
                 <div className="grid md:grid-cols-3 gap-8">
                   <div>
-                    <h3 className="text-xl font-semibold text-text-primary mb-3">When</h3>
+                    <h3 className="text-xl font-semibold mb-1">When</h3>
                     <ul className="list-disc list-inside text-text-secondary leading-relaxed space-y-2">
                       {productInfo.stabilityChambers.when.map((item, index) => (
                         <li key={index}>{item}</li>
@@ -4623,7 +4619,7 @@ export default function ProductsPage() {
                   </div>
                   
                   <div>
-                    <h3 className="text-xl font-semibold text-text-primary mb-3">Why</h3>
+                    <h3 className="text-xl font-semibold mb-3">Why</h3>
                     <ul className="list-disc list-inside text-text-secondary leading-relaxed space-y-2">
                       {productInfo.stabilityChambers.why.map((item, index) => (
                         <li key={index}>{item}</li>
@@ -4632,7 +4628,7 @@ export default function ProductsPage() {
                   </div>
                   
                   <div>
-                    <h3 className="text-xl font-semibold text-text-primary mb-3">Where</h3>
+                    <h3 className="text-xl font-semibold mb-3">Where</h3>
                     <ul className="list-disc list-inside text-text-secondary leading-relaxed space-y-2">
                       {productInfo.stabilityChambers.where.map((item, index) => (
                         <li key={index}>{item}</li>
@@ -4643,38 +4639,33 @@ export default function ProductsPage() {
               </div>
             </motion.div>
 
-            {/* Horizontal Divider */}
-            <div className="w-full flex items-center justify-center py-8">
-              <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
-            </div>
-
             {/* Table Top Instruments */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+                  <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-              viewport={{ once: true }}
+                    viewport={{ once: true }}
               className="w-full"
             >
               <div className="mb-8">
-                <h2 className="text-3xl font-bold text-text-primary mb-2">
+                <h2 className="text-3xl font-bold mb-2">
                   {productInfo.tableTopInstruments.title}
                 </h2>
                 <p className="text-primary-500 font-medium text-lg">
                   {productInfo.tableTopInstruments.subtitle}
                 </p>
-              </div>
+                      </div>
               
               <div className="space-y-6 w-full">
                 <div>
                   <p className="text-text-secondary leading-relaxed text-lg">
                     {productInfo.tableTopInstruments.description}
                   </p>
-                </div>
-                
+                    </div>
+
                 <div className="grid md:grid-cols-3 gap-8">
-                  <div>
-                    <h3 className="text-xl font-semibold text-text-primary mb-3">When</h3>
+                    <div>
+                    <h3 className="text-xl font-semibold mb-3">When</h3>
                     <ul className="list-disc list-inside text-text-secondary leading-relaxed space-y-2">
                       {productInfo.tableTopInstruments.when.map((item, index) => (
                         <li key={index}>{item}</li>
@@ -4683,7 +4674,7 @@ export default function ProductsPage() {
                   </div>
                   
                   <div>
-                    <h3 className="text-xl font-semibold text-text-primary mb-3">Why</h3>
+                    <h3 className="text-xl font-semibold mb-3">Why</h3>
                     <ul className="list-disc list-inside text-text-secondary leading-relaxed space-y-2">
                       {productInfo.tableTopInstruments.why.map((item, index) => (
                         <li key={index}>{item}</li>
@@ -4692,7 +4683,7 @@ export default function ProductsPage() {
                   </div>
                   
                   <div>
-                    <h3 className="text-xl font-semibold text-text-primary mb-3">Where</h3>
+                    <h3 className="text-xl font-semibold mb-3">Where</h3>
                     <ul className="list-disc list-inside text-text-secondary leading-relaxed space-y-2">
                       {productInfo.tableTopInstruments.where.map((item, index) => (
                         <li key={index}>{item}</li>
@@ -4710,70 +4701,52 @@ export default function ProductsPage() {
       <section className="py-20 bg-background-off">
         <div className="max-w-8xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Our Product Categories
             </h2>
             <p className="text-lg text-text-secondary max-w-3xl mx-auto">
-              Comprehensive range of pharmaceutical equipment and laboratory instruments
+              Precision-engineered solutions for pharmaceutical stability testing and laboratory quality control
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 w-full">
             {productCategories.map((category, index) => (
               <motion.div
                 key={index}
-                className="bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300"
+                className="glass p-6 border border-white/20 rounded-lg shadow-lg h-full flex flex-col"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="mb-6">
-                  <h3 className="text-2xl font-bold text-text-primary mb-2">
-                    {category.title}
-                  </h3>
-                  <p className="text-primary-500 font-medium text-base">
-                    {category.subtitle}
-                  </p>
-                    </div>
+                <h3 className="text-2xl font-bold mb-2">{category.title}</h3>
+                <p className="text-sm text-text-secondary mb-6">{category.description}</p>
                 
-                <p className="text-text-secondary text-base mb-6 leading-relaxed">
-                  {category.description}
-                </p>
-                
-                <div className="grid md:grid-cols-2 gap-6 mb-6">
-                  {category.subcategories.slice(0, 4).map((subcategory, subIndex) => (
-                    <div key={subIndex} className="border-l-2 border-primary-500 pl-4">
-                      <h4 className="text-sm font-semibold text-text-primary mb-2">
+                <div className="flex-1 mb-6">
+                  {category.subcategories.map((subcategory, subIndex) => (
+                    <div key={subIndex} className="mb-4">
+                      <h4 className="text-base font-semibold mb-2 border-l-2 border-primary-300 pl-3">
                         {subcategory.name}
-                      </h4>
-                      <div className="flex flex-wrap gap-1">
-                        {subcategory.types.slice(0, 3).map((type, typeIndex) => (
-                          <span key={typeIndex} className="text-xs bg-primary-50 text-primary-600 px-2 py-1 rounded-full">
-                                  {type}
-                                </span>
-                              ))}
-                        {subcategory.types.length > 3 && (
-                          <span className="text-xs text-text-muted">
-                            +{subcategory.types.length - 3} more
-                          </span>
-                        )}
-                            </div>
-                          </div>
-                        ))}
-                      </div>
+                        </h4>
+                      {subcategory.types.length > 0 && (
+                        <div className="flex flex-wrap gap-2">
+                          {subcategory.types.map((type, typeIndex) => (
+                            <span key={typeIndex} className="text-xs bg-transparent text-primary-500 px-3 py-1 rounded-full border border-primary-500 hover:bg-primary-500/10 hover:text-white transition-all duration-200">
+                              {type}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
                 
-                <div className="pt-4 border-t border-gray-100 flex justify-between items-center">
-                  <span className="text-sm text-text-muted">
-                    {category.subcategories.length} subcategories
-                  </span>
-                  <button 
-                    onClick={() => handleViewProducts(category.title)}
-                    className="bg-primary-500 text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-primary-600 transition-colors duration-200"
-                  >
-                    View Products
-                  </button>
-                      </div>
+                <button 
+                  onClick={() => handleViewProducts(category.title)}
+                  className="w-full bg-transparent border-2 border-primary-500 text-primary-500 py-2 rounded text-sm mt-auto font-semibold hover:bg-primary-500/10 hover:text-white transition-all duration-200"
+                >
+                  Explore
+                </button>
               </motion.div>
             ))}
           </div>

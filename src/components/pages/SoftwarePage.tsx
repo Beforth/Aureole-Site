@@ -155,7 +155,7 @@ export default function SoftwarePage() {
 
 
       {/* Hero Section */}
-      <section className="bg-white py-20 lg:py-32">
+      <section className="bg-background-off py-20 lg:py-32">
         <div className="w-full px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -164,14 +164,14 @@ export default function SoftwarePage() {
             className="max-w-4xl mx-auto text-center"
           >
             <h1 className="text-5xl lg:text-7xl font-bold mb-6">
-              <span className="block text-text-primary">Introducing</span>
+              <span className="block">Introducing</span>
               <span className="block text-primary-500">SIS-APP</span>
             </h1>
             <p className="text-xl text-text-secondary mb-8 leading-relaxed">
               Secure and Integrated Solutions for Applications, Products, and Processes
             </p>
-            <div className="bg-background-off rounded-2xl p-8 shadow-lg border border-gray-200">
-              <h2 className="text-3xl font-bold text-text-primary mb-4">21-CRF Part 11 Compliance Software</h2>
+            <div className="glass rounded-2xl p-8 shadow-lg border border-white/20">
+              <h2 className="text-3xl font-bold mb-4">21-CRF Part 11 Compliance Software</h2>
               <p className="text-lg text-text-secondary leading-relaxed">
                 In the fast-paced landscape of today's business world, the need for secure and seamlessly integrated solutions for applications, products, and processes has reached unprecedented levels. Our system and software are designed to deliver secure and integrated solutions for applications, products, and processes, ensuring the utmost protection and efficiency.
               </p>
@@ -193,7 +193,7 @@ export default function SoftwarePage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-text-primary mb-4">Software Features</h2>
+            <h2 className="text-4xl font-bold mb-4">Software Features</h2>
             <p className="text-text-secondary text-lg max-w-3xl">
               Comprehensive software solution with advanced features for pharmaceutical compliance and data management.
             </p>
@@ -213,14 +213,14 @@ export default function SoftwarePage() {
                 >
                   <div className="text-center">
                     {/* Small Circular Icon */}
-                    <div className="w-8 h-8 lg:w-10 lg:h-10 bg-white border border-primary-200 rounded-full flex items-center justify-center mx-auto mb-2 shadow-sm">
-                      <div className="text-primary-600 text-sm lg:text-base">
+                    <div className="w-8 h-8 lg:w-10 lg:h-10 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center mx-auto mb-2 shadow-sm">
+                      <div className="text-primary-500 text-sm lg:text-base">
                         {renderIcon(feature.icon)}
                       </div>
                     </div>
                     
                     {/* Simple Text */}
-                    <h3 className="text-xs font-medium text-text-primary leading-tight mt-2">
+                    <h3 className="text-xs font-medium leading-tight mt-2">
                       {feature.title}
                     </h3>
                   </div>
@@ -232,7 +232,7 @@ export default function SoftwarePage() {
       </section>
 
       {/* Benefits Section */}
-      <section className="bg-white py-20">
+      <section className="bg-background-off py-20">
         <div className="w-full px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -241,51 +241,51 @@ export default function SoftwarePage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl font-bold text-text-primary mb-6">
+              <h2 className="text-4xl font-bold mb-6">
                 Why Choose SIS-APP?
               </h2>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg className="w-4 h-4 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-8 h-8 bg-primary-500/20 backdrop-blur-sm border border-primary-500/30 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <svg className="w-4 h-4 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-text-primary mb-2">21-CFR Part 11 Compliance</h3>
+                    <h3 className="text-lg font-semibold mb-2">21-CFR Part 11 Compliance</h3>
                     <p className="text-text-secondary">Full compliance with FDA regulations for electronic records and signatures.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg className="w-4 h-4 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-8 h-8 bg-primary-500/20 backdrop-blur-sm border border-primary-500/30 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <svg className="w-4 h-4 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-text-primary mb-2">Secure Data Management</h3>
+                    <h3 className="text-lg font-semibold mb-2">Secure Data Management</h3>
                     <p className="text-text-secondary">Advanced encryption and security protocols to protect sensitive information.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg className="w-4 h-4 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-8 h-8 bg-primary-500/20 backdrop-blur-sm border border-primary-500/30 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <svg className="w-4 h-4 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-text-primary mb-2">Real-Time Monitoring</h3>
+                    <h3 className="text-lg font-semibold mb-2">Real-Time Monitoring</h3>
                     <p className="text-text-secondary">Live data analysis and parameter monitoring for immediate decision making.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg className="w-4 h-4 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-8 h-8 bg-primary-500/20 backdrop-blur-sm border border-primary-500/30 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <svg className="w-4 h-4 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-text-primary mb-2">Browser-Based Access</h3>
+                    <h3 className="text-lg font-semibold mb-2">Browser-Based Access</h3>
                     <p className="text-text-secondary">Access your software from anywhere using any modern web browser.</p>
                   </div>
                 </div>
@@ -297,12 +297,12 @@ export default function SoftwarePage() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-background-off to-white rounded-3xl p-8 lg:p-12 border border-gray-200"
+              className="glass rounded-3xl p-8 lg:p-12 border border-white/20"
             >
-              <h3 className="text-2xl font-bold text-text-primary mb-6">Contact Us to Experience the Difference</h3>
+              <h3 className="text-2xl font-bold mb-6">Contact Us to Experience the Difference</h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-primary-600 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-primary-500 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
@@ -311,19 +311,19 @@ export default function SoftwarePage() {
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-primary-600 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-primary-500 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                   <p className="text-text-secondary">connect@aureolepharmatech.com</p>
                 </div>
                 <div className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-primary-600 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-primary-500 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                   <p className="text-text-secondary">+91 86248 58551</p>
                 </div>
               </div>
-              <button className="mt-8 bg-primary-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-600 transition-colors duration-300 w-full shadow-sm hover:shadow-md">
+              <button className="mt-8 bg-transparent border-2 border-primary-500 text-primary-500 px-8 py-3 rounded-lg font-semibold hover:bg-primary-500/10 hover:text-white transition-all duration-300 w-full shadow-sm hover:shadow-md">
                 Get Started Today
               </button>
             </motion.div>

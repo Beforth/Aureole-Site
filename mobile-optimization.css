@@ -1,0 +1,614 @@
+/* Refined Mobile Optimization CSS for Aureole Pharma Tech */
+
+/* ===== MOBILE NAVIGATION OPTIMIZATION ===== */
+@media (max-width: 768px) {
+  .floating-nav {
+    top: 1rem !important;
+    width: 92% !important;
+    padding: 0.75rem 1rem !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(15px) !important;
+  }
+
+  .nav-container {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 1rem !important;
+  }
+
+  .nav-logo {
+    order: 1 !important;
+    flex-shrink: 0 !important;
+  }
+
+  .nav-links {
+    display: none !important;
+  }
+
+  .mobile-menu-toggle {
+    display: flex !important;
+    order: 2 !important;
+    flex-direction: column !important;
+    justify-content: space-around !important;
+    width: 30px !important;
+    height: 25px !important;
+    background: transparent !important;
+    border: none !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+    z-index: 10 !important;
+  }
+
+  .hamburger-line {
+    width: 100% !important;
+    height: 3px !important;
+    background: var(--text-primary) !important;
+    border-radius: 2px !important;
+    transition: all 0.3s ease !important;
+    transform-origin: center !important;
+  }
+
+  .hamburger-line.open:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px) !important;
+  }
+
+  .hamburger-line.open:nth-child(2) {
+    opacity: 0 !important;
+  }
+
+  .hamburger-line.open:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px) !important;
+  }
+
+  .nav-social,
+  .nav-cta {
+    display: none !important;
+  }
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu {
+  background: rgba(31, 41, 55, 0.95);
+  border-radius: 20px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 400px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(75, 85, 99, 0.5);
+}
+
+.mobile-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mobile-link {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.mobile-link:hover,
+.mobile-link.active {
+  background: rgba(59, 130, 246, 0.2);
+  color: #ffffff;
+  transform: translateX(5px);
+}
+
+/* ===== MOBILE HERO SECTION OPTIMIZATION ===== */
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 100vh;
+    padding: 1rem 0;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+    padding: 0 1rem !important;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: clamp(2.5rem, 8vw, 4rem) !important;
+    line-height: 1.1 !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem !important;
+    margin-bottom: 2rem !important;
+    padding: 0 1rem;
+  }
+
+  .molecule-container {
+    width: 320px !important;
+    height: 320px !important;
+    margin: 0 auto 2rem auto !important;
+  }
+
+  .molecule-center {
+    width: 180px !important;
+    height: 180px !important;
+  }
+
+  .molecule-stat-number {
+    font-size: 4rem !important;
+  }
+
+  .molecule-stat-label {
+    font-size: 0.8rem !important;
+  }
+
+  /* Keep the rotating rings visible but smaller */
+  .ring {
+    opacity: 0.3 !important;
+  }
+
+  .ring-1 {
+    width: 120% !important;
+    height: 120% !important;
+    top: -10% !important;
+    left: -10% !important;
+  }
+
+  .ring-2 {
+    width: 140% !important;
+    height: 140% !important;
+    top: -20% !important;
+    left: -20% !important;
+  }
+
+  .ring-3 {
+    width: 160% !important;
+    height: 160% !important;
+    top: -30% !important;
+    left: -30% !important;
+  }
+
+  .scroll-indicator {
+    bottom: 1rem !important;
+    font-size: 0.8rem !important;
+  }
+}
+
+/* ===== MOBILE SECTIONS OPTIMIZATION ===== */
+@media (max-width: 768px) {
+  .py-20 {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+  }
+
+  .max-w-7xl {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .lg\\:grid-cols-2 {
+    grid-template-columns: 1fr !important;
+  }
+
+  .text-3xl {
+    font-size: 2rem !important;
+  }
+
+  .text-4xl {
+    font-size: 2.5rem !important;
+  }
+
+  .text-lg {
+    font-size: 1.1rem !important;
+  }
+}
+
+/* ===== MOBILE ABOUT SECTION ===== */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 4rem 1rem !important;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 1.5rem !important;
+  }
+
+  .stat-value {
+    font-size: 2rem !important;
+  }
+
+  .stat-label {
+    font-size: 0.8rem !important;
+  }
+}
+
+/* ===== MOBILE VALUES SECTION ===== */
+@media (max-width: 768px) {
+  .values-section {
+    padding: 4rem 1rem !important;
+  }
+
+  .aureole-letters {
+    gap: 0.75rem !important;
+  }
+
+  .aureole-letter {
+    font-size: 2.5rem !important;
+  }
+
+  .values-grid-cards {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .value-card {
+    padding: 2rem !important;
+  }
+}
+
+/* ===== MOBILE PRODUCTS SECTION ===== */
+@media (max-width: 768px) {
+  .products-section {
+    padding: 4rem 1rem !important;
+  }
+
+  .product-card {
+    padding: 2rem !important;
+  }
+
+  .product-image {
+    height: 150px !important;
+  }
+}
+
+/* ===== MOBILE CATALOGUE SECTION - PRESERVED DESIGN ===== */
+@media (max-width: 768px) {
+  .catalogue-section {
+    padding: 4rem 1rem !important;
+  }
+
+  /* Keep the book-like design but stack vertically */
+  .catalogue-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+  }
+
+  .catalogue-left,
+  .catalogue-right {
+    border-radius: 0 !important;
+    padding: 2rem !important;
+  }
+
+  .catalogue-left {
+    border-right: none !important;
+    border-bottom: 2px solid #e5e7eb !important;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%) !important;
+  }
+
+  .catalogue-right {
+    border-left: none !important;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%) !important;
+  }
+
+  /* Preserve the paper fold effect */
+  .catalogue-left::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 100%;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.1) 0%, transparent 100%);
+    pointer-events: none;
+  }
+
+  .catalogue-right::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 0%, transparent 100%);
+    pointer-events: none;
+  }
+
+  .category-button {
+    padding: 1rem !important;
+    font-size: 1rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  /* Preserve the contact section design */
+  .contact-info-section {
+    margin-top: 2rem !important;
+    padding: 2rem !important;
+    background: rgba(248, 249, 250, 0.8) !important;
+    border-radius: 16px !important;
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+}
+
+/* ===== MOBILE FOOTER ===== */
+@media (max-width: 768px) {
+  .footer {
+    padding: 3rem 1rem 2rem 1rem !important;
+  }
+
+  .footer-top-section {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .footer-map-section {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .map-container {
+    height: 250px !important;
+  }
+
+  .quick-links-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .social-links {
+    justify-content: center !important;
+  }
+}
+
+/* ===== MOBILE MODAL OPTIMIZATION ===== */
+@media (max-width: 768px) {
+  .modal-overlay {
+    padding: 1rem !important;
+  }
+
+  .modal-content {
+    width: 95% !important;
+    max-width: none !important;
+    padding: 2rem !important;
+  }
+
+  .modal-title {
+    font-size: 1.5rem !important;
+  }
+
+  .form-input {
+    padding: 1rem !important;
+    font-size: 1rem !important;
+  }
+}
+
+/* ===== MOBILE TOUCH OPTIMIZATION ===== */
+@media (max-width: 768px) {
+  /* Larger touch targets */
+  button,
+  .nav-link,
+  .mobile-link {
+    min-height: 44px !important;
+    min-width: 44px !important;
+  }
+
+  /* Better touch feedback */
+  .touch-feedback {
+    transition: transform 0.1s ease !important;
+  }
+
+  .touch-feedback:active {
+    transform: scale(0.95) !important;
+  }
+
+  /* Improved scrolling */
+  .scroll-container {
+    -webkit-overflow-scrolling: touch !important;
+    scroll-behavior: smooth !important;
+  }
+}
+
+/* ===== MOBILE PERFORMANCE OPTIMIZATION ===== */
+@media (max-width: 768px) {
+  /* Keep animations but optimize them */
+  .animate-float {
+    animation-duration: 8s !important;
+  }
+
+  .animate-pulse {
+    animation-duration: 3s !important;
+  }
+
+  /* Optimize images for mobile */
+  .mobile-optimized-image {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+  }
+
+  /* Reduce shadow complexity on mobile */
+  .shadow-lg {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  .shadow-xl {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
+  }
+}
+
+/* ===== MOBILE TYPOGRAPHY OPTIMIZATION ===== */
+@media (max-width: 768px) {
+  /* Improve readability on mobile */
+  body {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+  }
+
+  h1 {
+    font-size: 2rem !important;
+    line-height: 1.3 !important;
+  }
+
+  h2 {
+    font-size: 1.75rem !important;
+    line-height: 1.4 !important;
+  }
+
+  h3 {
+    font-size: 1.5rem !important;
+    line-height: 1.4 !important;
+  }
+
+  p {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Better text contrast */
+  .text-muted {
+    color: #6b7280 !important;
+  }
+}
+
+/* ===== MOBILE SPACING OPTIMIZATION ===== */
+@media (max-width: 768px) {
+  /* Optimize spacing for mobile */
+  .space-y-4 > * + * {
+    margin-top: 1.5rem !important;
+  }
+
+  .space-y-6 > * + * {
+    margin-top: 2rem !important;
+  }
+
+  .space-y-8 > * + * {
+    margin-top: 2.5rem !important;
+  }
+
+  .gap-4 {
+    gap: 1.5rem !important;
+  }
+
+  .gap-6 {
+    gap: 2rem !important;
+  }
+
+  .gap-8 {
+    gap: 2.5rem !important;
+  }
+
+  .p-4 {
+    padding: 1.5rem !important;
+  }
+
+  .p-6 {
+    padding: 2rem !important;
+  }
+
+  .p-8 {
+    padding: 2.5rem !important;
+  }
+}
+
+/* ===== MOBILE ACCESSIBILITY IMPROVEMENTS ===== */
+@media (max-width: 768px) {
+  /* Better focus indicators */
+  button:focus,
+  input:focus,
+  a:focus {
+    outline: 2px solid var(--primary-color) !important;
+    outline-offset: 2px !important;
+  }
+
+  /* Improved color contrast */
+  .text-primary {
+    color: #1e40af !important;
+  }
+
+  /* Better button contrast */
+  .bg-primary {
+    background-color: #1e40af !important;
+  }
+}
+
+/* ===== MOBILE SAFE AREA SUPPORT ===== */
+@supports (padding: max(0px)) {
+  .mobile-safe-area {
+    padding-left: max(1rem, env(safe-area-inset-left)) !important;
+    padding-right: max(1rem, env(safe-area-inset-right)) !important;
+    padding-top: max(1rem, env(safe-area-inset-top)) !important;
+    padding-bottom: max(1rem, env(safe-area-inset-bottom)) !important;
+  }
+}
+
+/* ===== MOBILE UTILITY CLASSES ===== */
+.mobile-only {
+  display: none !important;
+}
+
+.desktop-only {
+  display: block !important;
+}
+
+@media (max-width: 768px) {
+  .mobile-only {
+    display: block !important;
+  }
+
+  .desktop-only {
+    display: none !important;
+  }
+
+  .mobile-text-center {
+    text-align: center !important;
+  }
+
+  .mobile-text-left {
+    text-align: left !important;
+  }
+
+  .mobile-text-right {
+    text-align: right !important;
+  }
+
+  .mobile-hidden {
+    display: none !important;
+  }
+
+  .mobile-visible {
+    display: block !important;
+  }
+}

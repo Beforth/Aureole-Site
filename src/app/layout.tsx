@@ -1,24 +1,28 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter, Space_Grotesk, Caveat } from 'next/font/google'
 import './globals.css'
+import '../../mobile-optimization.css'
 import ClientWrapper from '@/components/ClientWrapper'
 
 const inter = Inter({ 
   subsets: ['latin'],
   variable: '--font-inter',
-  display: 'swap',
+  display: 'block',
+  preload: true,
 })
 
 const spaceGrotesk = Space_Grotesk({ 
   subsets: ['latin'],
   variable: '--font-space-grotesk',
-  display: 'swap',
+  display: 'block',
+  preload: true,
 })
 
 const caveat = Caveat({ 
   subsets: ['latin'],
   variable: '--font-caveat',
-  display: 'swap',
+  display: 'block',
+  preload: true,
 })
 
 
@@ -46,6 +50,9 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+  viewportFit: 'cover',
 }
 
 export default function RootLayout({

@@ -6,41 +6,67 @@ import Footer from '@/components/Footer'
 
 const ventures = [
   {
-    title: "Mack Auraa Healthcare Pvt. Ltd.",
-    subtitle: "Bettering the lives",
-    description: "A dynamic and innovative player in India's animal health industry, dedicated to delivering world-class branded products. Committed to excellence, we provide cutting-edge solutions and premium healthcare products for animal well-being.",
-    image: "/images/ventures/mack-auraa-logo.png",
-    website: "https://mackauraa.com",
-    industry: "Animal Healthcare",
-    founded: "2018"
+    title: "Mack Pharmatech Pvt. Ltd.",
+    subtitle: "Pharmaceutical Excellence",
+    description: "Founded by Dr. Kiran Badgujar and Manoj Chaudhari, Mack Pharmatech is a renowned manufacturer of pharmaceutical and laboratory equipment, including stability chambers and lab instruments. Dr. Badgujar led the company until recently.",
+    image: "/images/ventures/mack-pharmatech-logo.png",
+    website: "https://aureolepharmatech.com",
+    industry: "Pharmaceutical Equipment",
+    founded: "1999"
   },
   {
-    title: "Aureole Process Equipment Pvt. Ltd.",
-    subtitle: "We are there with you",
-    description: "Established in 2005 under Dr. Kiran Badgujar's leadership, we specialize in manufacturing high-quality process equipment. With over 1000+ units supplied globally, we're renowned for autoclaves, sterilizers, and distillation plants.",
-    image: "/images/ventures/aureole-process-logo.png",
-    website: "https://aureoleprocess.com",
-    industry: "Process Equipment",
-    founded: "2005"
-  },
-  {
-    title: "Adityam Foundation",
+    title: "Adityam Foundation – Kiran Aashecha",
     subtitle: "A Ray of Hope",
-    description: "Founded in 2012 by Dr. Kiran Badgujar, Adityam Foundation is dedicated to social welfare and community development. We focus on supporting families, providing rehabilitation, and improving lives through compassion-driven initiatives.",
+    description: "An NGO driving social welfare, education, healthcare, and rural development initiatives in Nashik, Maharashtra. Founded in 2012 by Dr. Kiran Badgujar, dedicated to improving lives through compassion-driven initiatives.",
     image: "/images/ventures/adityam-foundation-logo.png",
     website: "https://adityamfoundation.org",
     industry: "Social Welfare",
-    founded: "2012",
-    quote: "Adityam means the sun—and like the sun, charity too illuminates wherever it shines."
+    founded: "2012"
+  },
+  {
+    title: "Mack Auraa Healthcare Pvt. Ltd.",
+    subtitle: "Veterinary Healthcare",
+    description: "Focuses on veterinary healthcare, producing products that enhance livestock well-being and farm productivity.",
+    image: "/images/ventures/mack-auraa-logo.png",
+    website: "https://mackauraahealthcare.com",
+    industry: "Animal Healthcare",
+    founded: "2012"
+  },
+  {
+    title: "Aureole Process Equipments Pvt. Ltd.",
+    subtitle: "Process Excellence",
+    description: "Specializes in high-quality process equipment for the pharmaceutical and biotech industries, supplying autoclaves, sterilizers, and distillation plants globally.",
+    image: "/images/ventures/aureole-process-logo.png",
+    website: "https://aureoleproequip.com",
+    industry: "Process Equipment",
+    founded: "2019"
+  },
+  {
+    title: "Aureole Pharma Pvt. Ltd.",
+    subtitle: "Pharmaceutical Innovation",
+    description: "Established under Dr. Kiran Badgujar, Aureole Pharma manufactures advanced pharmaceutical equipment, including stability chambers and lab instruments, serving clients across India.",
+    image: "/images/ventures/aureole-pharma-logo.png",
+    website: "https://aureolepharmatech.com",
+    industry: "Pharmaceutical Equipment",
+    founded: "2021"
+  },
+  {
+    title: "AuraaZion Lifesciences LLP",
+    subtitle: "Life Sciences Excellence",
+    description: "Manufactures specialized pharmaceutical machinery and life-sciences equipment for modern laboratories and industries.",
+    image: "/images/ventures/auraazion-logo.png",
+    website: "https://auraazionls.com",
+    industry: "Life Sciences Equipment",
+    founded: "2024"
   },
   {
     title: "Swapnkiran Resort",
-    subtitle: "Embracing Well-being",
-    description: "A premium hospitality destination reflecting Aureole Group's vision of holistic well-being. Offering serene environments, premium facilities, and rejuvenating experiences that blend comfort, relaxation, and nature.",
+    subtitle: "Eco-Friendly Agro-Tourism",
+    description: "An eco-friendly agro-tourism resort near Trimbakeshwar, Nashik, offering serene stays and sustainable farm experiences.",
     image: "/images/ventures/swapnkiran-resort-logo.png",
-    website: "https://www.swapnkiranagrofarm.com/",
+    website: "https://swapnkiranagrofarm.com",
     industry: "Hospitality",
-    founded: "2015"
+    founded: "2024"
   }
 ]
 
@@ -152,7 +178,7 @@ export default function AboutPage() {
       </section>
 
       {/* Vision, Mission, Goal */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-background-off">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="vision-mission-grid">
             <div className="vision-section">
@@ -201,61 +227,31 @@ export default function AboutPage() {
             </p>
           </motion.div>
 
-          <div className="ventures-grid-2x2">
+          <div className="horizontal-timeline">
             {ventures.map((venture, index) => (
               <motion.div
                 key={venture.title}
-                className="venture-card-horizontal"
+                className="timeline-event"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1, ease: 'easeOut' }}
+                transition={{ duration: 0.8, delay: index * 0.2, ease: 'easeOut' }}
                 viewport={{ once: true }}
               >
-                <div className="venture-card-content">
-                  <div className="venture-image-section">
-                    <img 
-                      src={venture.image} 
-                      alt={venture.title}
-                      className="venture-card-image"
-                      onError={(e) => {
-                        e.currentTarget.src = '/images/ventures/placeholder.png';
-                      }}
-                    />
-                  </div>
-                  <div className="venture-text-section">
-                    <div className="venture-header-info">
-                      <div className="venture-badge">{venture.industry}</div>
-                      <h3 className="venture-title">{venture.title}</h3>
-                      <p className="venture-subtitle">{venture.subtitle}</p>
-                      <div className="venture-meta">
-                        <span className="venture-founded">Est. {venture.founded}</span>
-                        {venture.website && (
-                          <a 
-                            href={venture.website} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="venture-website"
-                          >
-                            Visit Website →
-                          </a>
-                        )}
-                      </div>
-                    </div>
-                    
-                    <div className="venture-description-section">
-                      <p className="venture-description">{venture.description}</p>
-                      
-                      {venture.quote && (
-                        <blockquote className="venture-quote">
-                          "{venture.quote}"
-                        </blockquote>
-                      )}
-                      
-
-                      
-
-                    </div>
-                  </div>
+                <div className="timeline-date">{venture.founded}</div>
+                <div className="timeline-dot"></div>
+                <div className="timeline-content">
+                  <h3 className="timeline-title">{venture.title}</h3>
+                  <p className="timeline-description">{venture.description}</p>
+                  {venture.website && (
+                    <a
+                      href={venture.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="timeline-link"
+                    >
+                      Visit
+                    </a>
+                  )}
                 </div>
               </motion.div>
             ))}

@@ -63,7 +63,7 @@ export default function Catalogue() {
   }
 
   return (
-    <section className="py-20 bg-white" style={{backgroundColor: '#ffffff'}}>
+    <section className="py-20 bg-background-off">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -75,87 +75,69 @@ export default function Catalogue() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-0 relative shadow-2xl rounded-2xl">
-          {/* Left Page - Catalogue Categories */}
-          <div className="bg-white rounded-l-2xl p-8 border-r-2 border-gray-300 shadow-lg relative overflow-hidden">
-            {/* Paper Fold Effect - Left */}
-            <div className="absolute top-0 right-0 w-8 h-full bg-gradient-to-l from-gray-200/50 to-transparent"></div>
-            <div className="absolute top-0 right-0 w-4 h-full bg-gradient-to-l from-gray-300/30 to-transparent"></div>
-            
-            {/* Paper Texture */}
-            <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-50/20 to-gray-100/10 opacity-60"></div>
-            
-            <div className="relative z-10">
-              <div className="mb-6">
-                <h3 className="text-xl font-bold text-text-primary mb-2">
-                  Product Catalogues
-                </h3>
-                <p className="text-text-secondary text-sm">
-                  Click any category to request detailed catalogue
-                </p>
-              </div>
+        <div className="grid lg:grid-cols-2 gap-8 relative">
+          {/* Left Column - Catalogue Categories */}
+          <div className="glass rounded-2xl p-8 shadow-lg">
+            <div className="mb-6">
+              <h3 className="text-xl font-bold text-text-primary mb-2">
+                Product Catalogues
+              </h3>
+              <p className="text-text-secondary text-sm">
+                Click any category to request detailed catalogue
+              </p>
+            </div>
 
-              <div className="space-y-3">
-                {catalogueCategories.map((category, index) => (
-                  <button
-                    key={category}
-                    className="w-full text-left p-3 rounded-lg bg-primary-50/50 hover:bg-primary-100/70 transition-all duration-300 group border border-primary-200/30 relative"
-                    onClick={() => handleCategoryClick(category)}
-                    onMouseEnter={() => handleCategoryHover(category)}
-                    onMouseLeave={() => setHoveredCategory('')}
-                  >
-                    <div className="flex items-center justify-between">
-                      <span className="font-medium text-text-primary group-hover:text-primary-600 transition-colors">
-                        {category}
-                      </span>
-                      <Download className="w-4 h-4 text-primary-500 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </div>
-                  </button>
-                ))}
-              </div>
+            <div className="space-y-3">
+              {catalogueCategories.map((category, index) => (
+                <button
+                  key={category}
+                  className="w-full text-left p-3 rounded-lg bg-primary-50/50 hover:bg-primary-100/70 transition-all duration-300 group border border-primary-200/30 relative"
+                  onClick={() => handleCategoryClick(category)}
+                  onMouseEnter={() => handleCategoryHover(category)}
+                  onMouseLeave={() => setHoveredCategory('')}
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="font-medium text-text-primary group-hover:text-primary-600 transition-colors">
+                      {category}
+                    </span>
+                    <Download className="w-4 h-4 text-primary-500 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </div>
+                </button>
+              ))}
             </div>
           </div>
 
-          {/* Right Page - Info Content */}
-          <div className="bg-white rounded-r-2xl p-8 border-l-2 border-gray-300 shadow-lg relative overflow-hidden">
-            {/* Paper Fold Effect - Right */}
-            <div className="absolute top-0 left-0 w-8 h-full bg-gradient-to-r from-gray-200/50 to-transparent"></div>
-            <div className="absolute top-0 left-0 w-4 h-full bg-gradient-to-r from-gray-300/30 to-transparent"></div>
-            
-            {/* Paper Texture */}
-            <div className="absolute inset-0 bg-gradient-to-bl from-white via-gray-50/20 to-gray-100/10 opacity-60"></div>
-            
-            <div className="relative z-10">
-              <h3 className="text-xl font-bold text-text-primary mb-3">
-                {hoveredCategory ? categoryInfo[hoveredCategory as keyof typeof categoryInfo]?.title || 'Product Insights' : 'Product Insights'}
-              </h3>
-              <p className="text-text-secondary mb-4 text-sm">
-                {hoveredCategory ? categoryInfo[hoveredCategory as keyof typeof categoryInfo]?.description || 'Get complete clarity on every solution we offer.' : 'Get complete clarity on every solution we offer.'}
-              </p>
+          {/* Right Column - Info Content */}
+          <div className="glass rounded-2xl p-8 shadow-lg">
+            <h3 className="text-xl font-bold text-text-primary mb-3">
+              {hoveredCategory ? categoryInfo[hoveredCategory as keyof typeof categoryInfo]?.title || 'Product Insights' : 'Product Insights'}
+            </h3>
+            <p className="text-text-secondary mb-4 text-sm">
+              {hoveredCategory ? categoryInfo[hoveredCategory as keyof typeof categoryInfo]?.description || 'Get complete clarity on every solution we offer.' : 'Get complete clarity on every solution we offer.'}
+            </p>
 
-              <div>
-                <h4 className="text-base font-semibold text-text-primary mb-3">
-                  You'll Discover:
-                </h4>
-                <ul className="space-y-2">
-                  {infoFeatures.map((feature, index) => (
-                    <li
-                      key={feature}
-                      className="flex items-start space-x-2"
-                    >
-                      <CheckCircle className="w-4 h-4 text-primary-500 mt-0.5 flex-shrink-0" />
-                      <span className="text-text-secondary text-sm">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            <div>
+              <h4 className="text-base font-semibold text-text-primary mb-3">
+                You'll Discover:
+              </h4>
+              <ul className="space-y-2">
+                {infoFeatures.map((feature, index) => (
+                  <li
+                    key={feature}
+                    className="flex items-start space-x-2"
+                  >
+                    <CheckCircle className="w-4 h-4 text-primary-500 mt-0.5 flex-shrink-0" />
+                    <span className="text-text-secondary text-sm">{feature}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
 
         {/* Contact Information */}
         <div className="mt-12 text-center">
-          <div className="bg-gray-50/80 backdrop-blur-sm rounded-2xl p-6 max-w-3xl mx-auto border border-gray-200/50 shadow-lg">
+          <div className="glass rounded-2xl p-6 max-w-3xl mx-auto shadow-lg">
             <h3 className="text-xl font-bold text-text-primary mb-4">
               Need Immediate Assistance?
             </h3>
@@ -166,11 +148,23 @@ export default function Catalogue() {
               </div>
               <div className="flex items-center justify-center space-x-2">
                 <Mail className="w-5 h-5 text-primary-500" />
-                <span className="text-text-secondary text-sm">enquiry@aureolepharmatech.com</span>
+                <a 
+                  href="mailto:enquiry@aureolepharmatech.com"
+                  className="text-text-secondary text-sm hover:text-primary-500 transition-colors duration-200"
+                  title="Send us an email"
+                >
+                  enquiry@aureolepharmatech.com
+                </a>
               </div>
               <div className="flex items-center justify-center space-x-2">
                 <Phone className="w-5 h-5 text-primary-500" />
-                <span className="text-text-secondary text-sm">+91 86005 22240</span>
+                <a 
+                  href="tel:+918600522240"
+                  className="text-text-secondary text-sm hover:text-primary-500 transition-colors duration-200"
+                  title="Call us"
+                >
+                  +91 86005 22240
+                </a>
               </div>
             </div>
           </div>

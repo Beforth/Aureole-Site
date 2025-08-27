@@ -63,7 +63,7 @@ export default function Preloader() {
                 r="50"
                 className="logo-circle"
                 fill="none"
-                stroke="#2298d2"
+                stroke="#ffffff"
                 strokeWidth="2"
                 initial={{ pathLength: 0 }}
                 animate={{ pathLength: 1 }}
@@ -72,7 +72,7 @@ export default function Preloader() {
               <motion.path
                 className="logo-molecule"
                 d="M30 60 L90 60 M60 30 L60 90 M45 45 L75 75 M45 75 L75 45"
-                stroke="#2298d2"
+                stroke="#ffffff"
                 strokeWidth="3"
                 fill="none"
                 initial={{ pathLength: 0 }}

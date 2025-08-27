@@ -18,8 +18,8 @@ const quickLinks = [
 ]
 
 const socialLinks = [
-  { icon: Linkedin, href: '#', name: 'LinkedIn' },
-  { icon: Facebook, href: '#', name: 'Facebook' },
+  { icon: Linkedin, href: 'https://in.linkedin.com/company/aureole-group-india', name: 'LinkedIn' },
+  { icon: Facebook, href: 'https://www.facebook.com/aureolepharma', name: 'Facebook' },
   { icon: Instagram, href: '#', name: 'Instagram' },
   { icon: Twitter, href: '#', name: 'Twitter' },
 ]
@@ -57,11 +57,23 @@ export default function Footer() {
               </div>
               <div className="contact-item">
                 <Mail className="w-4 h-4" />
-                <p>enquiry@aureolepharmatech.com</p>
+                <a 
+                  href="mailto:enquiry@aureolepharmatech.com"
+                  className="hover:text-primary-500 transition-colors duration-200"
+                  title="Send us an email"
+                >
+                  enquiry@aureolepharmatech.com
+                </a>
               </div>
               <div className="contact-item">
                 <Phone className="w-4 h-4" />
-                <p>+91 86005 22240</p>
+                <a 
+                  href="tel:+918600522240"
+                  className="hover:text-primary-500 transition-colors duration-200"
+                  title="Call us"
+                >
+                  +91 86005 22240
+                </a>
               </div>
             </div>
           </motion.div>

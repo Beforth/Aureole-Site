@@ -20,10 +20,10 @@ export default function ServicesPage() {
 
       
              {/* Hero Section */}
-       <section className="hero-services bg-white">
+       <section className="hero-services bg-background-off">
          <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Support Services
             </h1>
             <p className="text-xl text-text-secondary max-w-4xl mx-auto leading-relaxed">
@@ -160,7 +160,7 @@ export default function ServicesPage() {
       </section>
 
              {/* Service Centers */}
-       <section className="py-20 bg-white service-centers-section">
+       <section className="py-20 bg-background-off service-centers-section">
          <div className="w-full px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
@@ -169,7 +169,7 @@ export default function ServicesPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Service Centers
             </h2>
             <p className="text-lg text-text-secondary max-w-3xl mx-auto">

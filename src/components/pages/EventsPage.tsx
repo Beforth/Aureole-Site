@@ -264,7 +264,7 @@ export default function EventsPage() {
       </section>
 
       {/* Past Events Section */}
-      <section className="bg-gray-50 py-20">
+      <section className="bg-background-off py-20">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div 
             className="text-center mb-16"
@@ -273,7 +273,7 @@ export default function EventsPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-text-primary mb-4">Past Events</h2>
+            <h2 className="text-4xl font-bold mb-4">Past Events</h2>
             <p className="text-text-secondary text-lg max-w-2xl mx-auto">
               Relive our successful participation in major industry exhibitions and conferences.
             </p>
@@ -283,7 +283,7 @@ export default function EventsPage() {
              {currentEvents.map((event, index) => (
                <motion.div
                  key={event.id}
-                 className="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-all duration-300"
+                 className="glass rounded-2xl p-6 shadow-sm border border-white/20 hover:shadow-md transition-all duration-300"
                  initial={{ opacity: 0, y: 30 }}
                  whileInView={{ opacity: 1, y: 0 }}
                  transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -296,12 +296,12 @@ export default function EventsPage() {
                      className="w-full h-48 object-cover rounded-xl shadow-sm"
                    />
                  </div>
-                 <h3 className="text-xl font-semibold text-text-primary mb-2">{event.name}</h3>
+                 <h3 className="text-xl font-semibold mb-2">{event.name}</h3>
                  <p className="text-primary-600 font-medium mb-1">{event.date}</p>
                  <p className="text-text-secondary mb-3">{event.location}</p>
                  <p className="text-text-secondary text-sm">{event.description}</p>
                  <div className="mt-4">
-                   <span className="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">
+                   <span className="inline-block bg-green-500/20 text-green-400 text-xs px-2 py-1 rounded-full border border-green-500/30">
                      Completed
                    </span>
                  </div>
@@ -321,7 +321,7 @@ export default function EventsPage() {
                <button
                  onClick={() => goToPage(currentPage - 1)}
                  disabled={currentPage === 1}
-                 className="px-4 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
+                 className="px-4 py-2 rounded-lg border border-white/20 text-text-secondary hover:bg-white/10 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
                >
                  Previous
                </button>
@@ -334,7 +334,7 @@ export default function EventsPage() {
                      className={`w-10 h-10 rounded-lg border transition-colors duration-200 ${
                        currentPage === page
                          ? 'bg-primary-500 text-white border-primary-500'
-                         : 'border-gray-300 text-gray-600 hover:bg-gray-50'
+                         : 'border-white/20 text-text-secondary hover:bg-white/10'
                      }`}
                    >
                      {page}
@@ -345,7 +345,7 @@ export default function EventsPage() {
                <button
                  onClick={() => goToPage(currentPage + 1)}
                  disabled={currentPage === totalPages}
-                 className="px-4 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
+                 className="px-4 py-2 rounded-lg border border-white/20 text-text-secondary hover:bg-white/10 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
                >
                  Next
                </button>

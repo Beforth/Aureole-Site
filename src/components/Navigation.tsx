@@ -32,10 +32,10 @@ export default function Navigation() {
 
   return (
     <>
-      <nav className={`floating-nav ${isScrolled ? 'scrolled' : ''} bg-white/95 backdrop-blur-md border-b border-gray-200/50 sticky top-0 z-50 transition-all duration-300 ${
+      <nav className={`floating-nav ${isScrolled ? 'scrolled' : ''} bg-gray-800/90 backdrop-blur-md border-b border-gray-600/50 sticky top-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/90 backdrop-blur-lg border-b border-gray-200/60 shadow-sm' 
-          : 'bg-white/95 backdrop-blur-md border-b border-gray-200/50'
+          ? 'bg-gray-800/95 backdrop-blur-lg border-b border-gray-600/60 shadow-sm' 
+          : 'bg-gray-800/90 backdrop-blur-md border-b border-gray-600/50'
       }`}>
         <div className="nav-container">
 
