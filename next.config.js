@@ -1,8 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: {
-    domains: ['images.unsplash.com'],
+  experimental: {
+    optimizePackageImports: ['lucide-react', 'framer-motion', 'gsap']
   },
-}
+  typescript: {
+    ignoreBuildErrors: false,
+  },
+  eslint: {
+    ignoreDuringBuilds: false,
+  },
+  swcMinify: true,
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

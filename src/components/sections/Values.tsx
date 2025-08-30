@@ -1,9 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
-import { motion } from 'framer-motion'
-import { AnimatePresence } from 'framer-motion'
-import { gsap } from 'gsap'
+import { motion, AnimatePresence } from 'framer-motion'
 
 const aureoleLetters = [
   { letter: 'A', meaning: 'ADHERENCE - We adhere to the highest standards of quality and compliance' },

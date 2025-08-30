@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter, Space_Grotesk, Caveat } from 'next/font/google'
+import { Inter, Space_Grotesk, Architects_Daughter, Playfair_Display } from 'next/font/google'
 import './globals.css'
 import '../../mobile-optimization.css'
 import ClientWrapper from '@/components/ClientWrapper'
@@ -18,9 +18,17 @@ const spaceGrotesk = Space_Grotesk({
   preload: true,
 })
 
-const caveat = Caveat({ 
+const architectsDaughter = Architects_Daughter({ 
   subsets: ['latin'],
-  variable: '--font-caveat',
+  variable: '--font-architects-daughter',
+  weight: '400',
+  display: 'block',
+  preload: true,
+})
+
+const playfairDisplay = Playfair_Display({ 
+  subsets: ['latin'],
+  variable: '--font-playfair-display',
   display: 'block',
   preload: true,
 })
@@ -61,7 +69,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable} ${caveat.variable}`}>
+    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable} ${architectsDaughter.variable} ${playfairDisplay.variable}`}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

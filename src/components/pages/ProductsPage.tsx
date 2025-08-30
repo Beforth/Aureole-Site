@@ -1,10 +1,11 @@
 'use client'
 
-import React, { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { useRouter, useSearchParams } from 'next/navigation'
 
 import Footer from '@/components/Footer'
+import QuoteRequestForm from '@/components/QuoteRequestForm'
 
 // ========================================
 // PRODUCT INFORMATION DATA - Static content for product categories
@@ -15,31 +16,28 @@ const productInfo = {
     subtitle: "Environmental Control Solutions",
     description: "Stability chambers are precision-engineered environmental control systems designed to provide accurate and consistent temperature and humidity conditions. They play a vital role in the pharmaceutical industry, ensuring that products maintain their quality, safety, and efficacy throughout their intended shelf life.",
     when: [
-      "Long-term stability testing of pharmaceutical products",
-      "Intermediate condition testing to monitor product behavior",
-      "Accelerated testing to simulate extreme storage conditions",
-      "At the drug development stage to study product response",
+      "For long-term, intermediate, and accelerated stability studies",
+      "During drug development to study formulation behavior",
       "Prior to regulatory submissions where stability data is mandatory",
-      "During batch release to verify product quality",
-      "For ongoing quality assurance throughout the product lifecycle"
+      "At batch release to validate product quality and consistency",
+      "Throughout the product lifecycle for ongoing quality assurance"
     ],
     why: [
-      "Regulatory Compliance – Conform to ICH guidelines and FDA standards",
-      "Shelf-life Determination – Provide accurate data to define expiry dates",
-      "Product Integrity – Preserve potency, appearance, and stability",
-      "Patient Safety – Detect harmful degradation before market release",
-      "Operational Reliability – Deliver consistent, reproducible test conditions",
-      "Quality Assurance – Safeguard compliance across manufacturing cycles",
-      "Data Integrity – Generate trustworthy, audit-ready stability reports"
+      "Ensure compliance with ICH, FDA, and global standards",
+      "Generate reliable data to establish product shelf life",
+      "Preserve potency, safety, and visual integrity of pharmaceuticals",
+      "Protect patient safety by detecting degradation risks early",
+      "Guarantee reproducible test conditions for regulatory audits",
+      "Maintain data integrity with 21 CFR Part 11–compliant systems"
     ],
     where: [
-      "Pharmaceutical manufacturing facilities – To validate production batches",
-      "R&D laboratories – For product formulation and innovation",
-      "Quality control departments – To maintain compliance standards",
-      "Regulatory testing centers – For independent evaluations",
-      "Biotechnology companies – To study biomolecule stability",
-      "Academic research centers – For drug development studies",
-      "Contract testing laboratories – Offering outsourced stability testing"
+      "Pharmaceutical manufacturing facilities – stability validation",
+      "R&D laboratories – drug innovation and formulation studies",
+      "Quality control departments – compliance-driven monitoring",
+      "Regulatory testing centers – independent product evaluations",
+      "Biotechnology companies – biomolecule and vaccine stability testing",
+      "Academic research centers – pharmaceutical development studies",
+      "Contract testing laboratories – outsourced stability projects"
     ]
   },
   tableTopInstruments: {
@@ -47,31 +45,25 @@ const productInfo = {
     subtitle: "Laboratory Equipment",
     description: "Table top instruments are compact, versatile laboratory devices designed to support a wide range of quality control, research, and testing applications. With precise temperature regulation, agitation, cleaning, and analytical support, these instruments are essential tools for maintaining accuracy, compliance, and efficiency in modern laboratories.",
     when: [
-      "For precise temperature control in sample incubation",
-      "During ultrasonic cleaning of delicate lab equipment",
-      "In sample preparation for analytical or pharmaceutical testing",
-      "When quality control requires reproducible conditions",
-      "In research protocols demanding temperature and agitation",
-      "For pharmaceutical testing requiring strict compliance",
-      "In educational institutions for demonstrations and training"
+      "In analytical labs for precise incubation and agitation",
+      "For ultrasonic cleaning of delicate lab equipment",
+      "During sample preparation in pharmaceutical testing",
+      "When research protocols require reproducibility and accuracy",
+      "For training and demonstration in educational labs"
     ],
     why: [
-      "Accuracy & Reliability – Ensure precise, reproducible results",
-      "Regulatory Compliance – Support GLP and international standards",
-      "Efficiency – Automate and streamline lab workflows",
-      "Error Reduction – Minimize human error with control systems",
-      "Research Support – Guarantee reproducibility and data integrity",
-      "Cost-Effectiveness – Deliver performance in compact designs",
-      "Critical Testing – Support pharmaceutical and scientific applications"
+      "Deliver accuracy, efficiency, and reliability in compact form",
+      "Minimize human error with automated controls",
+      "Support GLP and international compliance standards",
+      "Enhance research reproducibility and workflow efficiency",
+      "Provide cost-effective performance across diverse applications"
     ],
     where: [
-      "Pharmaceutical quality control laboratories – Routine testing",
-      "R&D facilities – For formulation and method development",
-      "Contract testing laboratories – Outsourced pharmaceutical services",
-      "Academic institutions – For training and experiments",
-      "Biotechnology companies – For product research and innovation",
-      "Medical device manufacturing – For component testing",
-      "Food, beverage, and environmental labs – For compliance and analysis"
+      "Pharmaceutical QC and R&D laboratories",
+      "Contract testing organizations (CROs/CTOs)",
+      "Academic institutions and training centers",
+      "Biotechnology and medical device companies",
+      "Food, beverage, and environmental testing labs"
     ]
   }
 }
@@ -183,6 +175,7 @@ export default function ProductsPage() {
   const [selectedIndividualProduct, setSelectedIndividualProduct] = useState<any>(null)  // Which specific product is selected (e.g., "Humidity Chamber")
   const [showFooter, setShowFooter] = useState(false)  // Whether to show footer (hidden during transitions)
   const [expandedSubtypes, setExpandedSubtypes] = useState<string | null>(null)  // Which subtype dropdown is expanded in sidebar
+  const [showQuoteForm, setShowQuoteForm] = useState(false)  // Whether to show the quote request form
   
   // Reference to the detail view container for scroll management
   const detailViewRef = useRef<HTMLDivElement>(null)
@@ -4537,9 +4530,12 @@ export default function ProductsPage() {
                         <h3 className="text-2xl font-bold mb-2">Interested in this product?</h3>
                         <p className="text-text-secondary text-lg">Get detailed specifications and pricing information</p>
                       </div>
-                      <button className="bg-transparent border-2 border-primary-500 text-primary-500 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-primary-500/10 hover:text-white transition-all duration-200">
+                      <button 
+                        onClick={() => setShowQuoteForm(true)}
+                        className="bg-transparent border-2 border-primary-500 text-primary-500 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-primary-500/10 hover:text-white transition-all duration-200"
+                      >
                         Request Quote
-                  </button>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -4561,6 +4557,13 @@ export default function ProductsPage() {
         </section>
                 
         {showFooter && <Footer />}
+        
+        {/* Quote Request Form */}
+        <QuoteRequestForm
+          isOpen={showQuoteForm}
+          onClose={() => setShowQuoteForm(false)}
+          productName={selectedIndividualProduct?.name || selectedProduct || 'Product'}
+        />
       </>
     )
   }
@@ -4754,6 +4757,13 @@ export default function ProductsPage() {
       </section>
 
       <Footer />
+      
+      {/* Quote Request Form */}
+      <QuoteRequestForm
+        isOpen={showQuoteForm}
+        onClose={() => setShowQuoteForm(false)}
+        productName={selectedIndividualProduct?.name || selectedProduct || 'Product'}
+      />
     </>
   )
 }

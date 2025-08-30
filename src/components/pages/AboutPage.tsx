@@ -6,15 +6,6 @@ import Footer from '@/components/Footer'
 
 const ventures = [
   {
-    title: "Mack Pharmatech Pvt. Ltd.",
-    subtitle: "Pharmaceutical Excellence",
-    description: "Founded by Dr. Kiran Badgujar and Manoj Chaudhari, Mack Pharmatech is a renowned manufacturer of pharmaceutical and laboratory equipment, including stability chambers and lab instruments. Dr. Badgujar led the company until recently.",
-    image: "/images/ventures/mack-pharmatech-logo.png",
-    website: "https://aureolepharmatech.com",
-    industry: "Pharmaceutical Equipment",
-    founded: "1999"
-  },
-  {
     title: "Adityam Foundation – Kiran Aashecha",
     subtitle: "A Ray of Hope",
     description: "An NGO driving social welfare, education, healthcare, and rural development initiatives in Nashik, Maharashtra. Founded in 2012 by Dr. Kiran Badgujar, dedicated to improving lives through compassion-driven initiatives.",
@@ -49,15 +40,6 @@ const ventures = [
     website: "https://aureolepharmatech.com",
     industry: "Pharmaceutical Equipment",
     founded: "2021"
-  },
-  {
-    title: "AuraaZion Lifesciences LLP",
-    subtitle: "Life Sciences Excellence",
-    description: "Manufactures specialized pharmaceutical machinery and life-sciences equipment for modern laboratories and industries.",
-    image: "/images/ventures/auraazion-logo.png",
-    website: "https://auraazionls.com",
-    industry: "Life Sciences Equipment",
-    founded: "2024"
   },
   {
     title: "Swapnkiran Resort",
