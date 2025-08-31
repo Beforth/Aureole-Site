@@ -176,6 +176,7 @@ export default function ProductsPage() {
   const [showFooter, setShowFooter] = useState(false)  // Whether to show footer (hidden during transitions)
   const [expandedSubtypes, setExpandedSubtypes] = useState<string | null>(null)  // Which subtype dropdown is expanded in sidebar
   const [showQuoteForm, setShowQuoteForm] = useState(false)  // Whether to show the quote request form
+  const [showAllFeatures, setShowAllFeatures] = useState(false)  // Whether to show all features or just first few
   
   // Reference to the detail view container for scroll management
   const detailViewRef = useRef<HTMLDivElement>(null)
@@ -2420,14 +2421,36 @@ export default function ProductsPage() {
                                        </div>
                                        Key Features
                                      </h3>
-                                     <ul className="space-y-2">
-                                       {selectedIndividualProduct.features.map((feature: string, index: number) => (
-                                         <li key={index} className="flex items-start">
-                                           <div className="w-2 h-2 bg-primary-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                           <span className="text-text-secondary text-sm">{feature}</span>
-                                         </li>
-                                       ))}
-                                     </ul>
+                                                                           <ul className="space-y-2">
+                                        {selectedIndividualProduct.features.slice(0, showAllFeatures ? undefined : 6).map((feature: string, index: number) => (
+                                          <li key={index} className="flex items-start">
+                                            <div className="w-2 h-2 bg-primary-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                            <span className="text-text-secondary text-sm">{feature}</span>
+                                          </li>
+                                        ))}
+                                      </ul>
+                                      {selectedIndividualProduct.features.length > 6 && (
+                                        <button 
+                                          onClick={() => setShowAllFeatures(!showAllFeatures)}
+                                          className="text-primary-500 text-sm hover:underline mt-2 flex items-center"
+                                        >
+                                          {showAllFeatures ? (
+                                            <>
+                                              <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+                                              </svg>
+                                              Show Less
+                                            </>
+                                          ) : (
+                                            <>
+                                              <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                              </svg>
+                                              Show {selectedIndividualProduct.features.length - 6} More
+                                            </>
+                                          )}
+                                        </button>
+                                      )}
                                    </div>
                                  )}
 
