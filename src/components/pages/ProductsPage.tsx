@@ -2445,9 +2445,9 @@ export default function ProductsPage() {
                                      </h3>
                                                                         <div className="space-y-2">
                                      {Object.entries(selectedIndividualProduct.specifications).map(([key, value], specIndex) => (
-                                       <div key={specIndex} className="flex justify-between items-center py-1.5 border-b border-white/20 last:border-b-0">
-                                           <span className="font-medium text-sm">{key}</span>
-                                           <span className="text-text-secondary text-sm">{value as string}</span>
+                                       <div key={specIndex} className="flex justify-between items-start py-1 border-b border-white/20 last:border-b-0">
+                                           <span className="font-medium text-sm flex-shrink-0 mr-6">{key}</span>
+                                           <span className="text-text-secondary text-sm text-right leading-tight break-words">{value as string}</span>
                                          </div>
                                        ))}
                                      </div>
@@ -2776,7 +2776,7 @@ export default function ProductsPage() {
                                 </tr>
                                 <tr className="bg-white/10">
                                   <td className="border border-white/20 px-3 py-2 font-medium">Transducer</td>
-                                  <td className="border border-white/20 px-3 py-2 text-text-secondary" colSpan={4}>Imported make PZT type bonded at the bottom of the tank with weld bond technique</td>
+                                  <td className="border border-white/20 px-3 py-2 text-text-secondary" colSpan={5}>Imported make PZT type bonded at the bottom of the tank with weld bond technique</td>
                                 </tr>
                                 <tr className="bg-white/5">
                                   <td className="border border-white/20 px-3 py-2 font-medium">Ultrasonic Gen.</td>
@@ -2890,7 +2890,7 @@ export default function ProductsPage() {
                                 </tr>
                                 <tr className="bg-gray-50">
                                   <td className="border border-gray-300 px-3 py-2 font-medium text-text-primary">Transducer</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary" colSpan={3}>Imported make PZT type bonded at the bottom of the tank with weld bond technique</td>
+                                  <td className="border border-gray-300 px-3 py-2 text-text-secondary" colSpan={4}>Imported make PZT type bonded at the bottom of the tank with weld bond technique</td>
                                 </tr>
                                 <tr className="bg-white">
                                   <td className="border border-gray-300 px-3 py-2 font-medium text-text-primary">Ultrasonic Gen.</td>
