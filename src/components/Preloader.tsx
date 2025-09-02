@@ -10,27 +10,24 @@ export default function Preloader() {
   useEffect(() => {
     setIsMounted(true)
     
-    // Debug: Log that preloader is starting
-    console.log('Preloader starting on page:', window.location.pathname)
-    console.log('Preloader isVisible:', isVisible)
-    console.log('Preloader isMounted:', isMounted)
+
     
     // Always show preloader on every page load/refresh
     // Hide body scroll and add class when preloader is visible
     if (typeof document !== 'undefined') {
       document.body.style.overflow = 'hidden'
       document.body.classList.add('preloader-active')
-      console.log('Preloader: Body overflow hidden, class added')
+
     }
     
     const timer = setTimeout(() => {
-      console.log('Preloader finishing on page:', window.location.pathname)
+
       setIsVisible(false)
       // Restore body scroll and remove class when preloader is hidden
       if (typeof document !== 'undefined') {
         document.body.style.overflow = 'unset'
         document.body.classList.remove('preloader-active')
-        console.log('Preloader: Body overflow restored, class removed')
+
       }
     }, 2500) // Increased to 2.5 seconds for better visibility
 

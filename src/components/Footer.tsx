@@ -11,10 +11,7 @@ const quickLinks = [
   { name: 'Our Team', href: '/about#team' },
   { name: 'Products', href: '/products' },
   { name: 'Services', href: '/services' },
-  { name: 'Contact Us', href: '/contact' },
-  { name: 'Issues & Escalation', href: '/contact#escalation' },
-  { name: 'Careers', href: '/careers' },
-  { name: 'Get Directions', href: '/contact#direction' },
+  { name: 'Careers', href: '/careers' }
 ]
 
 const socialLinks = [

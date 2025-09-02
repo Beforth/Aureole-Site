@@ -231,24 +231,17 @@ export default function ProductsPage() {
     const productType = searchParams.get('product')
     const individualProduct = searchParams.get('individual')
     
-    // Debug: Log what we found in the URL
-    console.log('🔍 ProductsPage Debug:', { 
-      productType, 
-      individualProduct, 
-      pathname: window.location.pathname,
-      fullUrl: window.location.href,
-      searchParams: searchParams.toString()
-    })
+
     
     // CASE 1: URL has a product parameter (e.g., ?product=Stability%20Chambers)
     if (productType) {
-      console.log('✅ Setting selectedProduct:', productType)
+
       setSelectedProduct(productType)  // Show the product detail view with sidebar
       setShowFooter(true)  // Show footer for detail pages
       
       // CASE 1A: URL also has an individual product (e.g., ?product=Stability%20Chambers&individual=Humidity%20Chamber)
       if (individualProduct) {
-        console.log('🔍 Looking for individual product:', individualProduct)
+
         const category = productDetails[productType as keyof typeof productDetails]
         if (category) {
           // First, look for the product in the main products list
@@ -269,17 +262,17 @@ export default function ProductsPage() {
           
           // If we found the individual product, select it
           if (foundProduct) {
-            console.log('✅ Found and setting individual product:', foundProduct.name)
+
             setSelectedIndividualProduct(foundProduct)
           } else {
-            console.log('❌ Individual product not found:', individualProduct)
+
           }
         }
       }
     } 
     // CASE 2: URL has no product parameter (e.g., just /products)
     else {
-      console.log('🔄 No product parameter - clearing selection')
+
       // Clear all product selections and show the overview page
       setSelectedProduct(null)
       setSelectedIndividualProduct(null)
@@ -2183,11 +2176,7 @@ export default function ProductsPage() {
   // ========================================
   // MAIN RENDER LOGIC - Decide which view to show
   // ========================================
-  console.log('🎯 Render Debug:', { 
-    selectedProduct, 
-    selectedIndividualProduct: selectedIndividualProduct?.name,
-    showingDetailView: !!selectedProduct 
-  })
+
   
   // VIEW 1: PRODUCT DETAIL VIEW - When a product category is selected
   // Shows: Sidebar with product list + Main content area with product details
