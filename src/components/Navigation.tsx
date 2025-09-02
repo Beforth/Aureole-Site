@@ -12,7 +12,8 @@ const navigationItems = [
   { name: 'Products', href: '/products' },
   { name: 'Services', href: '/services' },
   { name: 'Software', href: '/software' },
-  { name: 'Events', href: '/events' }
+  { name: 'Events', href: '/events' },
+  { name: 'Careers', href: '/careers' }
 ]
 
 export default function Navigation() {

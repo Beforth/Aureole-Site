@@ -139,6 +139,13 @@ export default function TopNavigation() {
             }`}>
               Events
             </Link>
+            <Link href="/careers" className={`transition-colors relative ${
+              isActivePath('/careers') 
+                ? 'text-blue-400 font-semibold after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-blue-400 after:rounded-full' 
+                : 'text-gray-200 hover:text-gray-100'
+            }`}>
+              Careers
+            </Link>
             
 
           </div>
