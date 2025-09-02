@@ -7,70 +7,112 @@ import Footer from '@/components/Footer'
 
 const softwareFeatures = [
   {
-    id: 1,
-    title: "User Friendly Software With Advanced Search Facility",
-    icon: "search",
-    description: "Intuitive interface with powerful search capabilities for easy navigation and data retrieval."
-  },
-  {
-    id: 2,
-    title: "Automated Back Up Facility",
-    icon: "cloud",
-    description: "Automatic data backup to ensure your information is always safe and recoverable."
-  },
-  {
-    id: 3,
-    title: "Data Migration Facility",
-    icon: "transfer",
-    description: "Seamless data transfer between systems with comprehensive migration tools."
-  },
-  {
-    id: 4,
-    title: "Data Restore Facility",
-    icon: "restore",
-    description: "Quick and reliable data restoration from backup systems when needed."
-  },
-  {
-    id: 5,
-    title: "Real Time Analysis",
-    icon: "chart",
-    description: "Live data monitoring and analysis for immediate insights and decision making."
-  },
-  {
-    id: 6,
-    title: "E-Records and E-Signature",
-    icon: "document",
-    description: "Digital record keeping with secure electronic signature capabilities."
-  },
-  {
-    id: 7,
-    title: "Password Encryption",
-    icon: "lock",
-    description: "Advanced encryption protocols to protect sensitive data and user credentials."
-  },
-  {
-    id: 8,
-    title: "Real Time Parameter Setting",
-    icon: "settings",
-    description: "Dynamic configuration and parameter adjustment in real-time."
-  },
-  {
-    id: 9,
-    title: "Browser Based Platform",
-    icon: "browser",
-    description: "Access your software from any device through modern web browsers."
-  },
-  {
-    id: 10,
     title: "Secured Audit Trail",
-    icon: "shield",
-    description: "Comprehensive logging and tracking of all system activities for compliance."
+    icon: "shield"
   },
   {
-    id: 11,
-    title: "Password Change Policy",
-    icon: "refresh",
-    description: "Enforced password policies and regular security updates for enhanced protection."
+    title: "E-Records & E-Signature",
+    icon: "document"
+  },
+  {
+    title: "MKT (Mean Kinetic Temperature)",
+    icon: "chart"
+  },
+  {
+    title: "Unlimited Equipment Connectivity",
+    icon: "transfer"
+  },
+  {
+    title: "Real Time Equipment Display",
+    icon: "monitor"
+  },
+  {
+    title: "Graphical Analysis",
+    icon: "chart"
+  },
+  {
+    title: "First Time Password Change",
+    icon: "refresh"
+  },
+  {
+    title: "Alpha Numeric Password",
+    icon: "lock"
+  },
+  {
+    title: "Multilevel Authorization",
+    icon: "shield"
+  },
+  {
+    title: "Offline Analysis",
+    icon: "chart"
+  },
+  {
+    title: "PDF Data Export",
+    icon: "document"
+  },
+  {
+    title: "Real Time Parameter Setting",
+    icon: "settings"
+  },
+  {
+    title: "MySQL Database",
+    icon: "database"
+  },
+  {
+    title: "Automated Backup",
+    icon: "cloud"
+  },
+  {
+    title: "Auto Logout & Account Security",
+    icon: "lock"
+  },
+  {
+    title: "Comprehensive Data Logging",
+    icon: "shield"
+  },
+  {
+    title: "Multi Browser Support",
+    icon: "browser"
+  },
+  {
+    title: "Time Synchronization",
+    icon: "clock"
+  },
+  {
+    title: "Master & Scanner Reports",
+    icon: "chart"
+  },
+  {
+    title: "Company Logo on Reports",
+    icon: "document"
+  },
+  {
+    title: "Guaranteed Data Integrity",
+    icon: "shield"
+  },
+  {
+    title: "Department Wise Access",
+    icon: "lock"
+  },
+  {
+    title: "Communication Fail Alerts",
+    icon: "alert"
+  },
+  {
+    title: "Password Protected Door Operation",
+    icon: "lock"
+  },
+  {
+    title: "Two Way Door Control",
+    icon: "settings"
+  },
+  {
+    title: "Group Wise Printing",
+    icon: "printer"
+  },
+  {
+    title: "Advanced Search Facility",
+    icon: "search"
   }
 ]
 
@@ -95,12 +137,7 @@ const renderIcon = (iconName: string) => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
         </svg>
       )
-    case 'restore':
-      return (
-        <svg className="w-6 h-6 lg:w-8 lg:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
-        </svg>
-      )
+
     case 'chart':
       return (
         <svg className="w-6 h-6 lg:w-8 lg:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -144,6 +181,36 @@ const renderIcon = (iconName: string) => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
         </svg>
       )
+    case 'monitor':
+      return (
+        <svg className="w-6 h-6 lg:w-8 lg:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
+        </svg>
+      )
+    case 'database':
+      return (
+        <svg className="w-6 h-6 lg:w-8 lg:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+        </svg>
+      )
+    case 'clock':
+      return (
+        <svg className="w-6 h-6 lg:w-8 lg:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      )
+    case 'alert':
+      return (
+        <svg className="w-6 h-6 lg:w-8 lg:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+        </svg>
+      )
+    case 'printer':
+      return (
+        <svg className="w-6 h-6 lg:w-8 lg:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6.72 13.829c-.24.03-.48.062-.72.096m.72-.096a42.415 42.415 0 0110.56 0m-10.56 0L6.34 18m10.94-4.171c.24.03.48.062.72.096m-.72-.096L17.66 18m0 0l.229 1.5a2.25 2.25 0 01-2.15 2.5H8.35a2.25 2.25 0 01-2.15-2.5L6.34 18m11.318 0h1.091A2.25 2.25 0 0021 15.75V9a2.25 2.25 0 00-2.25-2.25h-1.091M6.34 18H5.25A2.25 2.25 0 013 15.75V9a2.25 2.25 0 012.25-2.25h1.091M6.34 18l.229 1.5a2.25 2.25 0 002.15 2.5H8.35a2.25 2.25 0 002.15-2.5L6.34 18z" />
+        </svg>
+      )
     default:
       return null
   }
@@ -170,7 +237,7 @@ export default function SoftwarePage() {
             <p className="text-xl text-text-secondary mb-8 leading-relaxed">
               Secure and Integrated Solutions for Applications, Products, and Processes
             </p>
-            <div className="glass rounded-2xl p-8 shadow-lg border border-white/20">
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-white/20">
               <h2 className="text-3xl font-bold mb-4">21-CRF Part 11 Compliance Software</h2>
               <p className="text-lg text-text-secondary leading-relaxed">
                 In the fast-paced landscape of today's business world, the need for secure and seamlessly integrated solutions for applications, products, and processes has reached unprecedented levels. Our system and software are designed to deliver secure and integrated solutions for applications, products, and processes, ensuring the utmost protection and efficiency.
@@ -182,6 +249,8 @@ export default function SoftwarePage() {
           </motion.div>
         </div>
       </section>
+
+
 
       {/* Features Section - Minimal Line Design */}
       <section className="bg-background-off py-20">
@@ -199,16 +268,16 @@ export default function SoftwarePage() {
             </p>
           </motion.div>
 
-          {/* Single Line Layout - No Scrolling */}
+          {/* Multi-Row Grid Layout for 27 Features */}
           <div className="w-full">
-            <div className="grid grid-cols-11 gap-2 pb-8">
+            <div className="grid grid-cols-9 gap-3 pb-8">
               {softwareFeatures.map((feature, index) => (
                 <motion.div
-                  key={feature.id}
+                  key={index}
                   className="text-center"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0.5 }}
                   viewport={{ once: true }}
                 >
                   <div className="text-center">
@@ -297,7 +366,7 @@ export default function SoftwarePage() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="glass rounded-3xl p-8 lg:p-12 border border-white/20"
+              className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 lg:p-12 border border-white/20"
             >
               <h3 className="text-2xl font-bold mb-6">Contact Us to Experience the Difference</h3>
               <div className="space-y-4">

@@ -16,28 +16,55 @@ const productInfo = {
     subtitle: "Environmental Control Solutions",
     description: "Stability chambers are precision-engineered environmental control systems designed to provide accurate and consistent temperature and humidity conditions. They play a vital role in the pharmaceutical industry, ensuring that products maintain their quality, safety, and efficacy throughout their intended shelf life.",
     when: [
-      "For long-term, intermediate, and accelerated stability studies",
-      "During drug development to study formulation behavior",
-      "Prior to regulatory submissions where stability data is mandatory",
-      "At batch release to validate product quality and consistency",
-      "Throughout the product lifecycle for ongoing quality assurance"
+      "During product stability studies for pharmaceuticals, cosmetics, food, and chemicals",
+      "At formulation development stages to ensure product consistency over time",
+      "During pre-approval studies for regulatory submissions (FDA, ICH, WHO compliance)",
+      "When conducting accelerated, long-term, and intermediate stability testing",
+      "During temperature & humidity stress testing for product robustness",
+      "For ICH Zone-based testing (Zone I-IVb as per guidelines)",
+      "Pre-clinical and clinical trial phases for regulatory compliance",
+      "At scale-up and commercial batch release stages for QC testing",
+      "During raw material stability testing before production",
+      "When determining shelf-life, packaging compatibility, and storage conditions",
+      "For accelerated stability testing to predict product lifespan in less time",
+      "During photostability studies (with optional light testing feature)",
+      "During post-marketing surveillance to monitor product performance",
+      "For validating storage conditions for different markets globally",
+      "After product reformulation to ensure consistency and compliance"
     ],
     why: [
-      "Ensure compliance with ICH, FDA, and global standards",
-      "Generate reliable data to establish product shelf life",
-      "Preserve potency, safety, and visual integrity of pharmaceuticals",
-      "Protect patient safety by detecting degradation risks early",
-      "Guarantee reproducible test conditions for regulatory audits",
-      "Maintain data integrity with 21 CFR Part 11–compliant systems"
+      "Precise Temperature & Humidity Control with advanced sensors with high accuracy and uniformity",
+      "Energy-Efficient Technology – reduces power consumption significantly",
+      "Uniform Airflow Design for consistent conditions throughout the chamber",
+      "Compact & Modular Design to fit different lab spaces",
+      "High-Quality Construction with corrosion-resistant materials for durability",
+      "Fully Compliant with ICH, WHO, GMP, MHRA and FDA standards",
+      "High Reliability & Low Maintenance – designed for continuous operation",
+      "User-Friendly Interface with advanced HMI/PLC control system",
+      "Data Integrity & 21 CFR Part 11 Compliance (electronic data recording)",
+      "Safety Features – Alarms for temperature/humidity deviations",
+      "Remote Monitoring, Graphing & Remote Access via PC and Data Logging Options for complete traceability",
+      "Low Maintenance with Self-Diagnostic Features to reduce downtime",
+      "Eco-Friendly Refrigerants as per environmental guidelines",
+      "Validation & Mapping Support (IQ, OQ, PQ documentation provided)",
+      "Customizable Configurations – Walk-In, and special purpose chambers",
+      "Long-Term Reliability designed for 24x7 continuous operations",
+      "Global Service & AMC Support for hassle-free operation"
     ],
     where: [
-      "Pharmaceutical manufacturing facilities – stability validation",
-      "R&D laboratories – drug innovation and formulation studies",
-      "Quality control departments – compliance-driven monitoring",
-      "Regulatory testing centers – independent product evaluations",
-      "Biotechnology companies – biomolecule and vaccine stability testing",
-      "Academic research centers – pharmaceutical development studies",
-      "Contract testing laboratories – outsourced stability projects"
+      "Pharmaceutical & Biotech Industry – drug stability, packaging, and formulation studies",
+      "Food & Beverage Sector – shelf-life, flavour stability, and packaging testing",
+      "Cosmetic & Personal Care Industry – creams, lotions, perfumes stability analysis",
+      "Chemical Industry – raw material and specialty chemical testing",
+      "Medical Devices & Diagnostics – ensuring product safety under various conditions",
+      "Nutraceuticals & Herbal Products – validating potency and stability",
+      "Veterinary Medicines – ensuring compliance with stability guidelines",
+      "Academic & Research Institutions – long-term controlled experiments",
+      "Environmental Simulation Labs – simulating different global climatic zones",
+      "Aerospace & Defence Industry – material and component environmental stress testing",
+      "Packaging Industry – testing material resistance under different humidity/temperature",
+      "Dairy & Beverage Companies – microbial growth and preservation studies",
+      "Agricultural Research – testing seeds and crop samples in controlled climates"
     ]
   },
   tableTopInstruments: {
@@ -45,25 +72,40 @@ const productInfo = {
     subtitle: "Laboratory Equipment",
     description: "Table top instruments are compact, versatile laboratory devices designed to support a wide range of quality control, research, and testing applications. With precise temperature regulation, agitation, cleaning, and analytical support, these instruments are essential tools for maintaining accuracy, compliance, and efficiency in modern laboratories.",
     when: [
-      "In analytical labs for precise incubation and agitation",
-      "For ultrasonic cleaning of delicate lab equipment",
-      "During sample preparation in pharmaceutical testing",
-      "When research protocols require reproducibility and accuracy",
-      "For training and demonstration in educational labs"
+      "During sample preparation for research, testing, or analysis in laboratories",
+      "When performing controlled heating, mixing, or homogenization processes",
+      "For sterility testing and contamination monitoring in clean environments",
+      "During quality control and stability studies in pharmaceutical and biotech industries",
+      "In analytical testing and validation processes to ensure accuracy and compliance",
+      "For biological and chemical reactions requiring precise temperature or pressure control",
+      "During vacuum operations, drying, or evaporation in lab-scale experiments",
+      "When conducting environmental monitoring and air quality validation",
+      "For sample consistency and reproducibility in R&D and production labs",
+      "Whenever space-saving, portable solutions are required for lab operations"
     ],
     why: [
-      "Deliver accuracy, efficiency, and reliability in compact form",
-      "Minimize human error with automated controls",
-      "Support GLP and international compliance standards",
-      "Enhance research reproducibility and workflow efficiency",
-      "Provide cost-effective performance across diverse applications"
+      "Compact and space-efficient design – ideal for modern labs with limited space",
+      "High precision and accuracy in temperature, humidity, pressure, and process control",
+      "Energy-efficient and cost-effective without compromising performance",
+      "User-friendly interface with advanced digital controls for easy operation",
+      "Versatile applications across multiple industries and testing needs",
+      "Built-in safety features – alarms, overload protection, and fail-safes",
+      "Low maintenance with durable construction for long-term use",
+      "Compliance with international standards (ISO, GMP, WHO, FDA)",
+      "Customizable configurations to meet specific research or production requirements",
+      "Reliable performance under continuous operation with minimal downtime",
+      "Data logging and remote monitoring options for process traceability",
+      "Eco-friendly technology using sustainable materials and energy-saving systems"
     ],
     where: [
-      "Pharmaceutical QC and R&D laboratories",
-      "Contract testing organizations (CROs/CTOs)",
-      "Academic institutions and training centers",
-      "Biotechnology and medical device companies",
-      "Food, beverage, and environmental testing labs"
+      "Pharmaceutical and Biotech Industries – for formulation, stability, and QC testing",
+      "Food and Beverage Industry – for microbial testing, shelf-life studies, and sample prep",
+      "Chemical Industry – for controlled reactions, heating, and sample processing",
+      "Cosmetics and Personal Care Industry – for product stability and consistency studies",
+      "Medical and Diagnostic Laboratories – for sterilization, contamination monitoring, and testing",
+      "Academic and Research Institutes – for experimental studies and sample preparation",
+      "Environmental and Microbiology Labs – for air, water, and soil testing",
+      "Industrial Quality Control Labs – for product validation and batch consistency"
     ]
   }
 }
@@ -425,13 +467,15 @@ export default function ProductsPage() {
           subtypes: [
             {
               name: "Humidity Chamber / Stability Chamber",
-              description: "Humidity chambers play a crucial role in a wide array of industries, including electronics, military and defense, pharmaceuticals, transportation, medical devices, shipping, and communications.",
+              description: "Advanced humidity and stability chambers designed for precise environmental control in pharmaceutical, biotech, and research applications. These chambers provide accurate temperature and humidity conditions for stability testing, formulation development, and regulatory compliance.",
               image: "/images/products/humidity-chamber-stability-chamber.png",
               features: [
-                "Precise humidity control",
-                "Compact design",
+                "Precise temperature and humidity control",
+                "Advanced sensor technology",
                 "User-friendly interface",
-                "Compliance with standards"
+                "Compliance with ICH, WHO, GMP, MHRA and FDA standards",
+                "Energy-efficient operation",
+                "Uniform airflow design"
               ],
               specifications: {
                 "Temperature Range": "20°C to 60°C",
@@ -440,23 +484,23 @@ export default function ProductsPage() {
                 "Humidity Accuracy": "± 2.0% RH",
                 "Temperature Uniformity": "± 1.0°C",
                 "Humidity Uniformity": "± 3.0% RH",
-                "Test Conditions": "25°C & 60% RH, 30°C & 65% RH, 40°C & 75% RH, 30°C & 75% RH",
-                "Low Conditions": "25°C & 40% RH, 40°C & 25% RH, 30°C & 35% RH"
+                "Test Suitable for": "25°C & 60% RH, 30°C & 65% RH, 40°C & 75% RH, 30°C & 75% RH",
+                "Also available with low conditions": "25°C & 40% RH, 40°C & 25% RH, 30°C & 35% RH"
               },
               models: [
                 {
                   model: "AP_SA_HC-2.0_V**",
                   capacity: "200",
                   interior: { width: "660", depth: "450", height: "700" },
-                  exterior: { width: "785", depth: "1130", height: "1360" },
+                  exterior: { width: "785", depth: "780", height: "1350" },
                   trays: "2",
-                  powerSupply: ""
+                  powerSupply: "Single Phase 230 V"
                 },
                 {
                   model: "AP_SA_HC-4.0_V**",
                   capacity: "400",
                   interior: { width: "700", depth: "650", height: "900" },
-                  exterior: { width: "825", depth: "1330", height: "1560" },
+                  exterior: { width: "825", depth: "985", height: "1550" },
                   trays: "3",
                   powerSupply: "Single Phase 230 V"
                 },
@@ -464,37 +508,39 @@ export default function ProductsPage() {
                   model: "AP_SA_HC-6.0_V**",
                   capacity: "600",
                   interior: { width: "750", depth: "750", height: "1075" },
-                  exterior: { width: "875", depth: "1430", height: "1735" },
+                  exterior: { width: "875", depth: "1085", height: "1725" },
                   trays: "3",
-                  powerSupply: "230 V"
+                  powerSupply: "Single Phase 230 V"
                 },
                 {
                   model: "AP_SA_HC-8.0_V**",
                   capacity: "800",
                   interior: { width: "750", depth: "750", height: "1425" },
-                  exterior: { width: "875", depth: "1480", height: "2085" },
+                  exterior: { width: "875", depth: "1085", height: "2075" },
                   trays: "4",
-                  powerSupply: ""
+                  powerSupply: "Single Phase 230 V"
                 },
                 {
                   model: "AP_SA_HC-1.0K_V**",
                   capacity: "1000",
                   interior: { width: "850", depth: "750", height: "1575" },
-                  exterior: { width: "975", depth: "1480", height: "2230" },
+                  exterior: { width: "975", depth: "1085", height: "2225" },
                   trays: "4",
-                  powerSupply: ""
+                  powerSupply: "Single Phase 230 V"
                 }
               ]
             },
             {
               name: "BOD Incubator",
-              description: "BOD Incubator, which stands for Bio-Oxygen Demand Incubator, serves the critical function of maintaining precise temperature control for various applications.",
+              description: "Advanced BOD (Bio-Oxygen Demand) Incubators designed for precise temperature control in biological oxygen demand testing, microbiological research, and environmental analysis. These incubators provide accurate and uniform temperature conditions essential for reliable biological testing and research applications.",
               image: "/images/products/bod-incubator.png",
               features: [
-                "Biological oxygen demand testing",
-                "Temperature stability",
-                "Compact design",
-                "Energy efficient"
+                "Precise temperature control for BOD testing",
+                "Advanced sensor technology with high accuracy",
+                "Uniform temperature distribution",
+                "Energy-efficient operation",
+                "Compliance with international standards",
+                "User-friendly digital interface"
               ],
               specifications: {
                 "Temperature Range": "10°C to 60°C",
@@ -506,7 +552,7 @@ export default function ProductsPage() {
                   model: "AP_SA_BO/BI-1.25_V**",
                   capacity: "125",
                   interior: { width: "600", depth: "350", height: "600" },
-                  exterior: { width: "725", depth: "865", height: "1260" },
+                  exterior: { width: "725", depth: "685", height: "1250" },
                   trays: "2",
                   powerSupply: "Single Phase 230 V"
                 },
@@ -514,7 +560,7 @@ export default function ProductsPage() {
                   model: "AP_SA_BO/BI-2.0_V**",
                   capacity: "200",
                   interior: { width: "660", depth: "450", height: "700" },
-                  exterior: { width: "785", depth: "965", height: "1360" },
+                  exterior: { width: "785", depth: "780", height: "1350" },
                   trays: "2",
                   powerSupply: "Single Phase 230 V"
                 },
@@ -522,7 +568,7 @@ export default function ProductsPage() {
                   model: "AP_SA_BO/BI-4.0_V**",
                   capacity: "400",
                   interior: { width: "700", depth: "650", height: "900" },
-                  exterior: { width: "825", depth: "1165", height: "1560" },
+                  exterior: { width: "825", depth: "985", height: "1550" },
                   trays: "3",
                   powerSupply: "Single Phase 230 V"
                 },
@@ -530,7 +576,7 @@ export default function ProductsPage() {
                   model: "AP_SA_BO/BI-6.0_V**",
                   capacity: "600",
                   interior: { width: "750", depth: "750", height: "1075" },
-                  exterior: { width: "875", depth: "1275", height: "1735" },
+                  exterior: { width: "875", depth: "1085", height: "1725" },
                   trays: "3",
                   powerSupply: "Single Phase 230 V"
                 },
@@ -538,15 +584,15 @@ export default function ProductsPage() {
                   model: "AP_SA_BO/BI-8.0_V**",
                   capacity: "800",
                   interior: { width: "750", depth: "750", height: "1425" },
-                  exterior: { width: "875", depth: "1275", height: "2085" },
+                  exterior: { width: "875", depth: "1085", height: "2075" },
                   trays: "4",
                   powerSupply: "Single Phase 230 V"
                 },
                 {
                   model: "AP_SA_BO/BI-1.0K_V**",
                   capacity: "1000",
-                  interior: { width: "850", depth: "750", height: "1525" },
-                  exterior: { width: "975", depth: "1275", height: "2230" },
+                  interior: { width: "850", depth: "750", height: "1575" },
+                  exterior: { width: "975", depth: "1085", height: "2225" },
                   trays: "4",
                   powerSupply: "Single Phase 230 V"
                 }
@@ -555,13 +601,15 @@ export default function ProductsPage() {
 
             {
               name: "Cold Chamber",
-              description: "Refrigerated chambers for low-temperature storage and testing applications.",
+              description: "Advanced refrigerated chambers designed for precise low-temperature storage and testing applications. These chambers provide accurate temperature control in the cold range (2°C to 8°C) essential for pharmaceutical storage, biological sample preservation, and controlled environment testing.",
               image: "/images/products/cold-chamber.png",
               features: [
-                "Low temperature operation",
-                "Energy efficient cooling",
-                "Temperature monitoring",
-                "Alarm systems"
+                "Precise low temperature control (2°C to 8°C)",
+                "Advanced refrigeration system with high accuracy",
+                "Uniform temperature distribution",
+                "Energy-efficient operation",
+                "Compliance with international standards",
+                "User-friendly digital interface"
               ],
               specifications: {
                 "Temperature Range": "2°C to 8°C",
@@ -573,7 +621,7 @@ export default function ProductsPage() {
                   model: "AP_SA_CC-1.25_V**",
                   capacity: "125",
                   interior: { width: "600", depth: "350", height: "600" },
-                  exterior: { width: "725", depth: "865", height: "1260" },
+                  exterior: { width: "725", depth: "685", height: "1250" },
                   trays: "2",
                   powerSupply: "Single Phase 230 V"
                 },
@@ -581,7 +629,7 @@ export default function ProductsPage() {
                   model: "AP_SA_CC-2.0_V**",
                   capacity: "200",
                   interior: { width: "660", depth: "450", height: "700" },
-                  exterior: { width: "785", depth: "965", height: "1360" },
+                  exterior: { width: "785", depth: "780", height: "1350" },
                   trays: "2",
                   powerSupply: "Single Phase 230 V"
                 },
@@ -589,7 +637,7 @@ export default function ProductsPage() {
                   model: "AP_SA_CC-4.0_V**",
                   capacity: "400",
                   interior: { width: "700", depth: "650", height: "900" },
-                  exterior: { width: "825", depth: "1165", height: "1560" },
+                  exterior: { width: "825", depth: "985", height: "1550" },
                   trays: "3",
                   powerSupply: "Single Phase 230 V"
                 },
@@ -597,7 +645,7 @@ export default function ProductsPage() {
                   model: "AP_SA_CC-6.0_V**",
                   capacity: "600",
                   interior: { width: "750", depth: "750", height: "1075" },
-                  exterior: { width: "875", depth: "1275", height: "1735" },
+                  exterior: { width: "875", depth: "1085", height: "1725" },
                   trays: "3",
                   powerSupply: "Single Phase 230 V"
                 },
@@ -605,15 +653,15 @@ export default function ProductsPage() {
                   model: "AP_SA_CC-8.0_V**",
                   capacity: "800",
                   interior: { width: "750", depth: "750", height: "1425" },
-                  exterior: { width: "875", depth: "1275", height: "2085" },
+                  exterior: { width: "875", depth: "1085", height: "2075" },
                   trays: "4",
                   powerSupply: "Single Phase 230 V"
                 },
                 {
                   model: "AP_SA_CC-1.0K_V**",
                   capacity: "1000",
-                  interior: { width: "850", depth: "750", height: "1525" },
-                  exterior: { width: "975", depth: "1275", height: "2230" },
+                  interior: { width: "850", depth: "750", height: "1575" },
+                  exterior: { width: "975", depth: "1085", height: "2225" },
                   trays: "4",
                   powerSupply: "Single Phase 230 V"
                 }
@@ -621,13 +669,15 @@ export default function ProductsPage() {
             },
             {
               name: "Deep Freezer (upto -20°C / upto -40°C)",
-              description: "Ultra-low temperature freezers for long-term storage of sensitive materials.",
+              description: "Advanced ultra-low temperature freezers designed for long-term storage of sensitive biological materials, vaccines, and critical samples. These freezers provide precise temperature control in the ultra-low range essential for pharmaceutical storage, research applications, and sample preservation.",
               image: "/images/products/deep-freezer.png",
               features: [
-                "Ultra-low temperature operation",
-                "Heavy duty refrigeration",
-                "Temperature monitoring",
-                "Alarm systems"
+                "Ultra-low temperature operation (-5°C to -20°C / -25°C to -40°C)",
+                "Heavy duty refrigeration system with high accuracy",
+                "Uniform temperature distribution",
+                "Advanced temperature monitoring and control",
+                "Compliance with international standards",
+                "User-friendly digital interface"
               ],
               specifications: {
                 "Temperature Range": "-5°C to -20°C / -25°C to -40°C",
@@ -639,7 +689,7 @@ export default function ProductsPage() {
                   model: "AP_SA_DF-1.25_V**",
                   capacity: "125",
                   interior: { width: "625", depth: "400", height: "500" },
-                  exterior: { width: "810", depth: "725", height: "1260" },
+                  exterior: { width: "810", depth: "700", height: "1260" },
                   trays: "2",
                   powerSupply: "Single Phase 230 V"
                 },
@@ -647,7 +697,7 @@ export default function ProductsPage() {
                   model: "AP_SA_DF-2.0_V**",
                   capacity: "200",
                   interior: { width: "650", depth: "500", height: "625" },
-                  exterior: { width: "835", depth: "825", height: "1385" },
+                  exterior: { width: "835", depth: "800", height: "1385" },
                   trays: "2",
                   powerSupply: "Single Phase 230 V"
                 },
@@ -655,7 +705,7 @@ export default function ProductsPage() {
                   model: "AP_SA_DF-4.0_V**",
                   capacity: "400",
                   interior: { width: "700", depth: "650", height: "900" },
-                  exterior: { width: "885", depth: "975", height: "1660" },
+                  exterior: { width: "885", depth: "950", height: "1660" },
                   trays: "3",
                   powerSupply: "Single Phase 230 V"
                 },
@@ -663,7 +713,7 @@ export default function ProductsPage() {
                   model: "AP_SA_DF-6.0_V**",
                   capacity: "600",
                   interior: { width: "750", depth: "800", height: "1000" },
-                  exterior: { width: "935", depth: "1125", height: "1760" },
+                  exterior: { width: "935", depth: "1100", height: "1760" },
                   trays: "3",
                   powerSupply: "Single Phase 230 V"
                 },
@@ -671,7 +721,7 @@ export default function ProductsPage() {
                   model: "AP_SA_DF-8.0_V**",
                   capacity: "800",
                   interior: { width: "750", depth: "800", height: "1350" },
-                  exterior: { width: "935", depth: "1125", height: "2110" },
+                  exterior: { width: "935", depth: "1100", height: "2110" },
                   trays: "4",
                   powerSupply: "Single Phase 230 V"
                 },
@@ -679,7 +729,7 @@ export default function ProductsPage() {
                   model: "AP_SA_DF-1.0K_V**",
                   capacity: "1000",
                   interior: { width: "825", depth: "825", height: "1500" },
-                  exterior: { width: "1010", depth: "1150", height: "2260" },
+                  exterior: { width: "1010", depth: "1125", height: "2260" },
                   trays: "4",
                   powerSupply: "Single Phase 230 V"
                 }
@@ -687,15 +737,15 @@ export default function ProductsPage() {
             },
             {
               name: "Ultra Low Deep Freezer (-80°C)",
-              description: "Specialized freezers for ultra-low temperature storage of biological samples and critical materials.",
+              description: "Advanced ultra-low temperature freezers designed for critical storage of biological samples, vaccines, and research materials at temperatures down to -86°C. These specialized freezers provide precise ultra-low temperature control essential for long-term preservation of sensitive biological materials and pharmaceutical applications.",
               image: "/images/products/ultra-low-deep-freezer.png",
               features: [
-                "Ultra-low temperature operation",
-                "Heavy duty refrigeration system",
-                "Master & stand by sensor",
-                "SS Door with gasket",
-                "Quick release filter",
-                "One-hand operation handle",
+                "Ultra-low temperature operation (-40°C to -86°C)",
+                "Heavy duty refrigeration system with high accuracy",
+                "Master & stand by sensor for reliability",
+                "SS Door with gasket for optimal sealing",
+                "Quick release filter for easy maintenance",
+                "One-hand operation handle for convenience",
                 "Vacuum release port for quick re-access to samples",
                 "Lock the cold air inner door closing pressure can be adjusted by the handle"
               ],
@@ -749,16 +799,18 @@ export default function ProductsPage() {
             },
             {
               name: "Photostability Chamber",
-              description: "Specialized chambers for photostability testing according to ICH Q1B guidelines, supporting simultaneous Near UV & visible light testing.",
+              description: "Advanced photostability chambers designed specifically to meet ICH & FDA requirements for photostability testing. These chambers provide simultaneous Near UV & visible light testing according to ICH Q1B option 2, ensuring compliance with regulatory standards for drug substance and drug product photostability studies.",
               image: "/images/products/photostability-chamber.png",
               features: [
-                "ICH Q1B compliant",
+                "ICH Q1B compliant with FDA requirements",
                 "Simultaneous Near UV & visible light testing",
-                "Uniform light distribution",
-                "Automatic light control",
-                "Master & stand by sensor",
+                "Uniform light distribution for accurate testing",
+                "Automatic light control with exposure level monitoring",
+                "Master & stand by sensor for reliability",
                 "Two Door system with full view inner glass door & outer SS door",
-                "Leakage proof silicon rubber gasket"
+                "Leakage proof silicon rubber gasket",
+                "UV lights automatically switch off when door is opened",
+                "Inner mirror finish & outer matt finish for optimal light reflection"
               ],
               specifications: {
                 "Temperature Range": "20°C to 50°C",
@@ -770,7 +822,7 @@ export default function ProductsPage() {
                   model: "AP_SA_PH-2.0_V**",
                   capacity: "200",
                   interior: { width: "800", depth: "500", height: "600" },
-                  exterior: { width: "960", depth: "960", height: "1320" },
+                  exterior: { width: "925", depth: "850", height: "1300" },
                   trays: "1",
                   powerSupply: "Single Phase 230 V"
                 },
@@ -778,7 +830,7 @@ export default function ProductsPage() {
                   model: "AP_SA_PH-4.0_V**",
                   capacity: "400",
                   interior: { width: "800", depth: "700", height: "700" },
-                  exterior: { width: "760", depth: "1160", height: "1420" },
+                  exterior: { width: "925", depth: "1050", height: "1400" },
                   trays: "2",
                   powerSupply: "Single Phase 230 V"
                 }
@@ -786,21 +838,23 @@ export default function ProductsPage() {
             },
             {
               name: "Pharma Refrigerator / Dual Zone Chamber",
-              description: "Precision-engineered dual-zone chambers providing accurate and consistent temperature and humidity conditions for pharmaceutical products, with separate deep freezer and cold chamber zones.",
+              description: "Advanced dual-zone chambers designed for pharmaceutical applications, providing precise temperature control in two separate zones - an upper deep freezer zone and a lower cold chamber zone. These chambers ensure optimal storage conditions for different types of pharmaceutical products requiring different temperature ranges.",
               image: "/images/products/pharma-refrigerator-dual-zone-chamber.png",
               features: [
-                "Master & stand by sensor",
-                "SS Door with gasket",
-                "Heavy Duty refrigeration system",
-                "Inner outer door with proof silicon"
+                "Master & stand by sensor for reliability",
+                "SS Door with gasket for optimal sealing",
+                "Heavy Duty refrigeration system with high performance",
+                "Inner outer door with proof silicon for enhanced insulation",
+                "Dual zone temperature control for different storage requirements",
+                "Compliance with pharmaceutical storage standards"
               ],
               specifications: {
                 "Upper Zone (Deep Freezer) Temperature Range": "-5°C to -20°C",
-                "Upper Zone (Deep Freezer) Accuracy": "3°C",
-                "Upper Zone (Deep Freezer) Uniformity": "5°C",
+                "Upper Zone (Deep Freezer) Accuracy": "±3°C",
+                "Upper Zone (Deep Freezer) Uniformity": "±5°C",
                 "Lower Zone (Cold Chamber) Temperature Range": "2°C to 8°C",
-                "Lower Zone (Cold Chamber) Accuracy": "1°C",
-                "Lower Zone (Cold Chamber) Uniformity": "2°C"
+                "Lower Zone (Cold Chamber) Accuracy": "±1°C",
+                "Lower Zone (Cold Chamber) Uniformity": "±2°C"
               },
               models: [
                 {
@@ -843,13 +897,15 @@ export default function ProductsPage() {
             },
             {
               name: "Hot Air Oven",
-              description: "Aureole Pharma Tech hot air oven offers a controlled heating environment that is ideal for processes such as curing, drying, and conducting high-temperature tests.",
+              description: "Advanced hot air ovens designed for controlled heating environments ideal for curing, drying, sterilization, and conducting high-temperature tests. These ovens provide uniform heat distribution and precise temperature control for various laboratory and industrial applications.",
               image: "/images/products/hot-air-oven.png",
               features: [
-                "High temperature capability",
-                "Uniform heat distribution",
-                "Digital control system",
-                "Safety features"
+                "High temperature capability up to 250°C",
+                "Uniform heat distribution for consistent results",
+                "Digital control system with precise temperature control",
+                "Advanced safety features and thermal insulation",
+                "Stainless steel construction for durability",
+                "Multiple tray configurations for different applications"
               ],
               specifications: {
                 "Temperature Range": "10°C above ambient to 250°C",
@@ -901,15 +957,16 @@ export default function ProductsPage() {
             },
             {
               name: "Vacuum Oven",
-              description: "Precision vacuum ovens designed for applications requiring controlled atmosphere and uniform heating, ideal for drying, curing, and degassing.",
+              description: "Advanced vacuum ovens designed for applications requiring controlled atmosphere and uniform heating under vacuum conditions. These precision ovens are ideal for drying, curing, degassing, and other processes that require both temperature control and vacuum environment for optimal results.",
               image: "/images/products/vacuum-oven.png",
               features: [
-                "High vacuum capability",
-                "Precise temperature control",
-                "Uniform heating",
-                "Safety interlocks",
-                "Digital display for temperature and vacuum",
-                "Toughened glass window for sample viewing"
+                "High vacuum capability up to 760 mm of mercury (-30)",
+                "Precise temperature control with ±1°C accuracy",
+                "Uniform heating distribution under vacuum conditions",
+                "Advanced safety interlocks and vacuum monitoring",
+                "Digital display for temperature and vacuum pressure",
+                "Toughened glass window for sample viewing during operation",
+                "Stainless steel construction for durability and corrosion resistance"
               ],
               specifications: {
                 "Temperature Range": "60°C to 200°C",
@@ -946,15 +1003,15 @@ export default function ProductsPage() {
             },
             {
               name: "Muffle Furnace",
-              description: "High-temperature furnaces for heat treatment and material processing applications, designed for precise temperature control and uniform heating.",
+              description: "Advanced high-temperature furnaces designed for heat treatment, material processing, and laboratory applications requiring precise temperature control up to 1150°C. These furnaces provide uniform heating and are essential for various industrial and research processes.",
               image: "/images/products/muffle-furnace.png",
               features: [
-                "High temperature operation",
-                "Precise temperature control",
-                "Uniform heating",
-                "Safety features",
-                "Digital control system",
-                "Thermal insulation"
+                "High temperature operation up to 1150°C",
+                "Precise temperature control with ±5°C accuracy",
+                "Uniform heating distribution",
+                "Advanced safety features and thermal insulation",
+                "Digital control system with user-friendly interface",
+                "Robust construction for industrial applications"
               ],
               specifications: {
                 "Temperature Range": "1150°C",
@@ -975,7 +1032,7 @@ export default function ProductsPage() {
                   interior: { width: "200", depth: "300", height: "200" },
                   exterior: { width: "275", depth: "375", height: "275" },
                   trays: "Not specified",
-                  powerSupply: "230 V"
+                  powerSupply: "Single Phase 230 V"
                 }
               ]
             }
@@ -1056,7 +1113,7 @@ export default function ProductsPage() {
                   capacity: "20000",
                   interior: { width: "2000", depth: "4000", height: "2500" },
                   exterior: { width: "2160", depth: "4160", height: "2660" },
-                  trays: "56",
+                  trays: "60",
                   powerSupply: "Three Phase 415 V"
                 },
                 {
@@ -1064,7 +1121,7 @@ export default function ProductsPage() {
                   capacity: "30000",
                   interior: { width: "2500", depth: "4800", height: "2500" },
                   exterior: { width: "2660", depth: "4960", height: "2660" },
-                  trays: "98",
+                  trays: "84",
                   powerSupply: "Three Phase 415 V"
                 },
                 {
@@ -1072,7 +1129,7 @@ export default function ProductsPage() {
                   capacity: "40000",
                   interior: { width: "4000", depth: "4000", height: "2500" },
                   exterior: { width: "4160", depth: "4160", height: "2600" },
-                  trays: "98",
+                  trays: "108",
                   powerSupply: "Three Phase 415 V"
                 },
                 {
@@ -1080,7 +1137,7 @@ export default function ProductsPage() {
                   capacity: "50000",
                   interior: { width: "4000", depth: "5000", height: "2500" },
                   exterior: { width: "4160", depth: "5160", height: "2660" },
-                  trays: "154",
+                  trays: "144",
                   powerSupply: "Three Phase 415 V"
                 }
               ]
@@ -1135,7 +1192,7 @@ export default function ProductsPage() {
                   interior: { width: "2000", depth: "2000", height: "2000" },
                   exterior: { width: "2160", depth: "2160", height: "2160" },
                   trays: "24",
-                  powerSupply: "Single Phase 230 V"
+                  powerSupply: "Three Phase 415 V"
                 },
                 {
                   model: "AP_WC_CC-10.0K_V**",
@@ -1150,7 +1207,7 @@ export default function ProductsPage() {
                   capacity: "20000",
                   interior: { width: "2000", depth: "4000", height: "2500" },
                   exterior: { width: "2160", depth: "4160", height: "2660" },
-                  trays: "56",
+                  trays: "60",
                   powerSupply: "Three Phase 415 V"
                 },
                 {
@@ -1158,7 +1215,7 @@ export default function ProductsPage() {
                   capacity: "30000",
                   interior: { width: "2500", depth: "4800", height: "2500" },
                   exterior: { width: "2660", depth: "4960", height: "2660" },
-                  trays: "98",
+                  trays: "84",
                   powerSupply: "Three Phase 415 V"
                 },
                 {
@@ -1166,7 +1223,7 @@ export default function ProductsPage() {
                   capacity: "40000",
                   interior: { width: "4000", depth: "4000", height: "2500" },
                   exterior: { width: "4160", depth: "4160", height: "2660" },
-                  trays: "98",
+                  trays: "108",
                   powerSupply: "Three Phase 415 V"
                 },
                 {
@@ -1174,7 +1231,7 @@ export default function ProductsPage() {
                   capacity: "50000",
                   interior: { width: "4000", depth: "5000", height: "2500" },
                   exterior: { width: "4160", depth: "5160", height: "2660" },
-                  trays: "154",
+                  trays: "144",
                   powerSupply: "Three Phase 415 V"
                 }
               ]
@@ -1224,7 +1281,7 @@ export default function ProductsPage() {
                   interior: { width: "2000", depth: "1500", height: "2000" },
                   exterior: { width: "2160", depth: "1660", height: "2160" },
                   trays: "24",
-                  powerSupply: "Three Phase 415 V"
+                  powerSupply: "Single Phase 230 V"
                 },
                 {
                   model: "AP_WC_BO-8.0K_V**",
@@ -1247,7 +1304,7 @@ export default function ProductsPage() {
                   capacity: "20000",
                   interior: { width: "2000", depth: "4000", height: "2500" },
                   exterior: { width: "2160", depth: "4160", height: "2660" },
-                  trays: "56",
+                  trays: "60",
                   powerSupply: "Three Phase 415 V"
                 },
                 {
@@ -1255,7 +1312,7 @@ export default function ProductsPage() {
                   capacity: "30000",
                   interior: { width: "2500", depth: "4800", height: "2500" },
                   exterior: { width: "2660", depth: "4960", height: "2660" },
-                  trays: "98",
+                  trays: "84",
                   powerSupply: "Three Phase 415 V"
                 },
                 {
@@ -1263,7 +1320,7 @@ export default function ProductsPage() {
                   capacity: "40000",
                   interior: { width: "4000", depth: "4000", height: "2500" },
                   exterior: { width: "4160", depth: "4160", height: "2660" },
-                  trays: "98",
+                  trays: "108",
                   powerSupply: "Three Phase 415 V"
                 },
                 {
@@ -1271,37 +1328,39 @@ export default function ProductsPage() {
                   capacity: "50000",
                   interior: { width: "4000", depth: "5000", height: "2500" },
                   exterior: { width: "4160", depth: "5160", height: "2660" },
-                  trays: "154",
+                  trays: "144",
                   powerSupply: "Three Phase 415 V"
                 }
               ]
             },
             {
               name: "Walk In Deep Freezer",
-              description: "Large-scale walk-in deep freezers designed for bulk storage and industrial applications requiring ultra-low temperature conditions.",
+              description: "Advanced walk-in deep freezers designed for bulk storage and industrial applications requiring ultra-low temperature conditions. These large-scale freezers feature dual-zone design with an anti-room for temperature transition and a deep freezer zone for ultra-low temperature storage.",
               image: "/images/products/walk-in-deep-freezer.png",
               features: [
-                "Master & stand by sensor",
-                "Heavy Duty refrigeration system",
-                "Door Access System (Numeric)",
-                "Master & stand by refrigeration system",
-                "Split type refrigeration system",
-                "Racks with trays",
-                "Person trap alarm",
-                "7\" Touch Screen HMI",
-                "Double walled with 125 mm PUF insulated modular panels",
-                "SS 304 Interior & Exterior either SS 304 or Pre Coated GI",
-                "Stainless Steel Trays",
-                "Observation window - 300 x 300 mm",
-                "Forced air circulation for uniform temperature",
-                "CFC free cooling system",
+                "Master & stand by sensor for reliability",
+                "Heavy Duty refrigeration system with high performance",
+                "Door Access System (Numeric) for security",
+                "Master & stand by refrigeration system for continuous operation",
+                "Split type refrigeration system for efficiency",
+                "Racks with trays for organized storage",
+                "Person trap alarm for safety",
+                "Double walled with 125 mm PUF insulated modular panels for easy on-site assembly",
+                "SS 304 Interior & Exterior either SS 304 or Pre Coated GI for durability",
+                "Stainless Steel Trays for long-term use",
+                "Observation window - 300 x 300 mm for Anti Room visibility",
+                "Forced air circulation for uniform temperature distribution",
+                "CFC free cooling system with hermetically sealed compressor",
                 "Mechanism for equalizing air-pressure for door opening from inside",
-                "Audio/Visual alarms for deviations"
+                "Audio/Visual alarms for temperature deviations"
               ],
               specifications: {
+                "Anti Room Temperature Range": "2°C to 8°C",
+                "Anti Room Accuracy": "± 1°C",
+                "Anti Room Uniformity": "± 2°C",
                 "Deep Freezer Temperature Range": "-5°C to -20°C / -25°C to -40°C",
-                "Accuracy": "3°C",
-                "Uniformity": "5°C"
+                "Deep Freezer Accuracy": "± 3°C",
+                "Deep Freezer Uniformity": "± 5°C"
               }
             }
           ]
@@ -4635,29 +4694,29 @@ export default function ProductsPage() {
                 </div>
                 
                 <div className="grid md:grid-cols-3 gap-8">
-                  <div>
-                    <h3 className="text-xl font-semibold mb-1">When</h3>
-                    <ul className="list-disc list-inside text-text-secondary leading-relaxed space-y-2">
+                  <div className="flex flex-col h-full">
+                    <h3 className="text-xl font-semibold mb-4 text-center">When</h3>
+                    <ul className="list-disc text-text-secondary leading-relaxed space-y-3 flex-1 pl-4">
                       {productInfo.stabilityChambers.when.map((item, index) => (
-                        <li key={index}>{item}</li>
+                        <li key={index} className="text-sm">{item}</li>
                       ))}
                     </ul>
                   </div>
                   
-                  <div>
-                    <h3 className="text-xl font-semibold mb-3">Why</h3>
-                    <ul className="list-disc list-inside text-text-secondary leading-relaxed space-y-2">
+                  <div className="flex flex-col h-full">
+                    <h3 className="text-xl font-semibold mb-4 text-center">Why</h3>
+                    <ul className="list-disc text-text-secondary leading-relaxed space-y-3 flex-1 pl-4">
                       {productInfo.stabilityChambers.why.map((item, index) => (
-                        <li key={index}>{item}</li>
+                        <li key={index} className="text-sm">{item}</li>
                       ))}
                     </ul>
                   </div>
                   
-                  <div>
-                    <h3 className="text-xl font-semibold mb-3">Where</h3>
-                    <ul className="list-disc list-inside text-text-secondary leading-relaxed space-y-2">
+                  <div className="flex flex-col h-full">
+                    <h3 className="text-xl font-semibold mb-4 text-center">Where</h3>
+                    <ul className="list-disc text-text-secondary leading-relaxed space-y-3 flex-1 pl-4">
                       {productInfo.stabilityChambers.where.map((item, index) => (
-                        <li key={index}>{item}</li>
+                        <li key={index} className="text-sm">{item}</li>
                       ))}
                     </ul>
                   </div>
@@ -4690,29 +4749,29 @@ export default function ProductsPage() {
                     </div>
 
                 <div className="grid md:grid-cols-3 gap-8">
-                    <div>
-                    <h3 className="text-xl font-semibold mb-3">When</h3>
-                    <ul className="list-disc list-inside text-text-secondary leading-relaxed space-y-2">
+                    <div className="flex flex-col h-full">
+                    <h3 className="text-xl font-semibold mb-4 text-center">When</h3>
+                    <ul className="list-disc text-text-secondary leading-relaxed space-y-3 flex-1 pl-4">
                       {productInfo.tableTopInstruments.when.map((item, index) => (
-                        <li key={index}>{item}</li>
+                        <li key={index} className="text-sm">{item}</li>
                       ))}
                     </ul>
                   </div>
                   
-                  <div>
-                    <h3 className="text-xl font-semibold mb-3">Why</h3>
-                    <ul className="list-disc list-inside text-text-secondary leading-relaxed space-y-2">
+                  <div className="flex flex-col h-full">
+                    <h3 className="text-xl font-semibold mb-4 text-center">Why</h3>
+                    <ul className="list-disc text-text-secondary leading-relaxed space-y-3 flex-1 pl-4">
                       {productInfo.tableTopInstruments.why.map((item, index) => (
-                        <li key={index}>{item}</li>
+                        <li key={index} className="text-sm">{item}</li>
                       ))}
                     </ul>
                   </div>
                   
-                  <div>
-                    <h3 className="text-xl font-semibold mb-3">Where</h3>
-                    <ul className="list-disc list-inside text-text-secondary leading-relaxed space-y-2">
+                  <div className="flex flex-col h-full">
+                    <h3 className="text-xl font-semibold mb-4 text-center">Where</h3>
+                    <ul className="list-disc text-text-secondary leading-relaxed space-y-3 flex-1 pl-4">
                       {productInfo.tableTopInstruments.where.map((item, index) => (
-                        <li key={index}>{item}</li>
+                        <li key={index} className="text-sm">{item}</li>
                       ))}
                     </ul>
                   </div>
