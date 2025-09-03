@@ -151,6 +151,13 @@ export default function AboutPage() {
               
               <div className="letter-signature">
                 <p className="signature-line">Warm regards,</p>
+                <div className="signature-image-container mb-3 flex justify-end">
+                  <img 
+                    src="/images/director-signature.png" 
+                    alt="Dr. Kiran Badgujar Signature" 
+                    className="h-[100px] w-auto object-contain"
+                  />
+                </div>
                 <p className="signature-name">Dr. Kiran Badgujar</p>
                 <p className="signature-title">Director – Aureole Group</p>
               </div>

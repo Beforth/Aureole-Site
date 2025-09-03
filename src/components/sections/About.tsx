@@ -65,10 +65,14 @@ export default function About() {
           >
             <div className="glass rounded-2xl p-8 max-w-sm">
               <div className="text-center">
-                {/* Director Avatar */}
-                <div className="w-24 h-24 bg-gradient-primary rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-white text-2xl font-bold">KB</span>
-                </div>
+                                 {/* Director Avatar */}
+                 <div className="w-28 h-28 rounded-full mx-auto mb-4 overflow-hidden">
+                   <img 
+                     src="/images/director.png" 
+                     alt="Dr. Kiran Badgujar - Director" 
+                     className="w-full h-full object-fit object-center"
+                   />
+                 </div>
                 
                 <h4 className="text-xl font-semibold text-text-primary mb-1">
                   Dr. Kiran Badgujar
