@@ -37,9 +37,9 @@ export default function TopNavigation() {
               <Image 
                 src="/images/logo.png" 
                 alt="Aureole Pharma Tech" 
-                width={60} 
-                height={60} 
-                className="mr-3"
+                width={80} 
+                height={65} 
+                className="mr-3 mt-1"
               />
               <span className="text-xl font-bold text-gray-100">Aureole Pharma Tech</span>
             </Link>

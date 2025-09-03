@@ -300,6 +300,31 @@ export default function SoftwarePage() {
         </div>
       </section>
 
+      {/* Software Architecture Section */}
+      <section className="bg-background-off py-20">
+        <div className="w-full px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto text-center"
+          >
+            <h2 className="text-4xl font-bold mb-4">System Architecture</h2>
+            <p className="text-text-secondary text-lg max-w-3xl mx-auto mb-12">
+              Explore the robust and scalable architecture that powers SIS-APP, designed for maximum security, reliability, and performance.
+            </p>
+            
+                         {/* Architecture Image */}
+             <img 
+               src="/images/software-architecture.png" 
+               alt="SIS-APP Software Architecture Diagram" 
+               className="w-full h-auto rounded-xl shadow-lg"
+             />
+          </motion.div>
+        </div>
+      </section>
+
       {/* Benefits Section */}
       <section className="bg-background-off py-20">
         <div className="w-full px-6">
@@ -310,55 +335,77 @@ export default function SoftwarePage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl font-bold mb-6">
-                Why Choose SIS-APP?
-              </h2>
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-primary-500/20 backdrop-blur-sm border border-primary-500/30 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg className="w-4 h-4 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold mb-2">21-CFR Part 11 Compliance</h3>
-                    <p className="text-text-secondary">Full compliance with FDA regulations for electronic records and signatures.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-primary-500/20 backdrop-blur-sm border border-primary-500/30 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg className="w-4 h-4 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold mb-2">Secure Data Management</h3>
-                    <p className="text-text-secondary">Advanced encryption and security protocols to protect sensitive information.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-primary-500/20 backdrop-blur-sm border border-primary-500/30 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg className="w-4 h-4 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold mb-2">Real-Time Monitoring</h3>
-                    <p className="text-text-secondary">Live data analysis and parameter monitoring for immediate decision making.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-primary-500/20 backdrop-blur-sm border border-primary-500/30 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg className="w-4 h-4 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold mb-2">Browser-Based Access</h3>
-                    <p className="text-text-secondary">Access your software from anywhere using any modern web browser.</p>
-                  </div>
-                </div>
-              </div>
+                             <h2 className="text-4xl font-bold mb-6">
+                 Why Choose SIS-APP?
+               </h2>
+               <div className="space-y-6">
+                 <div className="flex items-start gap-4">
+                   <div className="w-8 h-8 bg-primary-500/20 backdrop-blur-sm border border-primary-500/30 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                     <svg className="w-4 h-4 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                     </svg>
+                   </div>
+                   <div>
+                     <h3 className="text-lg font-semibold mb-2">21-CFR Part 11 Compliance</h3>
+                     <p className="text-text-secondary">Full compliance with FDA regulations for electronic records and signatures, ensuring regulatory approval.</p>
+                   </div>
+                 </div>
+                 <div className="flex items-start gap-4">
+                   <div className="w-8 h-8 bg-primary-500/20 backdrop-blur-sm border border-primary-500/30 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                     <svg className="w-4 h-4 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                     </svg>
+                   </div>
+                   <div>
+                     <h3 className="text-lg font-semibold mb-2">Enterprise-Grade Security</h3>
+                     <p className="text-text-secondary">Multi-level authorization, audit trails, and encrypted data transmission for maximum protection.</p>
+                   </div>
+                 </div>
+                 <div className="flex items-start gap-4">
+                   <div className="w-8 h-8 bg-primary-500/20 backdrop-blur-sm border border-primary-500/30 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                     <svg className="w-4 h-4 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                     </svg>
+                   </div>
+                   <div>
+                     <h3 className="text-lg font-semibold mb-2">Real-Time Equipment Monitoring</h3>
+                     <p className="text-text-secondary">Live parameter tracking, MKT calculations, and instant alerts for critical operations.</p>
+                   </div>
+                 </div>
+                 <div className="flex items-start gap-4">
+                   <div className="w-8 h-8 bg-primary-500/20 backdrop-blur-sm border border-primary-500/30 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                     <svg className="w-4 h-4 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                     </svg>
+                   </div>
+                   <div>
+                     <h3 className="text-lg font-semibold mb-2">Scalable Architecture</h3>
+                     <p className="text-text-secondary">MySQL database with automated backups and unlimited equipment connectivity support.</p>
+                   </div>
+                 </div>
+                 <div className="flex items-start gap-4">
+                   <div className="w-8 h-8 bg-primary-500/20 backdrop-blur-sm border border-primary-500/30 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                     <svg className="w-4 h-4 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                     </svg>
+                   </div>
+                   <div>
+                     <h3 className="text-lg font-semibold mb-2">Advanced Analytics & Reporting</h3>
+                     <p className="text-text-secondary">Comprehensive data logging, graphical analysis, and customizable PDF reports with company branding.</p>
+                   </div>
+                 </div>
+                 <div className="flex items-start gap-4">
+                   <div className="w-8 h-8 bg-primary-500/20 backdrop-blur-sm border border-primary-500/30 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                     <svg className="w-4 h-4 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                     </svg>
+                   </div>
+                   <div>
+                     <h3 className="text-lg font-semibold mb-2">Cross-Platform Accessibility</h3>
+                     <p className="text-text-secondary">Multi-browser support with responsive design for desktop, tablet, and mobile access.</p>
+                   </div>
+                 </div>
+               </div>
             </motion.div>
 
             <motion.div
