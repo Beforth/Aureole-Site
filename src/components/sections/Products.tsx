@@ -1,6 +1,7 @@
 'use client'
 
 import { Thermometer, Microscope } from 'lucide-react'
+import { useRouter } from 'next/navigation'
 
 const productCategories = [
   {
@@ -20,6 +21,16 @@ const productCategories = [
 ]
 
 export default function Products() {
+  const router = useRouter()
+  
+  const handleViewProducts = (category: string) => {
+    if (category === 'Stability Chambers') {
+      router.push('/products?product=Stability%20Chambers')
+    } else if (category === 'Table Top Instruments') {
+      router.push('/products?product=Table%20Top%20Instruments')
+    }
+  }
+  
   return (
     <section className="py-20 bg-background-off" style={{backgroundColor: '#f8f9fa'}}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -76,7 +87,10 @@ export default function Products() {
                     ))}
                   </div>
 
-                  <button className="bg-gradient-primary text-white px-6 py-3 rounded-xl font-semibold">
+                  <button 
+                    onClick={() => handleViewProducts(category.title)}
+                    className="bg-gradient-primary text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 cursor-pointer"
+                  >
                     View Products
                   </button>
                 </div>
