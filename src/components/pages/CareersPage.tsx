@@ -6,178 +6,105 @@ import Footer from '@/components/Footer'
 
 const careerPositions = [
   {
-    id: 'MS_S&M_EL01',
-    title: 'Service Coordinator & Customer Support',
+    id: 'SE_MID_001',
+    title: 'Service Engineer',
     status: 'Open',
     level: 'Mid',
-    experience: '02 to 04 years of Backend support and Coordination of Sales, Customer Support and Service',
-    openings: 1,
-    description: [
-      'Relevant experience of 02 to 04 years of Service Coordinator, Customer Relationship Management in Pharma Industry',
-      'Knowledge of process improvement',
-      'Prepare and Set up SOPs for Service Department',
-      'Must have good communication, interpersonal and documentation skill',
-      'Able to support for promotional activities',
-      'Ready for cross department activities, able to support QA and QC Team',
-      'Good to have experience of other industries'
-    ]
-  },
-  {
-    id: 'MS_CS&S_EL04',
-    title: 'Service and Installations Engineer',
-    status: 'Open',
-    level: 'Senior',
-    experience: '05 to 07 years in Service and Installations of Pharma Lab equipment',
-    openings: 1,
-    description: [
-      'Relevant experience of 05 to 07 years in Service and Installations (Laboratory equipment)',
-      'Experience of Installation, Service and Maintenance of Laboratory equipment',
-      'Customer facing role, and able to handle all end-to-end activities of installation and service support',
-      'Able to support QA and QC Department from documentation and process perspective',
-      'Good to have hands on and able to support for PLC, SCADA, HMI',
-      'Should ready and able to do Onsite (Customer Site) and Online (Remote) Support',
-      'Should lead and guide the team of Service Engineers',
-      'Must have good communication skills and proactive attitude'
-    ]
-  },
-  {
-    id: 'MS_CS&S_EL05',
-    title: 'Service and Installations Engineer',
-    status: 'Open',
-    level: 'Mid',
-    experience: '02 to 04 years in Service and Installations of Pharma Lab equipment',
-    openings: 1,
-    description: [
-      'Relevant experience of 02 to 04 years in Service and Installation (Laboratory equipment)',
-      'Experience of Installation, Service and Maintenance of Laboratory equipment',
-      'Customer facing role, and able to handle all end-to-end activities of installation and service support',
-      'Able to support QA and QC Department from documentation and process perspective',
-      'Good to have hands on and able to support for PLC, SCADA, HMI',
-      'Should ready and able to do Onsite (Customer Site) and Online (Remote) Support',
-      'Should lead and guide the team of Service Engineers',
-      'Must have good communication skills and proactive attitude'
-    ]
-  },
-  {
-    id: 'MS_S&M_EL10',
-    title: 'Sales and Marketing Executive',
-    status: 'Open',
-    level: 'Mid',
-    experience: '02 to 03 years of Sales and Marketing (Pharma Equipment Industry)',
-    openings: 1,
-    description: [
-      'Relevant experience of 02 to 03 years of Sales and Marketing in Pharma Industry',
-      'Should must have good communication skill and able to handle customer requirement and queries',
-      'Must have experience of needed documentation in Sales and Marketing',
-      'Responsible for complete cycle (end-to-end) of each enquiry / order',
-      'Reporting to Regional Head, Outdoor and Travel will be must',
-      'Able to support for promotional activities, and Exhibition preparation',
-      'Good to have experience of other industries'
-    ]
-  },
-  {
-    id: 'MS_QC&A_EL02',
-    title: 'QA, QC and Documentation Specialist',
-    status: 'Open',
-    level: 'Senior',
-    experience: '05 to 08 years in QA, QC and Documentation',
-    openings: 1,
-    description: [
-      'Relevant experience of 05 to 08 years in QA, QC and Documentation',
-      'Proficiency in Pharma Industry Norms (21 CFR Part 11, US FDA, WHO Guidelines)',
-      'Prepare and set up internal, Department wise SOPs, guidelines',
-      'Handled Audits, FAT, SAT',
-      'Conduct and support internal audits across departments',
-      'Impart Trainings for Risk Management CORA (ICH Q9), QMS/GMP, CIF Cycles',
-      'Lead QC&A Team, guide, and mentor juniors',
-      'Should ready and able to do Onsite (Customer Site) and Online (Remote) Support',
-      'Must have good soft skills and carry positive attitude',
-      'Good to have experience of Departments in pharma industry or other domains'
-    ]
-  },
-  {
-    id: 'MS_QC&A_EL03',
-    title: 'QA, QC and Documentation Specialist',
-    status: 'Open',
-    level: 'Mid',
-    experience: '02 to 04 years in QA, QC and Documentation',
-    openings: 1,
-    description: [
-      'Relevant experience of 02 to 04 years in QA, QC and Documentation',
-      'Experience in Pharma Industry Norms (21 CFR Part 11, US FDA, WHO Guidelines)',
-      'Supported during Audits, FAT, SAT',
-      'Must have good soft skills and proactive attitude',
-      'Good to have experience of other Departments in pharma industry or other domains',
-      'Able to own the assigned task and deliver accordingly'
-    ]
-  },
-  {
-    id: 'MS_CS&S_EL06',
-    title: 'Automation Engineer - PLC, SCADA, HMI',
-    status: 'Open',
-    level: 'Senior',
-    experience: '05 to 07 years in Automation, PLC, SCADA, HMI for Pharma Lab equipment',
-    openings: 1,
-    description: [
-      'Relevant experience 05 to 07 years in Automation, PLC, SCADA, HMI for Pharma Lab equipment',
-      'Experience of Implementation, Support, Customisation and Development of PLC and SCADA',
-      'Able to handle - Requirement gathering, Development Testing and Deployment',
-      'Experienced for 21 CFR Part 11 compliance software and must be aware about Pharma Industry Standards',
-      'Able to provide Technical Support - Onsite (Customer premise) and Online (Remote)',
-      'Should ready and able to do Onsite (Customer Site) and Online (Remote) Support',
-      'Must be a good Team player and able to support site and service Engineers',
-      'Enable Service Engineers and impart Trainings to them',
-      'Proactive and keen for upskilling',
-      'Good to have Certifications and will be preferred'
-    ]
-  },
-  {
-    id: 'MS_CS&S_EL07',
-    title: 'Automation Engineer - PLC, SCADA, HMI',
-    status: 'Open',
-    level: 'Mid',
-    experience: '02 to 04 years in Automation, PLC, SCADA, HMI for Pharma Lab equipment',
-    openings: 1,
-    description: [
-      'Relevant experience 01 to 02 years in Automation, PLC, SCADA, HMI for Pharma Lab equipment',
-      'Experience of Support, Customisation and Development of PLC and SCADA',
-      'Should have experience in requirement gathering, Development Testing',
-      'Experienced for 21 CFR Part 11 compliance software',
-      'Should be ready for and able to provide Technical Support - Onsite (Customer premise) and Online (Remote)',
-      'Must be a good Team player and ready for upskilling'
-    ]
-  },
-  {
-    id: 'MS_D&PE_EL08',
-    title: 'Engineering Design and Product Development',
-    status: 'Open',
-    level: 'Senior',
-    experience: '05 to 07 years in Engineering Design and Product Development for Pharma Lab equipment',
-    openings: 1,
-    description: [
-      'Relevant experience of 05 to 07 years in Engineering Design and Product Development for Pharma Lab equipment',
-      'Experience of CATIA V5, AutoCAD and design for Pharma and Lab equipment',
-      'Worked on Panel Design, Electrical System Design and Control Panel Design for Lab equipment',
-      'Responsible for complete design of environment testing equipment',
-      'Should have experience of Design Qualification (DQ), customized GA drawing',
-      'Requirement gathering and consulting from design perspective to customer as well as production department (internal)',
-      'Take care of all documentation, set up processes',
-      'Take ownership of Product development from design perspective',
-      'Incorporate with Production team for feasible design of machines'
-    ]
-  },
-  {
-    id: 'MS_D&PE_EL09',
-    title: 'Engineering Design and Product Development',
-    status: 'Open',
-    level: 'Mid',
-    experience: '02 to 04 years in Engineering Design and Product Development for Pharma Lab equipment',
+    experience: '1–5 years (Pharma industry or Pharma equipment line)',
     openings: 2,
+    qualification: [
+      'B.E – Electrical / Instrumentation / Electronics / Mechanical',
+      'Diploma – Electrical / Instrumentation / Electronics / Mechanical',
+      'B.Sc. – Electronics or Physics',
+      'ITI – Electrical / Refrigeration'
+    ],
     description: [
-      'Relevant experience of 02 to 04 years in Engineering Design and Product Development for Pharma Lab equipment',
-      'Experience of CATIA V5, AutoCAD and design for Pharma and Lab equipment',
-      'Worked on Panel Design, Electrical System Design and Control Panel Design for Lab equipment',
-      'Able to take care of Design Qualification (DQ), customized GA drawing'
+      'Installation, Service, AMC, Calibration, and Maintenance of Laboratory Equipment',
+      'Handle complete end-to-end installation and service support',
+      'Strong technical background in Electrical, Electronics, and Refrigeration',
+      'Understand product technical specifications, functionality, and applications',
+      'Basic knowledge of PLC & HMI is preferred',
+      'Knowledge of electrical components: Contactor, Sensor, Timer, Temperature Controller, SSR, SMPS, MCB, Electrical Wiring',
+      'Customer-facing role, including remote support for client queries',
+      'Support QA and QC departments with documentation and process requirements',
+      'Good communication, interpersonal, and computer skills (MS Excel, PowerPoint, Word)',
+      'Outdoor role with travel as per requirement',
+      'High ethical standards, positive attitude, and adherence to company policies'
+    ]
+  },
+  {
+    id: 'SE_JUNIOR_002',
+    title: 'Service Engineer (Junior)',
+    status: 'Open',
+    level: 'Junior',
+    experience: '0–1 years (Pharma industry or Pharma equipment line)',
+    openings: 3,
+    qualification: [
+      'B.E – Electrical / Instrumentation / Electronics / Mechanical',
+      'Diploma – Electrical / Instrumentation / Electronics / Mechanical',
+      'B.Sc. – Electronics or Physics',
+      'ITI – Electrical / Refrigeration'
+    ],
+    description: [
+      'Assist in Installation, Service, AMC, Calibration, and Maintenance of Laboratory Equipment',
+      'Support in end-to-end installation and service activities',
+      'Technical background in Electrical, Electronics, and Refrigeration',
+      'Understanding of product specifications, functions, and applications',
+      'Basic PLC & HMI knowledge (preferred)',
+      'Familiarity with electrical components: Contactor, Sensor, Timer, Temperature Controller, SSR, SMPS, MCB, Electrical Wiring',
+      'Customer support role (including remote assistance)',
+      'Assist QA and QC departments with documentation support',
+      'Good communication, interpersonal, and computer skills (MS Excel, PowerPoint, Word)',
+      'Outdoor role with travel as per requirement',
+      'Positive attitude, ethics, and adherence to company policies'
+    ]
+  },
+  {
+    id: 'SM_MID_003',
+    title: 'Sales & Marketing (Mid-Level)',
+    status: 'Open',
+    level: 'Mid',
+    experience: '2–5 years (Pharma Industry or Pharma Equipment line – Stability, Lab Equipment, Autoclaves, Pharma Equipment)',
+    openings: 2,
+    qualification: [
+      'MBA (Marketing) with background in:',
+      'Electrical / Instrumentation / Electronics / Mechanical OR',
+      'B. Pharmacy'
+    ],
+    description: [
+      'Manage complete Sales cycle: Enquiry → Order Generation → Order Closure',
+      'Prepare and manage documentation (Quotations, Work Orders)',
+      'Handle end-to-end responsibility for each enquiry/order',
+      'Participate in outdoor client visits and frequent travel',
+      'Support promotional activities & exhibition preparation',
+      'Understand product specifications, applications, and technical aspects',
+      'Strong communication, interpersonal, and computer skills (MS Excel, PowerPoint, Word)',
+      'Outdoor job with travel as per schedule',
+      'High ethical values, right attitude, and adherence to company policies'
+    ]
+  },
+  {
+    id: 'SM_JUNIOR_004',
+    title: 'Sales & Marketing (Junior)',
+    status: 'Open',
+    level: 'Junior',
+    experience: '0–2 years (Pharma Industry or Pharma Equipment line – Stability, Lab Equipment, Autoclaves, Pharma Equipment)',
+    openings: 2,
+    qualification: [
+      'MBA (Marketing) with background in:',
+      'Electrical / Instrumentation / Electronics / Mechanical OR',
+      'B. Pharmacy'
+    ],
+    description: [
+      'Assist in complete Sales cycle: Enquiry → Order Generation → Order Closure',
+      'Support documentation requirements (Quotations, Work Orders)',
+      'Assist in managing end-to-end enquiry/order responsibilities',
+      'Participate in outdoor client visits and travel',
+      'Support promotional activities & exhibitions',
+      'Understand product specifications, functions, and applications',
+      'Strong communication, interpersonal, and computer skills (MS Excel, PowerPoint, Word)',
+      'Outdoor job with travel as per schedule',
+      'Positive attitude, ethics, and adherence to company policies'
     ]
   }
 ]
@@ -322,54 +249,103 @@ export default function CareersPage() {
             </div>
           </motion.div>
 
-          {/* Career Positions Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+          {/* Career Positions List */}
+          <div className="space-y-0">
             {filteredPositions.map((position, index) => (
               <motion.div
                 key={position.id}
-                className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+                className="border-b border-white/5 last:border-b-0"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                onClick={() => setSelectedPosition(selectedPosition === position.id ? null : position.id)}
+                layout
               >
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-text-primary mb-2">{position.title}</h3>
-                    <div className="flex flex-wrap gap-2 mb-3">
-                      <span className={`px-3 py-1 rounded-full text-xs font-medium text-white ${statusColors[position.status as keyof typeof statusColors]}`}>
-                        {position.status}
-                      </span>
-                      <span className={`px-3 py-1 rounded-full text-xs font-medium text-white ${levelColors[position.level as keyof typeof levelColors]}`}>
-                        {position.level}
-                      </span>
+                {/* Position Header */}
+                <div 
+                  className="py-6 cursor-pointer hover:bg-white/5 transition-colors duration-200"
+                  onClick={() => setSelectedPosition(selectedPosition === position.id ? null : position.id)}
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="flex-1">
+                      <h3 className="text-xl font-semibold text-text-primary mb-1">{position.title}</h3>
+                      <p className="text-text-secondary mb-3">{position.experience}</p>
+                      <div className="flex items-center gap-4 text-sm text-text-secondary">
+                        <span>Full-time</span>
+                        <span>•</span>
+                        <span>On-site & Remote</span>
+                        <span>•</span>
+                        <span className={`inline-flex items-center gap-1`}>
+                          <span className={`w-1.5 h-1.5 rounded-full ${statusColors[position.status as keyof typeof statusColors]}`}></span>
+                          {position.status}
+                        </span>
+                      </div>
                     </div>
-                    <p className="text-text-secondary text-sm mb-3">{position.experience}</p>
-                    <p className="text-primary-500 text-sm font-medium">{position.openings} opening{position.openings > 1 ? 's' : ''}</p>
+                    <div className="flex items-center gap-2 text-primary-500 group">
+                      <span className="text-sm group-hover:text-primary-400 transition-colors">
+                        {selectedPosition === position.id ? 'Hide' : 'View'}
+                      </span>
+                      <svg 
+                        className={`w-4 h-4 transition-transform duration-300 ease-out group-hover:text-primary-400 ${selectedPosition === position.id ? 'rotate-180' : ''}`}
+                        fill="none" 
+                        stroke="currentColor" 
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </div>
                   </div>
                 </div>
 
-                {/* Expandable Description */}
+                {/* Expandable Details */}
                 {selectedPosition === position.id && (
                   <motion.div
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: 'auto' }}
                     exit={{ opacity: 0, height: 0 }}
-                    className="mt-4 pt-4 border-t border-white/20"
+                    transition={{ 
+                      duration: 0.25, 
+                      ease: [0.4, 0, 0.2, 1],
+                      opacity: { duration: 0.15 }
+                    }}
+                    className="border-t border-white/5"
                   >
-                    <h4 className="font-semibold text-text-primary mb-3">Job Description:</h4>
-                    <ul className="space-y-2">
-                      {position.description.map((item, idx) => (
-                        <li key={idx} className="flex items-start gap-2 text-text-secondary text-sm">
-                          <span className="w-2 h-2 bg-primary-500 rounded-full mt-2 flex-shrink-0"></span>
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                    <button className="mt-4 w-full bg-primary-500 hover:bg-primary-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300">
-                      Apply Now
-                    </button>
+                    <div className="py-6 space-y-6">
+                      {/* Qualifications */}
+                      {position.qualification && (
+                        <div>
+                          <h4 className="text-base font-medium text-text-primary mb-3">Qualifications</h4>
+                          <div className="space-y-1">
+                            {position.qualification.map((item, idx) => (
+                              <div key={idx} className="flex items-start gap-2">
+                                <span className="w-1 h-1 bg-primary-500 rounded-full mt-2 flex-shrink-0"></span>
+                                <span className="text-sm text-text-secondary">{item}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Job Description */}
+                      <div>
+                        <h4 className="text-base font-medium text-text-primary mb-3">Responsibilities</h4>
+                        <div className="space-y-1">
+                          {position.description.map((item, idx) => (
+                            <div key={idx} className="flex items-start gap-2">
+                              <span className="w-1 h-1 bg-primary-500 rounded-full mt-2 flex-shrink-0"></span>
+                              <span className="text-sm text-text-secondary">{item}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Apply Button */}
+                      <div className="pt-2">
+                        <button className="bg-primary-500 hover:bg-primary-600 text-white text-sm font-medium py-2 px-4 rounded-md transition-colors duration-200">
+                          Apply
+                        </button>
+                      </div>
+                    </div>
                   </motion.div>
                 )}
               </motion.div>
